@@ -1,0 +1,6 @@
+@automationCorrespondencecoreService_HostAddress = http://localhost:5143
+
+GET {{automationCorrespondencecoreService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
