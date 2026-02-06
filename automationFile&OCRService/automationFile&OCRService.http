@@ -1,0 +1,6 @@
+@automationFile_OCRService_HostAddress = http://localhost:5103
+
+GET {{automationFile_OCRService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
