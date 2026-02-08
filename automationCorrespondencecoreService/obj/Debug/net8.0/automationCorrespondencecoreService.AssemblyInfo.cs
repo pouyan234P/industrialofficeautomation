@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("automationCorrespondencecoreService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64ece3dccca857bfab6be764b52c9caa324505a0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+478d5269fc586b246b5ec205dccfae84de7cba7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("automationCorrespondencecoreService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("automationCorrespondencecoreService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
