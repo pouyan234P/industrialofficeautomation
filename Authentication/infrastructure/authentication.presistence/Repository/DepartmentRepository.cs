@@ -1,5 +1,6 @@
 ﻿using authentication.application.IRepository;
 using authentication.domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,40 @@ namespace authentication.presistence.Repository
 {
     public class DepartmentRepository : IDepartmentRepository
     {
-        public Task<bool> addDepartment(Department department)
+        private readonly authDb _db;
+
+        public DepartmentRepository(authDb db)
         {
-            throw new NotImplementedException();
+            _db = db;
+        }
+        public async Task<bool> addDepartment(Department department)
+        {
+            _db.departments.Add(department);
+            _db.SaveChanges();
+            var t =await _db.departments.Select(t => t).OrderBy(x=>x).LastOrDefaultAsync();
+            if (t == null)
+            {
+                return false;
+            }
+            return true;
         }
 
-        public Task<IEnumerable<Department>> GetDepartment()
+        public async Task<IEnumerable<Department>> GetDepartment()
         {
-            throw new NotImplementedException();
+            var dep=await _db.departments.Select(t=>t).ToListAsync();
+            return dep;
         }
 
-        public Task<Department> GetDepartmentbyid(int? id)
+        public async Task<Department> GetDepartmentbyid(int? id)
         {
-            throw new NotImplementedException();
+            var dep=await _db.departments.Where(x=>x.Id==id).Select(x=>x).FirstOrDefaultAsync();
+            return dep!;
         }
 
-        public Task<Department> GetDepartmentbyname(string name)
+        public async Task<Department> GetDepartmentbyname(string name)
         {
-            throw new NotImplementedException();
+            var dep=await _db.departments.Where(x=>x.Name==name).Select(x=>x).FirstOrDefaultAsync();
+            return dep!;
         }
     }
 }

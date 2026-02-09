@@ -9,8 +9,8 @@ namespace authentication.application.IRepository
 {
     public interface IPositionRepository
     {
-        Task<Position> updatePosition(Position position);
-        Task<Position> deletePosition(Position position);
+        Task<Position> updatePosition(int id,Position position);
+        Task<bool> deletePosition(int id);
         Task<bool> insertPosition(Position position);
         Task<Position> getPosition(int  positionId);
 

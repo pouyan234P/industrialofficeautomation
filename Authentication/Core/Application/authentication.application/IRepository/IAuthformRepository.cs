@@ -9,8 +9,8 @@ namespace authentication.application.IRepository
 {
     public interface IAuthformRepository
     {
-        Task<User> regiseter(User user,string password);
+        Task<User?> regiseter(User user,string password);
         Task<string> login(string email, string password);
-        Task createRole(string role);
+        Task<string> createRole(string role);
     }
 }
