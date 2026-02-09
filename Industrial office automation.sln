@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "authentication.domain", "Au
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "authentication.application", "Authentication\Core\Application\authentication.application\authentication.application.csproj", "{26E3B323-F3EE-44AC-84E1-06C94863BE35}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "authentication.presistence", "Authentication\infrastructure\authentication.presistence\authentication.presistence.csproj", "{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "authentication.api", "Authentication\presntation\api\authentication.api\authentication.api.csproj", "{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +71,14 @@ Global
 		{26E3B323-F3EE-44AC-84E1-06C94863BE35}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26E3B323-F3EE-44AC-84E1-06C94863BE35}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26E3B323-F3EE-44AC-84E1-06C94863BE35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +96,8 @@ Global
 		{E9EA0A80-90A2-40EB-AB14-0DCFCAEF5133} = {1364ACB8-A5EC-462D-9B1F-C721ED2E0B66}
 		{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3} = {14364FB9-926C-4267-AE91-E5BBF3EFD867}
 		{26E3B323-F3EE-44AC-84E1-06C94863BE35} = {E9EA0A80-90A2-40EB-AB14-0DCFCAEF5133}
+		{9B8D61A9-8BF2-41DC-A17D-670A0BA89778} = {467D58BE-3678-4640-BC19-20807DF23377}
+		{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD} = {0D713E04-6DA6-4E4E-8AA2-340507BDFF1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0379478C-BF61-4F9B-B102-133C6743A590}

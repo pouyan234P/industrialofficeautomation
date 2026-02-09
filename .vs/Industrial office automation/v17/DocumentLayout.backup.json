@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createauthcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createauthcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\infrastructure\\authentication.presistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|solutionrelative:authentication\\infrastructure\\authentication.presistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\request\\commands\\createauthcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\request\\commands\\createauthcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\infrastructure\\authentication.presistence\\repository\\positionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|solutionrelative:authentication\\infrastructure\\authentication.presistence\\repository\\positionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\request\\commands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\request\\commands\\createrolecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\domain\\authentication.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|solutionrelative:authentication\\core\\domain\\authentication.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\irepository\\iauthformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\irepository\\iauthformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\domain\\authentication.domain\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|solutionrelative:authentication\\core\\domain\\authentication.domain\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|c:\\users\\pouyan\\onedrive\\documents(1)\\visual studio 2022\\project\\industrial office automation\\authentication\\core\\domain\\authentication.domain\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D40BCE6-3036-4FEE-88A0-DAB577BDDDB3}|Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj|solutionrelative:authentication\\core\\domain\\authentication.domain\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,67 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "createRoleCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:05:01.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "createRoleCommand.cs",
-              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createRoleCommand.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createRoleCommand.cs",
-              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createRoleCommand.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createRoleCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:02:52.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IAuthformRepository.cs",
-              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\IRepository\\IAuthformRepository.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\IRepository\\IAuthformRepository.cs",
-              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\IRepository\\IAuthformRepository.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\IRepository\\IAuthformRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:01:31.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "createAuthCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
-              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
+              "Title": "20260209160251_initial.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs",
+              "RelativeDocumentMoniker": "Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs",
+              "RelativeToolTip": "Authentication\\infrastructure\\authentication.presistence\\Migrations\\20260209160251_initial.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:01:18.041Z",
+              "WhenOpened": "2026-02-09T16:02:52.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "createAuthCommand.cs",
-              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createAuthCommand.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createAuthCommand.cs",
-              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createAuthCommand.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\request\\Commands\\createAuthCommand.cs",
+              "Title": "PositionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\PositionRepository.cs",
+              "RelativeDocumentMoniker": "Authentication\\infrastructure\\authentication.presistence\\Repository\\PositionRepository.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\PositionRepository.cs",
+              "RelativeToolTip": "Authentication\\infrastructure\\authentication.presistence\\Repository\\PositionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T15:59:11.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "persistenceServicesRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\persistenceServicesRegistration.cs",
+              "RelativeDocumentMoniker": "Authentication\\infrastructure\\authentication.presistence\\persistenceServicesRegistration.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\persistenceServicesRegistration.cs",
+              "RelativeToolTip": "Authentication\\infrastructure\\authentication.presistence\\persistenceServicesRegistration.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T15:50:38.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\User.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Domain\\authentication.domain\\User.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\User.cs",
+              "RelativeToolTip": "Authentication\\Core\\Domain\\authentication.domain\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-08T01:01:12.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-09T15:46:06.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\Role.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Domain\\authentication.domain\\Role.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\Role.cs",
+              "RelativeToolTip": "Authentication\\Core\\Domain\\authentication.domain\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T15:45:44.47Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\UserRole.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Domain\\authentication.domain\\UserRole.cs",
+              "ToolTip": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\UserRole.cs",
+              "RelativeToolTip": "Authentication\\Core\\Domain\\authentication.domain\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-09T15:45:28.079Z"
             }
           ]
         }

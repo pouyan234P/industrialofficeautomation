@@ -1,0 +1,13 @@
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\bin\Debug\net8.0\authentication.domain.deps.json
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\bin\Debug\net8.0\authentication.domain.dll
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\bin\Debug\net8.0\authentication.domain.pdb
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.csproj.AssemblyReference.cache
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.AssemblyInfoInputs.cache
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.AssemblyInfo.cs
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.csproj.CoreCompileInputs.cache
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.sourcelink.json
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.dll
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\refint\authentication.domain.dll
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\authentication.domain.pdb
+C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Domain\authentication.domain\obj\Debug\net8.0\ref\authentication.domain.dll

@@ -9,6 +9,7 @@ namespace authentication.domain
 {
     public class User: IdentityUser<int>
     {
+        public virtual ICollection<UserRole> userRoles { get; set; }
         public int personID { get; set; }
         public bool CurrentStatus { get; set; }
         public string Name { get; set; }
