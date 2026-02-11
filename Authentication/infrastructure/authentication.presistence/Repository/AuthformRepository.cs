@@ -94,12 +94,12 @@ namespace authentication.presistence.Repository
             var token = tokenhandler.CreateToken(tokendescription);
             return tokenhandler.WriteToken(token);
         }
-        public async Task<User?> regiseter(User user, string password)
+        public async Task<User?> regiseter(User user, string password,string role)
         {
            
             var users = await _userManger.CreateAsync(user, password);
             var Myuser = _userManger.Users.SingleOrDefault(u => u.Email == user.Email);
-            var result = await _userManger.AddToRoleAsync(Myuser!, "Admin");
+            var result = await _userManger.AddToRoleAsync(Myuser!, role);
             if (user != null || result != null)
             {
                 return Myuser;

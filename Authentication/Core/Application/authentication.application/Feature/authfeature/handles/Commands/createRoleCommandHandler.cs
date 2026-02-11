@@ -22,12 +22,12 @@ namespace authentication.application.Feature.authfeature.handles.Commands
         public async Task<baseCommandResponse> Handle(createRoleCommand request, CancellationToken cancellationToken)
         {
             var response= new baseCommandResponse();
-            var returntype =  _authform.createRole(request.RoleName);
+            var returntype = await _authform.createRole(request.RoleName);
             if (returntype != null)
             {
                 response.Success = true;
                 response.Message = "Creation was Successful";
-                response.id = returntype.Id;
+                
             }
             return response;
         }

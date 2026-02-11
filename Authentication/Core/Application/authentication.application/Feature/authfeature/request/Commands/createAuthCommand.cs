@@ -11,6 +11,6 @@ namespace authentication.application.Feature.authfeature.request.Commands
 {
     public class createAuthCommand:IRequest<baseCommandResponse>
     {
-        public registerDTO registerDTO { get; set; }
+        public registerDTO? registerdto { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using authentication.application.DTO;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace authentication.application.Feature.authfeature.request.Queries
 {
     public class loginRequest:IRequest<string>
     {
-        public string? email { get; set; }
-        public string? password { get; set; }
+        public loginDTO? myslogindto { get; set; }
     }
 }

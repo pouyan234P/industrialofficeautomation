@@ -19,7 +19,7 @@ namespace authentication.application.Feature.authfeature.handles.Queries
         }
         public async Task<string> Handle(loginRequest request, CancellationToken cancellationToken)
         {
-            var login=await _authform.login(request.email!,request.password!);
+            var login=await _authform.login(request.myslogindto!.Email!,request.myslogindto.Password!);
             return login ?? "it not valid";
         }
     }

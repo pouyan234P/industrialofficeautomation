@@ -1,9 +1,11 @@
-﻿using authentication.application.Feature.authfeature.request.Commands;
+﻿using authentication.application.DTO;
+using authentication.application.Feature.authfeature.request.Commands;
 using authentication.application.IRepository;
 using authentication.application.Responses;
 using authentication.domain;
 using AutoMapper;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,14 +30,15 @@ namespace authentication.application.Feature.authfeature.handles.Commands
             var response = new baseCommandResponse();
             var myuser = new User
             {
-                Email = request.registerDTO.Email,
-                family = request.registerDTO.family,
-                Name = request.registerDTO.Name,
-                PhoneNumber = request.registerDTO.phoneNumber,
-                Country = request.registerDTO.Country,
+                Email = request.registerdto.Email,
+                family = request.registerdto.family,
+                Name = request.registerdto.Name,
+                PhoneNumber = request.registerdto.phoneNumber,
+                Country = request.registerdto.Country,
                 Date = DateTime.Now.Date,
+                UserName=request.registerdto.Name+"_"+request.registerdto.family
             };
-            var myusersend = await _authformRepository.regiseter(myuser, request.registerDTO.Password);
+            var myusersend = await _authformRepository.regiseter(myuser, request.registerdto.Password,request.registerdto.Role);
             if (myusersend != null)
             {
                 response.Success = true;
