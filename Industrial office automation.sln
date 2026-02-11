@@ -51,6 +51,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{DFEE23
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrespondenceCore.domain", "automationCorrespondencecoreService\core\Domain\CorrespondenceCore.domain\CorrespondenceCore.domain.csproj", "{135E63B4-1F63-4B66-9E1E-345864F04DC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrespondenceCore.Application", "automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\CorrespondenceCore.Application.csproj", "{90FE1A9A-9AA2-4898-922B-ECF7832A17DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,10 @@ Global
 		{135E63B4-1F63-4B66-9E1E-345864F04DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{135E63B4-1F63-4B66-9E1E-345864F04DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{135E63B4-1F63-4B66-9E1E-345864F04DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FE1A9A-9AA2-4898-922B-ECF7832A17DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FE1A9A-9AA2-4898-922B-ECF7832A17DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FE1A9A-9AA2-4898-922B-ECF7832A17DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FE1A9A-9AA2-4898-922B-ECF7832A17DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{FBD04A35-9CF7-4080-B452-A646412372CA} = {A886C9AF-1CE4-42FD-B74A-9F0F67A4BC44}
 		{DFEE23DC-225A-4746-A344-AC2E2725738A} = {A886C9AF-1CE4-42FD-B74A-9F0F67A4BC44}
 		{135E63B4-1F63-4B66-9E1E-345864F04DC5} = {DFEE23DC-225A-4746-A344-AC2E2725738A}
+		{90FE1A9A-9AA2-4898-922B-ECF7832A17DE} = {FBD04A35-9CF7-4080-B452-A646412372CA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0379478C-BF61-4F9B-B102-133C6743A590}
