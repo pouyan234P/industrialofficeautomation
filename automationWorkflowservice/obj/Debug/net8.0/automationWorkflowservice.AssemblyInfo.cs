@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("automationWorkflowservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b18a98a27ae1e7e69b24985760107a94ffc0fe4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5139d10803bbb805859a4a76ad615bb23807b0e4")]
 [assembly: System.Reflection.AssemblyProductAttribute("automationWorkflowservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("automationWorkflowservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
