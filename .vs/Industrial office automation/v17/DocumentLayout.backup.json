@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{12AF65AA-CC34-4693-8A60-D73A4EE1F40B}|automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\CorrespondenceCore.Presistence.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\infrastructure\\correspondencecore.presistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12AF65AA-CC34-4693-8A60-D73A4EE1F40B}|automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\CorrespondenceCore.Presistence.csproj|solutionrelative:automationcorrespondencecoreservice\\infrastructure\\correspondencecore.presistence\\persistenceservicesregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\attachmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|solutionrelative:automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\attachmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\attachmentfeature\\handles\\queries\\getattachmentdetailrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|solutionrelative:automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\attachmentfeature\\handles\\queries\\getattachmentdetailrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "persistenceServicesRegistration.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\persistenceServicesRegistration.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\persistenceServicesRegistration.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\persistenceServicesRegistration.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\persistenceServicesRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABGAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "getAttachmentDetailRequestHandler.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\AttachmentFeature\\handles\\Queries\\getAttachmentDetailRequestHandler.cs",
+              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\AttachmentFeature\\handles\\Queries\\getAttachmentDetailRequestHandler.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\AttachmentFeature\\handles\\Queries\\getAttachmentDetailRequestHandler.cs",
+              "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\AttachmentFeature\\handles\\Queries\\getAttachmentDetailRequestHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T15:57:09.344Z",
+              "WhenOpened": "2026-02-13T22:27:38.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "attachmentController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\attachmentController.cs",
+              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\attachmentController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\attachmentController.cs",
+              "RelativeToolTip": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\attachmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T22:13:31.807Z",
               "EditorCaption": ""
             }
           ]

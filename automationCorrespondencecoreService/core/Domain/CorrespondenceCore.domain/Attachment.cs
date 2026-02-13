@@ -12,8 +12,11 @@ namespace CorrespondenceCore.domain
     public class Attachment
     {
         public int ID { get; set; }
-        public Letter? LetterID { get; set; }
+
+        // Just rename this to 'Letter' so EF can generate the shadow ID correctly
+        public Letter Letter { get; set; }
+
         public string? FilePath { get; set; }
-        public FileType MyProperty { get; set; }
+        public FileType type{ get; set; }
     }
 }
