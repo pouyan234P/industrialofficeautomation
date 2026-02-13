@@ -6,4 +6,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\CorrespondenceCore.domain\CorrespondenceCore.domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CorrespondenceCore.domain">
+      <HintPath>..\..\Domain\CorrespondenceCore.domain\bin\Debug\net8.0\CorrespondenceCore.domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

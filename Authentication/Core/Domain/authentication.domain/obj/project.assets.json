@@ -1048,11 +1048,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj",
+      "projectUniqueName": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj",
       "projectName": "authentication.domain",
-      "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj",
+      "projectPath": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\authentication.domain.csproj",
       "packagesPath": "C:\\Users\\pouyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\obj\\",
+      "outputPath": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Domain\\authentication.domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

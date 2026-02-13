@@ -10,7 +10,8 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
-          "authentication.domain": "1.0.0"
+          "authentication.domain": "1.0.0",
+          "CorrespondenceCore.domain": "1.0.0.0"
         },
         "runtime": {
           "authentication.application.dll": {}
@@ -292,6 +293,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "CorrespondenceCore.domain/1.0.0.0": {
+        "runtime": {
+          "CorrespondenceCore.domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -485,6 +494,11 @@
     },
     "authentication.domain/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CorrespondenceCore.domain/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

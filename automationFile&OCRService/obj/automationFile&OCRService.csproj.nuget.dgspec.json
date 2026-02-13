@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj": {}
+    "C:\\Project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj": {
+    "C:\\Project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj",
+        "projectUniqueName": "C:\\Project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj",
         "projectName": "automationFile&OCRService",
-        "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj",
+        "projectPath": "C:\\Project\\Industrial office automation\\automationFile&OCRService\\automationFile&OCRService.csproj",
         "packagesPath": "C:\\Users\\pouyan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationFile&OCRService\\obj\\",
+        "outputPath": "C:\\Project\\Industrial office automation\\automationFile&OCRService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

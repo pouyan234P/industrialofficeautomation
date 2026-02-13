@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CorrespondenceCore.domain/1.0.0": {
+        "runtime": {
+          "CorrespondenceCore.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CorrespondenceCore.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

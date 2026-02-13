@@ -1,16 +1,18 @@
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.deps.json
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.dll
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.pdb
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.domain.dll
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.domain.pdb
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.csproj.AssemblyReference.cache
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.AssemblyInfoInputs.cache
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.AssemblyInfo.cs
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.csproj.CoreCompileInputs.cache
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.sourcelink.json
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authenti.AA50348C.Up2Date
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.dll
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\refint\authentication.application.dll
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.pdb
-C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\ref\authentication.application.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.deps.json
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.application.pdb
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.domain.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\CorrespondenceCore.domain.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\authentication.domain.pdb
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\bin\Debug\net8.0\CorrespondenceCore.domain.pdb
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.AssemblyInfo.cs
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.sourcelink.json
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authenti.AA50348C.Up2Date
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\refint\authentication.application.dll
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\authentication.application.pdb
+C:\Project\Industrial office automation\Authentication\Core\Application\authentication.application\obj\Debug\net8.0\ref\authentication.application.dll

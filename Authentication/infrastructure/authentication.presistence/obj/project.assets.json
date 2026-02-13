@@ -5482,11 +5482,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj",
+      "projectUniqueName": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj",
       "projectName": "authentication.presistence",
-      "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj",
+      "projectPath": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj",
       "packagesPath": "C:\\Users\\pouyan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\obj\\",
+      "outputPath": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -5507,8 +5507,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj": {
-              "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj"
+            "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj": {
+              "projectPath": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj"
             }
           }
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj": {}
+    "C:\\Project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj": {
+    "C:\\Project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj",
+        "projectUniqueName": "C:\\Project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj",
         "projectName": "automationSearchservice",
-        "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj",
+        "projectPath": "C:\\Project\\Industrial office automation\\automationSearchservice\\automationSearchservice.csproj",
         "packagesPath": "C:\\Users\\pouyan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationSearchservice\\obj\\",
+        "outputPath": "C:\\Project\\Industrial office automation\\automationSearchservice\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

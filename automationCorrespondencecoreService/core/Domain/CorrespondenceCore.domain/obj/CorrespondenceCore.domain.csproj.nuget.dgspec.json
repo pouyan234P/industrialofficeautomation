@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj": {}
+    "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj": {
+    "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj",
+        "projectUniqueName": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj",
         "projectName": "CorrespondenceCore.domain",
-        "projectPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj",
+        "projectPath": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj",
         "packagesPath": "C:\\Users\\pouyan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\obj\\",
+        "outputPath": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iVmh69W1fwc=",
+  "dgSpecHash": "H+QMv3BqOS8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj",
+  "projectFilePath": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pouyan\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pouyan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

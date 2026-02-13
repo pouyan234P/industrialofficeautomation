@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mA7uy3uXpAc=",
+  "dgSpecHash": "1iFsZQqOnu0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pouyan\\OneDrive\\Documents(1)\\Visual Studio 2022\\project\\Industrial office automation\\automationWorkflowservice\\automationWorkflowservice.csproj",
+  "projectFilePath": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\automationWorkflowservice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",

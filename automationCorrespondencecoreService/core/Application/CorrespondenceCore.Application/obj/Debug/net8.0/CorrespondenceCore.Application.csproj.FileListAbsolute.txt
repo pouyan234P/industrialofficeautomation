@@ -1,0 +1,16 @@
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.sourcelink.json
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\bin\Debug\net8.0\CorrespondenceCore.Application.deps.json
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\bin\Debug\net8.0\CorrespondenceCore.Application.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\bin\Debug\net8.0\CorrespondenceCore.Application.pdb
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\bin\Debug\net8.0\CorrespondenceCore.domain.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\bin\Debug\net8.0\CorrespondenceCore.domain.pdb
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\Correspo.BF183985.Up2Date
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\refint\CorrespondenceCore.Application.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\CorrespondenceCore.Application.pdb
+C:\Project\Industrial office automation\automationCorrespondencecoreService\core\Application\CorrespondenceCore.Application\obj\Debug\net8.0\ref\CorrespondenceCore.Application.dll

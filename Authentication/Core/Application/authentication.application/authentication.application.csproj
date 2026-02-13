@@ -15,4 +15,10 @@
     <ProjectReference Include="..\..\Domain\authentication.domain\authentication.domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="CorrespondenceCore.domain">
+      <HintPath>..\..\..\..\automationCorrespondencecoreService\core\Domain\CorrespondenceCore.domain\bin\Debug\net8.0\CorrespondenceCore.domain.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

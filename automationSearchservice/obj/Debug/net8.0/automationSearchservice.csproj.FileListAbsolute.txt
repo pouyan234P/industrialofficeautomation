@@ -30,3 +30,35 @@ C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial offi
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.pdb
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.genruntimeconfig.cache
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\ref\automationSearchservice.dll
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\appsettings.Development.json
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\appsettings.json
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.staticwebassets.endpoints.json
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.exe
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.deps.json
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.runtimeconfig.json
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.dll
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\automationSearchservice.pdb
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Project\Industrial office automation\automationSearchservice\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.MvcApplicationPartsAssemblyInfo.cs
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.sourcelink.json
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\scopedcss\bundle\automationSearchservice.styles.css
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\staticwebassets.build.json
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\staticwebassets.development.json
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automati.AB335CB8.Up2Date
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.dll
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\refint\automationSearchservice.dll
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.pdb
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\automationSearchservice.genruntimeconfig.cache
+C:\Project\Industrial office automation\automationSearchservice\obj\Debug\net8.0\ref\automationSearchservice.dll

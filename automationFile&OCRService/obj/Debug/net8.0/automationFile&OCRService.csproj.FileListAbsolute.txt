@@ -30,3 +30,35 @@ C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial offi
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.pdb
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.genruntimeconfig.cache
 C:\Users\pouyan\OneDrive\Documents(1)\Visual Studio 2022\project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\ref\automationFile&OCRService.dll
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\appsettings.Development.json
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\appsettings.json
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.staticwebassets.endpoints.json
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.exe
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.deps.json
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.runtimeconfig.json
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.dll
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\automationFile&OCRService.pdb
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Project\Industrial office automation\automationFile&OCRService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.MvcApplicationPartsAssemblyInfo.cs
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.sourcelink.json
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\scopedcss\bundle\automationFile&OCRService.styles.css
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\staticwebassets.development.json
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automati.730A22AB.Up2Date
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.dll
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\refint\automationFile&OCRService.dll
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.pdb
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\automationFile&OCRService.genruntimeconfig.cache
+C:\Project\Industrial office automation\automationFile&OCRService\obj\Debug\net8.0\ref\automationFile&OCRService.dll
