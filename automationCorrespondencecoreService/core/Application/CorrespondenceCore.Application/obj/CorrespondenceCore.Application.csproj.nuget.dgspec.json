@@ -61,6 +61,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[3.6.0, )"
             }
           },
           "imports": [

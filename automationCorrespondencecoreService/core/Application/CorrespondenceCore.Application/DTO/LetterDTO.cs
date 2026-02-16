@@ -18,6 +18,6 @@ namespace CorrespondenceCore.Application.DTO
         public PriorityDTO MyProperty { get; set; }
         public ConfidentialityDTO confidentiality { get; set; }
         public TypeDTO type { get; set; }
-        public string? BodyHTML { get; set; }
+        public object? BodyHTML { get; set; }
     }
 }

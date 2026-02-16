@@ -1,0 +1,418 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "CorrespondenceCore.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/attachment/addAttachment": {
+      "post": {
+        "tags": [
+          "attachment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/setAttachmentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/setAttachmentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/setAttachmentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/attachment/getAttachment/{id}": {
+      "get": {
+        "tags": [
+          "attachment"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/attachment/getAttachments": {
+      "get": {
+        "tags": [
+          "attachment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/attachment/updateAttachment": {
+      "post": {
+        "tags": [
+          "attachment"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachmentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachmentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AttachmentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/addLetter": {
+      "post": {
+        "tags": [
+          "Letter"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/setLetterDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/setLetterDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/setLetterDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/getLetter/{id}": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/getLetters": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Letter/updateLetter": {
+      "post": {
+        "tags": [
+          "Letter"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LetterDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LetterDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LetterDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AttachmentDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "letterID": {
+            "$ref": "#/components/schemas/LetterDTO"
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "myProperty": {
+            "$ref": "#/components/schemas/FileType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfidentialityDTO": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "FileType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "LetterDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "abstract": {
+            "type": "string",
+            "nullable": true
+          },
+          "letterNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "myProperty": {
+            "$ref": "#/components/schemas/PriorityDTO"
+          },
+          "confidentiality": {
+            "$ref": "#/components/schemas/ConfidentialityDTO"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
+          },
+          "bodyHTML": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PriorityDTO": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "TypeDTO": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "setAttachmentDTO": {
+        "type": "object",
+        "properties": {
+          "letterID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "filePath": {
+            "type": "string",
+            "nullable": true
+          },
+          "myProperty": {
+            "$ref": "#/components/schemas/FileType"
+          }
+        },
+        "additionalProperties": false
+      },
+      "setLetterDTO": {
+        "type": "object",
+        "properties": {
+          "subject": {
+            "type": "string",
+            "nullable": true
+          },
+          "abstract": {
+            "type": "string",
+            "nullable": true
+          },
+          "letterNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "myProperty": {
+            "$ref": "#/components/schemas/PriorityDTO"
+          },
+          "confidentiality": {
+            "$ref": "#/components/schemas/ConfidentialityDTO"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
+          },
+          "bodyHTML": {
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

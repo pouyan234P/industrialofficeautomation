@@ -1,9 +1,12 @@
 ﻿using CorrespondenceCore.Application.DTO;
+using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Commands;
+using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Queries;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Command;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 
 namespace CorrespondenceCore.Api.Controllers.api
 {
@@ -21,6 +24,13 @@ namespace CorrespondenceCore.Api.Controllers.api
         [HttpPost("addLetter")]
         public async Task<IActionResult> addLetter([FromBody]setLetterDTO letterDTO)
         {
+            var bsonDocument = BsonDocument.Parse(letterDTO.BodyHTML!.ToString());
+            var commandhtml = new createhtmlbodyCommand
+            {
+                elements = bsonDocument
+            };
+            var result=await _mediator.Send(commandhtml);
+            letterDTO.BodyHTML = result["_id"]!.ToString();
             var command = new createLetterCommand
             {
                 setLetterDTO = letterDTO
@@ -36,6 +46,11 @@ namespace CorrespondenceCore.Api.Controllers.api
             {
                 id = id
             });
+            var result = await _mediator.Send(new gethtmlbodyRequest
+            {
+                id = response.BodyHTML.ToString()
+            });
+            response.BodyHTML = result;
             return Ok(response);
         }
 

@@ -18,6 +18,6 @@ namespace CorrespondenceCore.domain
         public Priority priority { get; set; }
         public Confidentiality confidentiality { get; set; }
         public Types type { get; set; }
-        public string? BodyHTML { get; set; }
+        public string? BodyHTMLID { get; set; }
     }
 }

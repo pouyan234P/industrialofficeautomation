@@ -1,0 +1,139 @@
+[
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.attachmentController",
+    "Method": "addAttachment",
+    "RelativePath": "api/attachment/addAttachment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "attachmentDTO",
+        "Type": "CorrespondenceCore.Application.DTO.setAttachmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.attachmentController",
+    "Method": "getAttachment",
+    "RelativePath": "api/attachment/getAttachment/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.attachmentController",
+    "Method": "getAttachments",
+    "RelativePath": "api/attachment/getAttachments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.attachmentController",
+    "Method": "updateAttachment",
+    "RelativePath": "api/attachment/updateAttachment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dTO",
+        "Type": "CorrespondenceCore.Application.DTO.AttachmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
+    "Method": "addLetter",
+    "RelativePath": "api/Letter/addLetter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letterDTO",
+        "Type": "CorrespondenceCore.Application.DTO.setLetterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
+    "Method": "getLetter",
+    "RelativePath": "api/Letter/getLetter/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
+    "Method": "getLetters",
+    "RelativePath": "api/Letter/getLetters",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
+    "Method": "updateLetter",
+    "RelativePath": "api/Letter/updateLetter",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "myletterDTO",
+        "Type": "CorrespondenceCore.Application.DTO.LetterDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CorrespondenceCore.Api.WeatherForecast, CorrespondenceCore.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

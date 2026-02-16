@@ -26,6 +26,7 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Command
         {
             var response = new baseCommandResponse();
             var map = _mapper.Map<Letter>(request.setLetterDTO);
+            map.CreatedDate=DateTime.Now;
             var result=await _repository.Add(map);
             if(result!=null)
             {

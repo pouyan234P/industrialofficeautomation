@@ -157,3 +157,9 @@ C:\Project\Industrial office automation\automationCorrespondencecoreService\pres
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\CorrespondenceCore.Api.pdb
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\CorrespondenceCore.Api.genruntimeconfig.cache
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\ref\CorrespondenceCore.Api.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\DnsClient.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Driver.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\SharpCompress.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Snappier.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\ZstdSharp.dll

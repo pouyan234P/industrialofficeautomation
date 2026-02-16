@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CorrespondenceCore.Application.IRepository;
+using CorrespondenceCore.Presistence.helper;
 using CorrespondenceCore.Presistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,12 @@ namespace CorrespondenceCore.Presistence
             services.AddScoped(typeof(IGenericRepository<>), typeof(genericRepository<>));
             services.AddScoped<IattachmentRepository, attachmentRepository>();
             services.AddScoped<ILetterRepository, letterRepository>();
+            services.AddSingleton<IhtmlbodyMongoRepository, htmlbodyMongoRepository>();
+            services.Configure<Mongosettings>(x =>
+            {
+                x.Connection = configuration.GetSection("MongoSettings:Connection").Value;
+                x.DatabaseName = configuration.GetSection("MongoSettings:DatabaseName").Value;
+            });
             return services;
         }
     }
