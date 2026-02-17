@@ -398,7 +398,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "myProperty": {
+          "priority": {
             "$ref": "#/components/schemas/PriorityDTO"
           },
           "confidentiality": {

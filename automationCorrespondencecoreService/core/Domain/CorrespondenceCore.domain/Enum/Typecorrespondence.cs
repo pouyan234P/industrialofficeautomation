@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CorrespondenceCore.domain.Enum
 {
-    public enum Types
+    public enum Typecorrespondence
     {
         Domestic = 0,
         imported = 1,

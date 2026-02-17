@@ -17,7 +17,7 @@ namespace CorrespondenceCore.domain
         public DateTime CreatedDate { get; set; }
         public Priority priority { get; set; }
         public Confidentiality confidentiality { get; set; }
-        public Types type { get; set; }
+        public Typecorrespondence type { get; set; }
         public string? BodyHTMLID { get; set; }
     }
 }

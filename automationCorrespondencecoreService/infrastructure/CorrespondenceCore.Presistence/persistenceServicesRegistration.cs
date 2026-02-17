@@ -21,6 +21,7 @@ namespace CorrespondenceCore.Presistence
             services.AddScoped(typeof(IGenericRepository<>), typeof(genericRepository<>));
             services.AddScoped<IattachmentRepository, attachmentRepository>();
             services.AddScoped<ILetterRepository, letterRepository>();
+            services.AddScoped<IGenerateNextNumberAsyncRepository,GenerateNextNumberAsyncRepository>();
             services.AddSingleton<IhtmlbodyMongoRepository, htmlbodyMongoRepository>();
             services.Configure<Mongosettings>(x =>
             {

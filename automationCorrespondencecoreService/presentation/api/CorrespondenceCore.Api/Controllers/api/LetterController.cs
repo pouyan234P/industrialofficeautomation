@@ -50,7 +50,7 @@ namespace CorrespondenceCore.Api.Controllers.api
             {
                 id = response.BodyHTML.ToString()
             });
-            response.BodyHTML = result;
+            response.BodyHTML = result["context"].ToString();
             return Ok(response);
         }
 

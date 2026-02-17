@@ -25,6 +25,7 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Queries
         {
             var result = await _repository.Get(request.id);
             var resultmap=_mapper.Map<LetterDTO>(result);
+            resultmap.BodyHTML=result.BodyHTMLID;
             return resultmap;
         }
     }
