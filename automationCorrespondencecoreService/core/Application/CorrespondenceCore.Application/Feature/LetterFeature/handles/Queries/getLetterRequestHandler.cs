@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Queries
 {
-    public class getLetterRequestHandler : IRequestHandler<getLetterRequest, LetterDTO>
+    public class getLetterRequestHandler : IRequestHandler<getLetterRequest,IEnumerable<LetterDTO>>
     {
         private readonly ILetterRepository _repository;
         private readonly IMapper _mapper;
@@ -21,10 +21,10 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Queries
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<LetterDTO> Handle(getLetterRequest request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<LetterDTO>> Handle(getLetterRequest request, CancellationToken cancellationToken)
         {
             var result = await _repository.GetAll();
-            var resultmap=_mapper.Map<LetterDTO>(result);
+            var resultmap=_mapper.Map<IEnumerable<LetterDTO>>(result);
             return resultmap;
         }
     }

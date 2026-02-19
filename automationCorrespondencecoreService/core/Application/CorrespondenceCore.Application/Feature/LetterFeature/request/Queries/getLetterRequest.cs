@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CorrespondenceCore.Application.Feature.LetterFeature.request.Queries
 {
-    public class getLetterRequest:IRequest<LetterDTO>
+    public class getLetterRequest:IRequest<IEnumerable<LetterDTO>>
     {
     }
 }
