@@ -17,7 +17,6 @@ namespace CorrespondenceCore.Presistence.Repository
     {
         private IMongoDatabase _db { get; set; }
         private MongoClient _mongoClient { get; set; }
-        public IClientSessionHandle Session { get; set; }
         public htmlbodyMongoRepository(IOptions<Mongosettings> configuration)
         {
             _mongoClient = new MongoClient(configuration.Value.Connection);

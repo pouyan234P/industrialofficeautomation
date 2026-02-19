@@ -10,6 +10,6 @@ namespace workflow.Appliction.Feature.referralFeature.request.Queries
 {
     public class getReferralbyPositionRequest:IRequest<IEnumerable<referralDTO>>
     {
-        public int SenderPositionID { get; set; }
+        public required string SenderPositionID { get; set; }
     }
 }

@@ -1,37 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\application\\workflow.appliction\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|solutionrelative:automationworkflowservice\\core\\application\\workflow.appliction\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
-              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
-              "RelativeToolTip": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T00:45:58.695Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

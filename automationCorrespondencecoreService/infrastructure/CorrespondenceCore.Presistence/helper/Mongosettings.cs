@@ -8,7 +8,7 @@ namespace CorrespondenceCore.Presistence.helper
 {
     public class Mongosettings
     {
-        public string Connection { get; set; }
-        public string DatabaseName { get; set; }
+        public required string Connection { get; set; }
+        public required string DatabaseName { get; set; }
     }
 }

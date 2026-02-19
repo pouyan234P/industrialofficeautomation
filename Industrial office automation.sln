@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workflow.domain", "automati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workflow.Appliction", "automationWorkflowservice\core\Application\workflow.Appliction\workflow.Appliction.csproj", "{83BAB2D4-075E-4772-8A3C-7C89C15799C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "workflow.Persistence", "automationWorkflowservice\infrastructure\workflow.Persistence\workflow.Persistence.csproj", "{4DF399A7-448B-4D7A-B696-F78DE14ED99C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{83BAB2D4-075E-4772-8A3C-7C89C15799C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83BAB2D4-075E-4772-8A3C-7C89C15799C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83BAB2D4-075E-4772-8A3C-7C89C15799C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF399A7-448B-4D7A-B696-F78DE14ED99C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF399A7-448B-4D7A-B696-F78DE14ED99C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF399A7-448B-4D7A-B696-F78DE14ED99C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF399A7-448B-4D7A-B696-F78DE14ED99C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{DB274864-E4FF-46FE-9F46-D103374829D0} = {2FE008A7-C33D-4544-97BF-DA0CAC5DAF1D}
 		{31D92EF7-9A34-453E-86BB-376E0A22E77C} = {54FE57E1-F161-46AC-A011-BCF85E652B03}
 		{83BAB2D4-075E-4772-8A3C-7C89C15799C0} = {DB274864-E4FF-46FE-9F46-D103374829D0}
+		{4DF399A7-448B-4D7A-B696-F78DE14ED99C} = {801CBC39-7334-4CD4-865C-88969998EC15}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0379478C-BF61-4F9B-B102-133C6743A590}
