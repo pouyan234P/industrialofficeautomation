@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\lettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|solutionrelative:automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\lettercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12AF65AA-CC34-4693-8A60-D73A4EE1F40B}|automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\CorrespondenceCore.Presistence.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\infrastructure\\correspondencecore.presistence\\repository\\htmlbodymongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12AF65AA-CC34-4693-8A60-D73A4EE1F40B}|automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\CorrespondenceCore.Presistence.csproj|solutionrelative:automationcorrespondencecoreservice\\infrastructure\\correspondencecore.presistence\\repository\\htmlbodymongorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\letterfeature\\handles\\queries\\getletterdetailrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|solutionrelative:automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\letterfeature\\handles\\queries\\getletterdetailrequesthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\letterfeature\\handles\\command\\createlettercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|solutionrelative:automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\feature\\letterfeature\\handles\\command\\createlettercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\dto\\setletterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26F29DEE-69D0-43BA-8154-6CE99109948D}|automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\CorrespondenceCore.Application.csproj|solutionrelative:automationcorrespondencecoreservice\\core\\application\\correspondencecore.application\\dto\\setletterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\application\\workflow.appliction\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|solutionrelative:automationworkflowservice\\core\\application\\workflow.appliction\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "htmlbodyMongoRepository.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\Repository\\htmlbodyMongoRepository.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\Repository\\htmlbodyMongoRepository.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\Repository\\htmlbodyMongoRepository.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\infrastructure\\CorrespondenceCore.Presistence\\Repository\\htmlbodyMongoRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T07:11:34.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "getLetterDetailRequestHandler.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Queries\\getLetterDetailRequestHandler.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Queries\\getLetterDetailRequestHandler.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Queries\\getLetterDetailRequestHandler.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Queries\\getLetterDetailRequestHandler.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAlwB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T07:03:02.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "createLetterCommandHandler.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Command\\createLetterCommandHandler.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Command\\createLetterCommandHandler.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Command\\createLetterCommandHandler.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Command\\createLetterCommandHandler.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T06:56:44.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "setLetterDTO.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\DTO\\setLetterDTO.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\DTO\\setLetterDTO.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\DTO\\setLetterDTO.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\DTO\\setLetterDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T06:33:17.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LetterController.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\LetterController.cs",
-              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\LetterController.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\LetterController.cs",
-              "RelativeToolTip": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\LetterController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADYAAAAIAAAAAAAAAA==",
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
+              "RelativeToolTip": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T03:14:42.512Z",
+              "WhenOpened": "2026-02-19T00:45:58.695Z",
               "EditorCaption": ""
             }
           ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("automationSearchservice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b2ed999088d82ada0789d0c591caeed97596d05")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+872a8350ac7f044c3192b0cc852d89b980e0f84b")]
 [assembly: System.Reflection.AssemblyProductAttribute("automationSearchservice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("automationSearchservice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7ipL8Su8GLM=",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pouyan\\.nuget\\packages\\mongodb.bson\\3.6.0\\mongodb.bson.3.6.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
