@@ -10,6 +10,6 @@ namespace workflow.Appliction.Feature.referralFeature.request.Queries
 {
     public class getReferraldetailRequest:IRequest<referralDTO>
     {
-        public int id { get; set; }
+        public string id { get; set; }
     }
 }
