@@ -1,0 +1,16 @@
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.sourcelink.json
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\bin\Debug\net8.0\workflow.Appliction.deps.json
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\bin\Debug\net8.0\workflow.Appliction.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\bin\Debug\net8.0\workflow.Appliction.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\bin\Debug\net8.0\workflow.domain.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\bin\Debug\net8.0\workflow.domain.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.60379567.Up2Date
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\refint\workflow.Appliction.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\ref\workflow.Appliction.dll

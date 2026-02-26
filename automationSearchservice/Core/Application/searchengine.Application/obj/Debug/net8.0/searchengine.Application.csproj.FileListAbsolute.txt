@@ -1,0 +1,16 @@
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\bin\Debug\net8.0\searchengine.Application.deps.json
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\bin\Debug\net8.0\searchengine.Application.dll
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\bin\Debug\net8.0\searchengine.Application.pdb
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\bin\Debug\net8.0\searchengine.domain.dll
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\bin\Debug\net8.0\searchengine.domain.pdb
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.sourcelink.json
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchen.EDD5EB67.Up2Date
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.dll
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\refint\searchengine.Application.dll
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\searchengine.Application.pdb
+C:\Project\Industrial office automation\automationSearchservice\Core\Application\searchengine.Application\obj\Debug\net8.0\ref\searchengine.Application.dll

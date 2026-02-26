@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Authentication\\presntation\\api\\authentication.api\\authentication.api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\bin\Debug\net8.0\workflow.domain.deps.json
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\bin\Debug\net8.0\workflow.domain.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\bin\Debug\net8.0\workflow.domain.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.AssemblyInfo.cs
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.sourcelink.json
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\refint\workflow.domain.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\workflow.domain.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\core\Domain\workflow.domain\obj\Debug\net8.0\ref\workflow.domain.dll

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace workflow.Appliction.Feature.referralFeature.handles.Command
         {
             var response = new baseCommandResponse();
             var map = _mapper.Map<Referral>(request.setReferral);
-            var result = _repository.Add(map);
+            var result = _repository.Add(map.ToBsonDocument());
             if (result != null)
             {
                 response.Success=true;

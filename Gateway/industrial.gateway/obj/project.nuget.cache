@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7iIx/V59usI=",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Industrial office automation\\Gateway\\industrial.gateway\\industrial.gateway.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.dotnet.ilcompiler\\8.0.16\\microsoft.dotnet.ilcompiler.8.0.16.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.16\\microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\runtime.win-x64.microsoft.dotnet.ilcompiler\\8.0.16\\runtime.win-x64.microsoft.dotnet.ilcompiler.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
