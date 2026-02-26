@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "+V0ZnCg1qKk=",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Industrial office automation\\automationSearchservice\\infrastructure\\searchengine.Persistence\\searchengine.Persistence.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pouyan\\.nuget\\packages\\elastic.clients.elasticsearch\\9.3.0\\elastic.clients.elasticsearch.9.3.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\elastic.transport\\0.10.3\\elastic.transport.0.10.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.3\\microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.options\\10.0.3\\microsoft.extensions.options.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.3\\microsoft.extensions.primitives.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.0\\system.diagnostics.diagnosticsource.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.io.pipelines\\10.0.0\\system.io.pipelines.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.text.encodings.web\\10.0.0\\system.text.encodings.web.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.text.json\\10.0.0\\system.text.json.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

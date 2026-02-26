@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "dgSpecHash": "HYNlGmK97mM=",
+  "success": true,
+  "projectFilePath": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pouyan\\.nuget\\packages\\elastic.clients.elasticsearch\\9.3.0\\elastic.clients.elasticsearch.9.3.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\elastic.transport\\0.10.3\\elastic.transport.0.10.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr\\14.0.0\\mediatr.14.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.3\\microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.0\\microsoft.extensions.logging.abstractions.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.options\\10.0.3\\microsoft.extensions.options.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.3\\microsoft.extensions.primitives.10.0.3.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.0\\system.diagnostics.diagnosticsource.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.io.pipelines\\10.0.0\\system.io.pipelines.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.text.encodings.web\\10.0.0\\system.text.encodings.web.10.0.0.nupkg.sha512",
+    "C:\\Users\\pouyan\\.nuget\\packages\\system.text.json\\10.0.0\\system.text.json.10.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 14.0.0 was resolved.",
+      "projectPath": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

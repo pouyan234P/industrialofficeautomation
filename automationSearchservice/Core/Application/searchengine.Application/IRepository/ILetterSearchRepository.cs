@@ -10,6 +10,6 @@ namespace searchengine.Application.IRepository
     public interface ILetterSearchRepository
     {
         Task<bool> IndexLetterAsync(LetterSearchDocument document);
-        Task<List<LetterSearchDocument>> SearchAsync(string keyword, DateTime? fromDate, DateTime? toDate);
+        Task<IEnumerable<LetterSearchDocument>> SearchAsync(string keyword, DateTime? fromDate, DateTime? toDate);
     }
 }
