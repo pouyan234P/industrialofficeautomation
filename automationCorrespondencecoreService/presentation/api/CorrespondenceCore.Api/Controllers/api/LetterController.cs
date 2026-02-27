@@ -1,4 +1,5 @@
-﻿using CorrespondenceCore.Application.DTO;
+﻿using CorrespondenceCore.Api.DTO;
+using CorrespondenceCore.Application.DTO;
 using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Commands;
 using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Queries;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Command;
@@ -14,6 +15,7 @@ namespace CorrespondenceCore.Api.Controllers.api
     [ApiController]
     public class LetterController : ControllerBase
     {
+        protected ResponseDTO _response;
         private readonly IMediator _mediator;
 
         public LetterController(IMediator mediator)
@@ -24,52 +26,88 @@ namespace CorrespondenceCore.Api.Controllers.api
         [HttpPost("addLetter")]
         public async Task<IActionResult> addLetter([FromBody]setLetterDTO letterDTO)
         {
-            var bsonDocument = BsonDocument.Parse(letterDTO.BodyHTML!.ToString());
-            var commandhtml = new createhtmlbodyCommand
+            try
             {
-                elements = bsonDocument
-            };
-            var result=await _mediator.Send(commandhtml);
-            letterDTO.BodyHTML = result["_id"]!.ToString();
-            var command = new createLetterCommand
+                var bsonDocument = BsonDocument.Parse(letterDTO.BodyHTML!.ToString());
+                var commandhtml = new createhtmlbodyCommand
+                {
+                    elements = bsonDocument
+                };
+                var result = await _mediator.Send(commandhtml);
+                letterDTO.BodyHTML = result["_id"]!.ToString();
+                var command = new createLetterCommand
+                {
+                    setLetterDTO = letterDTO
+                };
+                _response.Result = await _mediator.Send(command);
+            }
+            catch (Exception e)
             {
-                setLetterDTO = letterDTO
-            };
-            var response=await _mediator.Send(command);
-            return Ok(response);
+                _response.IsSuccess = false;
+                _response.ErrorMessages= new List<string>() { e.ToString()};    
+            }
+
+            return Ok(_response);
         }
 
         [HttpGet("getLetter/{id}")]
         public async Task<IActionResult> getLetter(int id)
         {
-            var response = await _mediator.Send(new getLetterDetailRequest
+            try
             {
-                id = id
-            });
-            var result = await _mediator.Send(new gethtmlbodyRequest
+                var response = await _mediator.Send(new getLetterDetailRequest
+                {
+                    id = id
+                });
+                var result = await _mediator.Send(new gethtmlbodyRequest
+                {
+                    id = response.BodyHTML.ToString()
+                });
+                response.BodyHTML = result["context"].ToString();
+                _response.Result = response;
+            }
+            catch (Exception e)
             {
-                id = response.BodyHTML.ToString()
-            });
-            response.BodyHTML = result["context"].ToString();
-            return Ok(response);
+                _response.IsSuccess = false;
+                _response.ErrorMessages=new List<string>() { e.ToString()};
+            }
+            return Ok(_response);
         }
 
         [HttpGet("getLetters")]
         public async Task<IActionResult> getLetters()
         {
-            var response = await _mediator.Send(new getLetterRequest());
-            return Ok(response);
+            try
+            {
+                var response = await _mediator.Send(new getLetterRequest());
+                _response.Result = response;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages=new List<string> { e.ToString()};
+            }
+            return Ok(_response);
         }
 
         [HttpPost("updateLetter")]
         public async Task<IActionResult> updateLetter([FromBody]LetterDTO myletterDTO)
         {
-            var command = new updateLetterCommand
+            try
             {
-                letterDTO = myletterDTO
-            };
-            var response= await _mediator.Send(command);
-            return Ok(response);
+                var command = new updateLetterCommand
+                {
+                    letterDTO = myletterDTO
+                };
+                var response = await _mediator.Send(command);
+                _response.Result = response;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages=new List<string>() { e.ToString()};
+            }
+            return Ok(_response);
         }
 
        /* public async Task<IActionResult> deleteLetter(int id)

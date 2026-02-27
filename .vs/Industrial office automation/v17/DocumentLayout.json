@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1274B197-EBBA-403C-B313-ECAF77E94069}|automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj|c:\\project\\industrial office automation\\automationsearchservice\\presentation\\api\\searchengine.api\\controllers\\api\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1274B197-EBBA-403C-B313-ECAF77E94069}|automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj|solutionrelative:automationsearchservice\\presentation\\api\\searchengine.api\\controllers\\api\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "letterelsiController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
+              "RelativeDocumentMoniker": "automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
+              "RelativeToolTip": "automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-27T16:53:51.914Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
