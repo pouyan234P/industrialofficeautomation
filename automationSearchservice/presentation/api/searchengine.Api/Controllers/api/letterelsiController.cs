@@ -9,11 +9,11 @@ namespace searchengine.Api.Controllers.api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class letterController : ControllerBase
+    public class letterelsiController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public letterController(IMediator mediator)
+        public letterelsiController(IMediator mediator)
         {
             _mediator = mediator;
         }
