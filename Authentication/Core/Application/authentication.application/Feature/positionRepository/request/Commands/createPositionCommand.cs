@@ -11,6 +11,6 @@ namespace authentication.application.Feature.positionRepository.request.Commands
 {
     public class createPositionCommand:IRequest<baseCommandResponse>
     {
-        public getPosition? positionDTO { get; set; }
+        public setPosition? positionDTO { get; set; }
     }
 }

@@ -1,5 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
+using searchengine.Application;
+using searchengine.Persistence;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.ConfigureApplicationService();
+builder.Services.configurePersistenceServices();
 // Add services to the container.
 
 builder.Services.AddControllers();

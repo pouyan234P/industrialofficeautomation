@@ -1,5 +1,4 @@
 ﻿using Elastic.Clients.Elasticsearch;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using searchengine.Application.IRepository;
 using searchengine.Persistence.Repository;
@@ -13,7 +12,7 @@ namespace searchengine.Persistence
 {
     public static class persistenceServicesRegistration
     {
-        public static IServiceCollection configurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection configurePersistenceServices(this IServiceCollection services)
         {
             var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
             .DefaultIndex("letters_index") // نام دیتابیس (ایندکس) پیش‌فرض

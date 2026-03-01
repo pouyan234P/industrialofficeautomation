@@ -1,0 +1,8 @@
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.csproj.AssemblyReference.cache
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.AssemblyInfoInputs.cache
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.AssemblyInfo.cs
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.csproj.CoreCompileInputs.cache
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.MvcApplicationPartsAssemblyInfo.cs
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.sourcelink.json
