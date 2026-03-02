@@ -2,6 +2,7 @@
 {
     public class SD
     {
+        public static string identityApiBase { get; set; }
         public static string gatewayApiBase { get; set; }
         /*public static string ProductApiBase { get; set; }
         public static string ShoppingApiBase { get; set; }

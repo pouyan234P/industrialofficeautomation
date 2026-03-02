@@ -10,12 +10,12 @@ namespace authentication.api.Controllers.api
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class departmlentController : ControllerBase
+    public class departmentController : ControllerBase
     {
         protected ResponseDTO _response;
         private readonly IMediator _mediator;
 
-        public departmlentController(IMediator mediator)
+        public departmentController(IMediator mediator)
         {
             _mediator = mediator;
         }
