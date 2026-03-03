@@ -18,6 +18,7 @@ namespace CorrespondenceCore.Api.Controllers.api
         public attachmentController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("addAttachment")]

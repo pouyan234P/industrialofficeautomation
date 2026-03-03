@@ -18,6 +18,7 @@ namespace authentication.api.Controllers.api
         public departmentController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("addDepartment")]

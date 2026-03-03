@@ -36,7 +36,7 @@ namespace webapi.Services.IdentityService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url= SD.identityApiBase+ "/api/department/getDepartmentbyid"+id
+                Url= SD.identityApiBase+ "/api/department/getDepartmentbyid/"+id
             });
         }
 
@@ -45,7 +45,7 @@ namespace webapi.Services.IdentityService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url=SD.identityApiBase+ "/api/department/getDepartmentbyname"+name
+                Url=SD.identityApiBase+ "/api/department/getDepartmentbyname/"+name
             });
         }
     }

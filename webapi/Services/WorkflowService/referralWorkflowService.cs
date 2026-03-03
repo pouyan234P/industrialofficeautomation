@@ -36,7 +36,7 @@ namespace webapi.Services.WorkflowService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.GET,
-                Url=SD.gatewayApiBase+ "/api/referral/getAllByPositon"+id
+                Url=SD.gatewayApiBase+ "/api/referral/getAllByPositon/"+id
             });
         }
 

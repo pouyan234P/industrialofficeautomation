@@ -18,6 +18,7 @@ namespace workflow.Api.Controllers.api
         public referralController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("createreferral")]

@@ -17,7 +17,7 @@ namespace webapi.Services.IdentityService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.POST,
-                Url=SD.identityApiBase+ "/api/auth/CreateRole"+myroleName
+                Url=SD.identityApiBase+ "/api/auth/CreateRole/"+myroleName
             });
         }
 

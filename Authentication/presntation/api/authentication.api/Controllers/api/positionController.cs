@@ -18,6 +18,7 @@ namespace authentication.api.Controllers.api
         public positionController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("insertPosition")]

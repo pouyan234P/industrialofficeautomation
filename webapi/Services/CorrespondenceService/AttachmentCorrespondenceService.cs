@@ -27,7 +27,7 @@ namespace webapi.Services.CorrespondenceService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url=SD.gatewayApiBase + "/api/attachment/getAttachment"+ id
+                Url=SD.gatewayApiBase + "/api/attachment/getAttachment/"+ id
             });
         }
 

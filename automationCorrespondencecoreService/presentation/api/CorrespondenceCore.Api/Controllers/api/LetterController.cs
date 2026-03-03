@@ -21,6 +21,7 @@ namespace CorrespondenceCore.Api.Controllers.api
         public LetterController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("addLetter")]

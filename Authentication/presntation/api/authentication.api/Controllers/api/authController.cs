@@ -22,6 +22,7 @@ namespace authentication.api.Controllers.api
         public authController(IMediator mediator)
         {
             _mediator = mediator;
+            this._response = new ResponseDTO();
         }
 
         [HttpPost("register")]

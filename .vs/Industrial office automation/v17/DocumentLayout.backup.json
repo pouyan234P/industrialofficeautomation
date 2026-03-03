@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\authentication\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\authentication\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}|Authentication\\presntation\\api\\authentication.api\\authentication.api.csproj|c:\\project\\industrial office automation\\authentication\\presntation\\api\\authentication.api\\controllers\\api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1EDD7AF2-9ACB-44F1-8792-BC49A230B6AD}|Authentication\\presntation\\api\\authentication.api\\authentication.api.csproj|solutionrelative:authentication\\presntation\\api\\authentication.api\\controllers\\api\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createrolecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createauthcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\feature\\authfeature\\handles\\commands\\createauthcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|c:\\project\\industrial office automation\\authentication\\infrastructure\\authentication.presistence\\repository\\authformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|solutionrelative:authentication\\infrastructure\\authentication.presistence\\repository\\authformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "createRoleCommandHandler.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createRoleCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "createAuthCommandHandler.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
+              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\Feature\\authfeature\\handles\\Commands\\createAuthCommandHandler.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T22:17:20.881Z",
+              "WhenOpened": "2026-03-03T18:49:40.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthformRepository.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "RelativeDocumentMoniker": "Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "RelativeToolTip": "Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T18:49:09.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "authController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
+              "RelativeDocumentMoniker": "Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
+              "RelativeToolTip": "Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAFwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T18:47:46.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "authController.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
-              "RelativeDocumentMoniker": "Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
-              "RelativeToolTip": "Authentication\\presntation\\api\\authentication.api\\Controllers\\api\\authController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\authController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\authentication\\authController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\authController.cs",
+              "RelativeToolTip": "webapi\\Controllers\\api\\authentication\\authController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T22:12:10.369Z",
+              "WhenOpened": "2026-03-03T18:47:46.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "webapi\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Services\\BaseService.cs",
+              "RelativeToolTip": "webapi\\Services\\BaseService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwEcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T18:47:46.872Z",
               "EditorCaption": ""
             }
           ]

@@ -17,7 +17,7 @@ namespace webapi.Services.IdentityService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url=SD.identityApiBase+ "/api/position/getPosition"+id
+                Url=SD.identityApiBase+ "/api/position/getPosition/"+id
             });
         }
 
