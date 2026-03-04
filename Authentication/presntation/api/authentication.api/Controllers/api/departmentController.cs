@@ -3,11 +3,13 @@ using authentication.application.DTO;
 using authentication.application.Feature.departmentFeature.request.Commands;
 using authentication.application.Feature.departmentFeature.request.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace authentication.api.Controllers.api
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class departmentController : ControllerBase

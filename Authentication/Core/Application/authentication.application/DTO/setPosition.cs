@@ -10,7 +10,8 @@ namespace authentication.application.DTO
     public class setPosition
     {
         public string Title { get; set; }
-        public Department depID { get; set; }
-        public User userID { get; set; }
+        // 1. The Foreign Keys (The actual integers saved in the Position table)
+        public int departmentId { get; set; }
+        public int userId { get; set; }
     }
 }

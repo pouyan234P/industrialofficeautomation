@@ -10,7 +10,8 @@ namespace webapi.Model.Authentication
     public class setPosition
     {
         public string Title { get; set; }
-        public DepartmentDTO depID { get; set; }
-        public int userID { get; set; }
+        // 1. The Foreign Keys (The actual integers saved in the Position table)
+        public int departmentId { get; set; }
+        public int userId { get; set; }
     }
 }

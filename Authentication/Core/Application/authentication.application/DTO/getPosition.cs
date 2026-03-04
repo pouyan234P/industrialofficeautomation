@@ -10,8 +10,8 @@ namespace authentication.application.DTO
     public class getPosition
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public Department depID { get; set; }
-        public User userID { get; set; }
+        public string? Title { get; set; }
+        public Department? depID { get; set; }
+        public getuserDTO? userID { get; set; }
     }
 }

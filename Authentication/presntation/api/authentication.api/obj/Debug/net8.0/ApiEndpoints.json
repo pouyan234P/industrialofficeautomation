@@ -130,7 +130,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "setPosition",
+        "Name": "myPosition",
         "Type": "authentication.application.DTO.setPosition",
         "IsRequired": true
       }

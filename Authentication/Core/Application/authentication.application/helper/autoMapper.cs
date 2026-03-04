@@ -13,8 +13,8 @@ namespace authentication.application.helper
     {
         public autoMapper() 
         {
-            CreateMap<Department, DepartmentDTO>();
-            CreateMap<Position, getPosition>();
+            CreateMap<Department, DepartmentDTO>().ReverseMap();
+            CreateMap<Position, getPosition>().ForMember(dest=>dest.depID,mapper=>mapper.MapFrom(c=>c.Department)).ForPath(dest=>dest.userID.username,mapper=>mapper.MapFrom(c=>c.User.UserName));
         }
     }
 }

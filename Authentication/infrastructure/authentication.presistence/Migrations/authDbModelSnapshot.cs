@@ -142,17 +142,17 @@ namespace authentication.presistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("depIDId")
+                    b.Property<int>("departmentId")
                         .HasColumnType("int");
 
-                    b.Property<int>("userIDId")
+                    b.Property<int>("userId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("depIDId");
+                    b.HasIndex("departmentId");
 
-                    b.HasIndex("userIDId");
+                    b.HasIndex("userId");
 
                     b.ToTable("positions");
                 });
@@ -334,21 +334,21 @@ namespace authentication.presistence.Migrations
 
             modelBuilder.Entity("authentication.domain.Position", b =>
                 {
-                    b.HasOne("authentication.domain.Department", "depID")
+                    b.HasOne("authentication.domain.Department", "Department")
                         .WithMany()
-                        .HasForeignKey("depIDId")
+                        .HasForeignKey("departmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("authentication.domain.User", "userID")
+                    b.HasOne("authentication.domain.User", "User")
                         .WithMany()
-                        .HasForeignKey("userIDId")
+                        .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("depID");
+                    b.Navigation("Department");
 
-                    b.Navigation("userID");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("authentication.domain.UserRole", b =>

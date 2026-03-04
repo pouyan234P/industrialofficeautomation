@@ -30,7 +30,7 @@ namespace authentication.presistence.Repository
 
         public async Task<Position> getPosition(int positionId)
         {
-            var pos=await _db.positions.Where(x=>x.Id==positionId).Select(x=>x).FirstOrDefaultAsync();
+            var pos=await _db.positions.Where(x=>x.Id==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();
             return pos!;
         }
 
@@ -48,10 +48,10 @@ namespace authentication.presistence.Repository
 
         public async Task<Position> updatePosition(int id,Position position)
         {
-            var pos = await _db.positions.Where(x => x.Id == id).Select(x => x).FirstOrDefaultAsync();
+            var pos = await _db.positions.Where(x => x.Id == id).Select(x => x).Include(x=>x.User).Include(x=>x.Department).FirstOrDefaultAsync();
             pos.Title= position.Title;
-            pos.depID= position.depID;
-            pos.userID= position.userID;
+            pos.Department= position.Department;
+            pos.User= position.User;
             _db.SaveChanges();
             return pos;
         }

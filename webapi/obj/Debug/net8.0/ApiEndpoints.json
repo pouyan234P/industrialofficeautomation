@@ -48,6 +48,96 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.Controllers.api.authentication.departmentController",
+    "Method": "addDepartment",
+    "RelativePath": "api/department/addDepartment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dTO",
+        "Type": "webapi.Model.Authentication.DepartmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.departmentController",
+    "Method": "getDepartment",
+    "RelativePath": "api/department/getDepartment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.departmentController",
+    "Method": "getDepartmentbyid",
+    "RelativePath": "api/department/getDepartmentbyid/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.departmentController",
+    "Method": "getDepartmentbyname",
+    "RelativePath": "api/department/getDepartmentbyname/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.positionController",
+    "Method": "getPosition",
+    "RelativePath": "api/position/getPosition/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.positionController",
+    "Method": "insertPosition",
+    "RelativePath": "api/position/insertPosition",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setPosition",
+        "Type": "webapi.Model.Authentication.setPosition",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "webapi.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

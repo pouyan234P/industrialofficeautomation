@@ -12,6 +12,6 @@ namespace webapi.Model.Authentication
         public int Id { get; set; }
         public string Title { get; set; }
         public DepartmentDTO depID { get; set; }
-        public int userID { get; set; }
+        public getuserDTO userID { get; set; }
     }
 }

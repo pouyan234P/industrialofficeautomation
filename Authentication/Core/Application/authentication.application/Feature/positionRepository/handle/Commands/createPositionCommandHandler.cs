@@ -24,9 +24,9 @@ namespace authentication.application.Feature.positionRepository.handle.Commands
             var response=new baseCommandResponse();
             var myposition = new Position
             {
-                depID = request.positionDTO.depID,
+                departmentId = request.positionDTO.departmentId,
                 Title = request.positionDTO.Title,
-                userID = request.positionDTO.userID
+                userId = request.positionDTO.userId
             };
             var result = await _repository.insertPosition(myposition);
             if (result == true)
@@ -37,9 +37,7 @@ namespace authentication.application.Feature.positionRepository.handle.Commands
             else {
                 string message = "something went wrong";
                 response.Success = false;
-                response.Errors = new List<string>();
-                response.Errors.Add(message);
-
+                response.Errors = new List<string>() { message};
             }
             return response;
         }

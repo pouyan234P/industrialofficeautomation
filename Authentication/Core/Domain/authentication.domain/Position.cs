@@ -10,7 +10,12 @@ namespace authentication.domain
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public Department depID { get; set; }
-        public User userID { get; set; }
+        // 1. The Foreign Keys (The actual integers saved in the Position table)
+        public int departmentId { get; set; }
+        public int userId { get; set; }
+
+        // 2. The Navigation Properties (The objects EF Core uses to join tables)
+        public Department Department { get; set; }
+        public User User { get; set; }
     }
 }
