@@ -9,6 +9,14 @@
       {
         "Path": "webapi\\webapi.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Gateway\\industrialGateway\\industrialGateway.csproj",
+        "Action": "Start"
       }
     ]
   }

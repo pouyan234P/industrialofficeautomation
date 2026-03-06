@@ -10,6 +10,7 @@ C:\Project\Industrial office automation\automationCorrespondencecoreService\pres
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Azure.Core.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Azure.Identity.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\DnsClient.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Humanizer.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MediatR.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MediatR.Contracts.dll
@@ -48,7 +49,11 @@ C:\Project\Industrial office automation\automationCorrespondencecoreService\pres
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Bson.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Driver.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\SharpCompress.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Snappier.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -67,6 +72,7 @@ C:\Project\Industrial office automation\automationCorrespondencecoreService\pres
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\System.Security.Permissions.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\ZstdSharp.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -157,9 +163,3 @@ C:\Project\Industrial office automation\automationCorrespondencecoreService\pres
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\CorrespondenceCore.Api.pdb
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\CorrespondenceCore.Api.genruntimeconfig.cache
 C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\obj\Debug\net8.0\ref\CorrespondenceCore.Api.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\DnsClient.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Bson.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\MongoDB.Driver.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\SharpCompress.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\Snappier.dll
-C:\Project\Industrial office automation\automationCorrespondencecoreService\presentation\api\CorrespondenceCore.Api\bin\Debug\net8.0\ZstdSharp.dll

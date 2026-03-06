@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using searchengine.Api.DTO;
@@ -8,6 +9,7 @@ using searchengine.domain;
 
 namespace searchengine.Api.Controllers.api
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class letterelsiController : ControllerBase
@@ -35,13 +37,13 @@ namespace searchengine.Api.Controllers.api
         }
 
         [HttpGet("search")]
-        public async Task<IActionResult> search([FromBody] string keyword, [FromBody] DateTime? fromDate, [FromBody] DateTime? toDate)
+        public async Task<IActionResult> search([FromBody] SearchRequestDto dto)
         {
             var result = await _mediator.Send(new SearchRequest
             {
-                keyword = keyword,
-                fromDate = fromDate,
-                toDate = toDate
+                keyword = dto.keyword,
+                fromDate = dto.fromDate,
+                toDate = dto.toDate
             });
             return Ok(result);
         }

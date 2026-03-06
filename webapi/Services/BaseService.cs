@@ -29,7 +29,7 @@ namespace webapi.Services
                 message.Content = stringContent;
                 if (!string.IsNullOrEmpty(apiRequest.AccessToken))
                 {
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer ", apiRequest.AccessToken);
                 }
                 HttpResponseMessage apiresponse = null;
                 switch (apiRequest.ApiType)

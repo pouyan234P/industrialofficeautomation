@@ -1,4 +1,5 @@
-﻿using webapi.Model;
+﻿using Microsoft.AspNetCore.Mvc;
+using webapi.Model;
 using webapi.Model.CorrespondenceModel;
 using webapi.Services.IServices.ICorrespondenceService;
 
@@ -27,7 +28,7 @@ namespace webapi.Services.CorrespondenceService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url=SD.gatewayApiBase + "/api/Letter/getLetter/"+id
+                Url=SD.gatewayApiBase +"/api/Letter/getLetter/"+id
             });
         }
 
@@ -36,7 +37,7 @@ namespace webapi.Services.CorrespondenceService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.GET,
-                Url=SD.gatewayApiBase + "/api/Letter/getLetters"
+                Url=SD.gatewayApiBase +"/api/Letter/getLetters"
             });
         }
 
@@ -46,8 +47,19 @@ namespace webapi.Services.CorrespondenceService
             {
                 ApiType=SD.ApiType.POST,
                 Data=letterDTO,
-                Url=SD.gatewayApiBase + "/api/Letter/updateLetter"
+                Url=SD.gatewayApiBase +"/api/Letter/updateLetter"
             });
         }
+
+        public async Task<T> Ping<T>()
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.GET,
+                Url = SD.gatewayApiBase +"/api/Letter/Ping"
+            });
+        }
+
+        
     }
 }

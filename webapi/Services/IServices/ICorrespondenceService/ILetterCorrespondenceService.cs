@@ -8,5 +8,6 @@ namespace webapi.Services.IServices.ICorrespondenceService
         Task<T> getLetter<T>(int id);
         Task<T> getLetters<T>();
         Task<T> updateLetter<T>(LetterDTO letterDTO);
+        Task<T> Ping<T>();
     }
 }

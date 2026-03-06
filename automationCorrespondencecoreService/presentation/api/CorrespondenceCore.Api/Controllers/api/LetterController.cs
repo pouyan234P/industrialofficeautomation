@@ -5,12 +5,14 @@ using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Queries;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Command;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MongoDB.Bson;
 
 namespace CorrespondenceCore.Api.Controllers.api
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class LetterController : ControllerBase
@@ -111,9 +113,16 @@ namespace CorrespondenceCore.Api.Controllers.api
             return Ok(_response);
         }
 
-       /* public async Task<IActionResult> deleteLetter(int id)
+        [HttpGet("ping")]
+        public IActionResult Ping()
         {
+            _response.Result = "Pong from Letter Service!";
+            return Ok(_response);
+        }
 
-        }*/
+        /* public async Task<IActionResult> deleteLetter(int id)
+         {
+
+         }*/
     }
 }

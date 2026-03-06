@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("automationFile&OCRService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb49092a25f24c54f224c62bd150ce4faabca198")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7866f3d663af50dda7420f3b0d18442a3b023d")]
 [assembly: System.Reflection.AssemblyProductAttribute("automationFile&OCRService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("automationFile&OCRService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

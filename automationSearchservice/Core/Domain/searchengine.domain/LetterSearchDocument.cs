@@ -16,7 +16,7 @@ namespace searchengine.domain
         public string OcrContent { get; set; }     // متن استخراج شده از عکس‌ها/PDF پیوست
 
         // متادیتا برای فیلتر کردن سریع
-        public DateTime CreatedDate { get; set; }
+        public DateTime? CreatedDate { get; set; }
         public int SenderDepartmentId { get; set; }
         public string LetterType { get; set; }     // Internal, Incoming, Outgoing
     }

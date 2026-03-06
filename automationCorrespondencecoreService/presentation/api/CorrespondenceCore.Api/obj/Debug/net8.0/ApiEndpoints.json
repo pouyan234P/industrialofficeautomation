@@ -101,6 +101,16 @@
   },
   {
     "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
+    "Method": "Ping",
+    "RelativePath": "api/Letter/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
     "Method": "updateLetter",
     "RelativePath": "api/Letter/updateLetter",
     "HttpMethod": "POST",

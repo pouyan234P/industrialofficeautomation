@@ -13,13 +13,8 @@ C:\Project\Industrial office automation\automationSearchservice\presentation\api
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
-C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Project\Industrial office automation\automationSearchservice\presentation\api\searchengine.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll

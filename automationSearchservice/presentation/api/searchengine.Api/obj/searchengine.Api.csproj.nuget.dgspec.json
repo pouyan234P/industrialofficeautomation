@@ -282,7 +282,7 @@
           "dependencies": {
             "MediatR": {
               "target": "Package",
-              "version": "[14.0.0, )"
+              "version": "[11.0.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

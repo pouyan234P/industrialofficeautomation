@@ -199,6 +199,18 @@
         }
       }
     },
+    "/api/Letter/ping": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
