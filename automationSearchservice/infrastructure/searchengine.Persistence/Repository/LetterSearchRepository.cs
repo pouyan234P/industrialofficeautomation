@@ -22,12 +22,32 @@ namespace searchengine.Persistence.Repository
         }
         public async Task<bool> IndexLetterAsync(LetterSearchDocument document)
         {
-            // استفاده از LetterId به عنوان ID داکیومنت در الاستیک
-            // این کار باعث می‌شود اگر نامه ویرایش شد، رکورد قبلی در الاستیک آپدیت شود نه اینکه تکراری بسازد
             var response = await _client.IndexAsync(document, idx => idx
-                .Index("letters_index")
-                .Id(document.LetterId.ToString())
-            );
+        .Index("letters_index")
+        .Id(document.LetterId.ToString())
+    );
+
+            if (!response.IsValidResponse)
+            {
+                // Put a breakpoint here or log these details:
+
+                // 1. Gives you the raw HTTP request/response and exact error
+                var debugInfo = response.DebugInformation;
+
+                // 2. Gives you the specific error from the Elasticsearch server
+                var serverError = response.ElasticsearchServerError; // Note: Use response.ServerError if using v7 NEST
+
+                // 3. Catches underlying network/connection exceptions
+                // Fix for CS7036: Provide the required 'out' parameter for TryGetOriginalException
+                if (response.TryGetOriginalException(out var exception))
+                {
+                    // Log or handle the exception as needed
+                    Console.WriteLine($"Debug Info: {exception.Message}");
+                };
+
+                // Example logging:
+                Console.WriteLine($"Debug Info: {debugInfo}");
+            }
 
             return response.IsValidResponse;
         }

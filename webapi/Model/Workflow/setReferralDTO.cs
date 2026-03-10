@@ -15,7 +15,7 @@ namespace webapi.Model.Workflow
 
         // کپی شده برای سرعت (Denormalized)
         public string LetterSubject { get; set; }
-        public string LetterNo { get; set; }
+        public string? LetterNo { get; set; }
         public priorityDTO Priority { get; set; }    // آنی، فوری، عادی
 
         // --- ارتباط با فرستنده (از SQL - Position) ---

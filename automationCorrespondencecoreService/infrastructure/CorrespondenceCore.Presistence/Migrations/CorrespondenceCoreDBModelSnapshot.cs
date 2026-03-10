@@ -107,8 +107,8 @@ namespace CorrespondenceCore.Presistence.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("LetterNo")
-                        .HasColumnType("int");
+                    b.Property<string>("LetterNo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("SentDate")
                         .HasColumnType("datetime2");

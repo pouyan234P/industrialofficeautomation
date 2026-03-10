@@ -158,6 +158,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.Controllers.api.search.letterelsiController",
+    "Method": "addorupdate",
+    "RelativePath": "api/letterelsi/addorupdate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "letterDocument",
+        "Type": "webapi.Model.Searchengine.LetterSearchDocument",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "webapi.Controllers.api.authentication.positionController",
     "Method": "getPosition",
     "RelativePath": "api/position/getPosition/{id}",
@@ -184,6 +200,32 @@
       {
         "Name": "setPosition",
         "Type": "webapi.Model.Authentication.setPosition",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.workflow.referralController",
+    "Method": "createreferral",
+    "RelativePath": "api/referral/createreferral/{type}/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "webapi.Model.Workflow.setReferralDTO",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

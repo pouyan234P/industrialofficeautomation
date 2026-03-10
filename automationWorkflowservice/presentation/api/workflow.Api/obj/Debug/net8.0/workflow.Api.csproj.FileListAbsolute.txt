@@ -54,3 +54,8 @@ C:\Project\Industrial office automation\automationWorkflowservice\presentation\a
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\obj\Debug\net8.0\workflow.Api.genruntimeconfig.cache
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\obj\Debug\net8.0\ref\workflow.Api.dll
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\obj\Debug\net8.0\workflow.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\RabbitMQ.Client.dll

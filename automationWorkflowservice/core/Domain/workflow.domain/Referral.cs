@@ -13,7 +13,7 @@ namespace workflow.domain
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string ReferralID { get; set; }
+        public string id { get; set; }
 
         // --- ارتباط با نامه (از SQL) ---
         public int LetterID { get; set; }

@@ -14,7 +14,7 @@ namespace searchengine.Persistence
     {
         public static IServiceCollection configurePersistenceServices(this IServiceCollection services)
         {
-            var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
+            var settings = new ElasticsearchClientSettings(new Uri("http://192.168.1.173:9200"))
             .DefaultIndex("letters_index") // نام دیتابیس (ایندکس) پیش‌فرض
                                     // در محیط Production باید یوزر و پسورد تنظیم کنید:
                                     // .Authentication(new BasicAuthentication("elastic", "your_password"))

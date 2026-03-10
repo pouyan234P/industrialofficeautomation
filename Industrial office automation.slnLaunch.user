@@ -17,6 +17,14 @@
       {
         "Path": "Gateway\\industrialGateway\\industrialGateway.csproj",
         "Action": "Start"
+      },
+      {
+        "Path": "automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj",
+        "Action": "Start"
       }
     ]
   }

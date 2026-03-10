@@ -1,9 +1,13 @@
+using MediatR;
+using searchengine.Api.RabbitMQ;
 using searchengine.Application;
+using searchengine.Application.Feature.leatterFeature.request.Command;
 using searchengine.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureApplicationService();
 builder.Services.configurePersistenceServices();
+builder.Services.AddHostedService<RabbitMQsearchConsumer>();
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -12,6 +16,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

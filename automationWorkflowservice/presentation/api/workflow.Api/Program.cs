@@ -1,10 +1,11 @@
 using workflow.Persistence;
 using workflow.Appliction;
+using workflow.Api.RabbitMQ;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureApplicationService();
 builder.Services.configurePersistenceServices(builder.Configuration);
 // Add services to the container.
-
+builder.Services.AddHostedService<RabbitMQreferralConsumer>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

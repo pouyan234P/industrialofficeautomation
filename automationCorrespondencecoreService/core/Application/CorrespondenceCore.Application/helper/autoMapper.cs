@@ -14,7 +14,7 @@ namespace CorrespondenceCore.Application.helper
         public autoMapper()
         {
             CreateMap<Attachment,AttachmentDTO>();
-            CreateMap<Letter,LetterDTO>();
+            CreateMap<Letter,LetterDTO>().ReverseMap();
             CreateMap<setAttachmentDTO,Attachment>();
             CreateMap<setLetterDTO, Letter>();
         }

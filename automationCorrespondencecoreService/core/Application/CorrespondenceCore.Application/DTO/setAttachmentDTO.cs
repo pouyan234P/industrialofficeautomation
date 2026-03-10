@@ -9,7 +9,7 @@ namespace CorrespondenceCore.Application.DTO
 {
     public class setAttachmentDTO
     {
-        public int LetterID { get; set; }
+        public LetterDTO LetterID { get; set; }
         public string? FilePath { get; set; }
         public FileType MyProperty { get; set; }
     }

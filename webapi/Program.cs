@@ -22,6 +22,10 @@ builder.Services.AddScoped<IreferralWorkflowService, referralWorkflowService>();
 builder.Services.AddScoped<IauthIdentityService, authIdentityService>();
 builder.Services.AddScoped<IdepartmentIdentityService,departmentIdentityService>();
 builder.Services.AddScoped<IpositionIdentityService, positionIdentityService>();
+builder.Services.AddScoped<IgenerateNextNumbeService,generateNextNumbeService>();
+builder.Services.AddScoped<IRabbitMQreferralMessageSender,RabbitMqreferralMessageSender>();
+builder.Services.AddScoped<IRabbitMQsearchMessageSender,RabbitMQsearchMessageSender>();
+
 SD.gatewayApiBase = builder.Configuration["ServiceUrls:gatewayApi"]!;
 SD.identityApiBase = builder.Configuration["ServiceUrls:IdentityApi"]!;
 builder.Services.AddScoped<IRabbitMQsearchMessageSender, RabbitMQsearchMessageSender>();

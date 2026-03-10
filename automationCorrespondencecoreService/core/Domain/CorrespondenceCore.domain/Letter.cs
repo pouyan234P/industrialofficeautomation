@@ -12,7 +12,7 @@ namespace CorrespondenceCore.domain
         public int ID { get; set; }
         public string? Subject { get; set; }
         public string? Abstract { get; set; }
-        public int LetterNo { get; set; }
+        public string? LetterNo { get; set; }
         public DateTime SentDate { get; set; }
         public DateTime CreatedDate { get; set; }
         public Priority priority { get; set; }

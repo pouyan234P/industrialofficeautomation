@@ -282,11 +282,19 @@
           "dependencies": {
             "MediatR": {
               "target": "Package",
-              "version": "[11.0.0, )"
+              "version": "[11.1.0, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.23, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[7.2.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

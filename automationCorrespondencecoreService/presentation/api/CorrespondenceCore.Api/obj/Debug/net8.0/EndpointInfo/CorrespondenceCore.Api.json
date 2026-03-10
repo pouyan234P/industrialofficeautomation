@@ -102,6 +102,37 @@
         }
       }
     },
+    "/api/generateNextNumber/getnextnumber": {
+      "get": {
+        "tags": [
+          "generateNextNumber"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/getNextNumberDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/getNextNumberDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/getNextNumberDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Letter/addLetter": {
       "post": {
         "tags": [
@@ -307,8 +338,8 @@
             "nullable": true
           },
           "letterNo": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "sentDate": {
             "type": "string",
@@ -328,6 +359,7 @@
             "$ref": "#/components/schemas/TypeDTO"
           },
           "bodyHTML": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -374,12 +406,29 @@
         },
         "additionalProperties": false
       },
+      "getNextNumberDTO": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deptID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "setAttachmentDTO": {
         "type": "object",
         "properties": {
           "letterID": {
-            "type": "integer",
-            "format": "int32"
+            "$ref": "#/components/schemas/LetterDTO"
           },
           "filePath": {
             "type": "string",
@@ -403,8 +452,8 @@
             "nullable": true
           },
           "letterNo": {
-            "type": "integer",
-            "format": "int32"
+            "type": "string",
+            "nullable": true
           },
           "sentDate": {
             "type": "string",

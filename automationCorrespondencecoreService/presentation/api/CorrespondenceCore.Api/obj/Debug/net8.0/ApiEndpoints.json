@@ -58,6 +58,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.generateNextNumberController",
+    "Method": "getnextnumber",
+    "RelativePath": "api/generateNextNumber/getnextnumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "CorrespondenceCore.Api.DTO.getNextNumberDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CorrespondenceCore.Api.Controllers.api.LetterController",
     "Method": "addLetter",
     "RelativePath": "api/Letter/addLetter",

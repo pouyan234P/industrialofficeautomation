@@ -143,6 +143,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "creatorPositionId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "letterType": {
             "type": "string",
             "nullable": true

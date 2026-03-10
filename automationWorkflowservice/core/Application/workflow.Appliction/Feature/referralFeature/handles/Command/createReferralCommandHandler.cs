@@ -27,6 +27,7 @@ namespace workflow.Appliction.Feature.referralFeature.handles.Command
         {
             var response = new baseCommandResponse();
             var map = _mapper.Map<Referral>(request.setReferral);
+            map.id = ObjectId.GenerateNewId().ToString();
             var result = _repository.Add(map.ToBsonDocument());
             if (result != null)
             {
