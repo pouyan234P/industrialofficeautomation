@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/letterelsi/search": {
+    "/api/letterelsi/addorupdate": {
       "post": {
         "tags": [
           "letterelsi"
@@ -34,8 +34,10 @@
             "description": "OK"
           }
         }
-      },
-      "get": {
+      }
+    },
+    "/api/letterelsi/search": {
+      "post": {
         "tags": [
           "letterelsi"
         ],
@@ -163,11 +165,13 @@
           },
           "fromDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           },
           "toDate": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false

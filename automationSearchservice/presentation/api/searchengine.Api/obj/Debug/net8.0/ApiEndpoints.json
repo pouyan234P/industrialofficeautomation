@@ -2,7 +2,7 @@
   {
     "ContainingType": "searchengine.Api.Controllers.api.letterelsiController",
     "Method": "addorupdate",
-    "RelativePath": "api/letterelsi/search",
+    "RelativePath": "api/letterelsi/addorupdate",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -19,7 +19,7 @@
     "ContainingType": "searchengine.Api.Controllers.api.letterelsiController",
     "Method": "search",
     "RelativePath": "api/letterelsi/search",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

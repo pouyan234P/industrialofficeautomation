@@ -13,8 +13,7 @@ namespace CorrespondenceCore.domain
     {
         public int ID { get; set; }
 
-        // Just rename this to 'Letter' so EF can generate the shadow ID correctly
-        public Letter Letter { get; set; }
+        // Just rename this to 'Letter' so EF can generate the shadow ID correctl
 
         public string? FilePath { get; set; }
         public FileType type{ get; set; }

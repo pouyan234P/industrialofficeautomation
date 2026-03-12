@@ -8,6 +8,7 @@ using webapi.Model.CorrespondenceModel;
 using webapi.Model.CorrespondenceModel.Enum;
 using webapi.Model.Searchengine;
 using webapi.Model.Workflow;
+using webapi.Model.Workflow.Enum;
 using webapi.RabbmitmqSender;
 using webapi.Services.IServices.ICorrespondenceService;
 
@@ -39,6 +40,7 @@ namespace webapi.Controllers.api.workflow
             var letter = await _letterservice.getLetter<ResponseDTO>(dto.LetterID);
             string jsonString = JsonConvert.SerializeObject(letter.Result);
             LetterDTO mydto = JsonConvert.DeserializeObject<LetterDTO>(jsonString)!;
+            
             if (mydto.LetterNo == null)
             {
                 var mygetdto = new getNextNumberDTO
@@ -53,6 +55,7 @@ namespace webapi.Controllers.api.workflow
                 dto.LetterNo =mynumber;
                 mydto.LetterNo = mynumber;
                 await _letterservice.updateLetter<ResponseDTO>(mydto);
+
             }
             else
                 dto.LetterNo=mydto.LetterNo;
@@ -68,6 +71,10 @@ namespace webapi.Controllers.api.workflow
                 CreatorPositionId=dto.SenderPositionID,
                 SenderDepartmentId=id
             };
+            dto.LetterNo = mydto.LetterNo;
+            dto.LetterSubject = mydto.Subject;
+            dto.Timestamp=DateTime.Now;
+            dto.Priority=Enum.Parse<priorityDTO>(mydto.priority.ToString());
             _messageSender.SendMessage(dto, _configuration.GetValue<string>("TopicAndQueueNames:myreferral"));
             _rabbitMQsearch.SendMessage(mysels, _configuration.GetValue<string>("TopicAndQueueNames:myels"));
             return Ok();

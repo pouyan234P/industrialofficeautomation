@@ -14,9 +14,9 @@ namespace webapi.Model.Workflow
         public int LetterID { get; set; }
 
         // کپی شده برای سرعت (Denormalized)
-        public string LetterSubject { get; set; }
+        public string? LetterSubject { get; set; }
         public string? LetterNo { get; set; }
-        public priorityDTO Priority { get; set; }    // آنی، فوری، عادی
+        public priorityDTO? Priority { get; set; }    // آنی، فوری، عادی
 
         // --- ارتباط با فرستنده (از SQL - Position) ---
         public int SenderPositionID { get; set; }
@@ -35,10 +35,12 @@ namespace webapi.Model.Workflow
         [BsonRepresentation(BsonType.String)]
         public referralStatusDTO Status { get; set; } // خوانده نشده (Unread)، مشاهده شد (Viewed)، بایگانی (Archived)
 
+
+        //این فیلد، دستور، یادداشت یا توضیحاتی است که "فرستنده ارجاع" برای "گیرنده ارجاع" می‌نویسد تا به او بگوید روی این نامه چه کاری باید انجام دهد.
         public string Paraph { get; set; } // متن هامش (دستور مدیر)
 
         // --- زمان‌بندی ---
-        public DateTime Timestamp { get; set; }      // زمان دقیق ارسال
+        public DateTime? Timestamp { get; set; }      // زمان دقیق ارسال
         public DateTime? ViewDate { get; set; }      // زمان دقیق دیده شدن (برای تیک دوم)
         public DateTime? ActionDate { get; set; }    // زمانی که گیرنده کار را تمام کرد
         public DateTime? Deadline { get; set; }

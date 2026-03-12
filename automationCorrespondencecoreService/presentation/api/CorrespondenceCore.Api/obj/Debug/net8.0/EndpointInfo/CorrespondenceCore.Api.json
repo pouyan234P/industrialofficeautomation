@@ -291,9 +291,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "letterID": {
-            "$ref": "#/components/schemas/LetterDTO"
-          },
           "filePath": {
             "type": "string",
             "nullable": true
@@ -349,7 +346,7 @@
             "type": "string",
             "format": "date-time"
           },
-          "myProperty": {
+          "priority": {
             "$ref": "#/components/schemas/PriorityDTO"
           },
           "confidentiality": {
@@ -361,6 +358,9 @@
           "bodyHTML": {
             "type": "string",
             "nullable": true
+          },
+          "attachmentID": {
+            "$ref": "#/components/schemas/AttachmentDTO"
           }
         },
         "additionalProperties": false
@@ -427,9 +427,6 @@
       "setAttachmentDTO": {
         "type": "object",
         "properties": {
-          "letterID": {
-            "$ref": "#/components/schemas/LetterDTO"
-          },
           "filePath": {
             "type": "string",
             "nullable": true
@@ -470,6 +467,9 @@
           },
           "bodyHTML": {
             "nullable": true
+          },
+          "attachmentID": {
+            "$ref": "#/components/schemas/AttachmentDTO"
           }
         },
         "additionalProperties": false

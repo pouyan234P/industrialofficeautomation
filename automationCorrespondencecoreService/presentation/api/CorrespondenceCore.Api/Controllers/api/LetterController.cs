@@ -42,7 +42,8 @@ namespace CorrespondenceCore.Api.Controllers.api
                 {
                     setLetterDTO = letterDTO
                 };
-                _response.Result = await _mediator.Send(command);
+                var myresult = await _mediator.Send(command);
+                _response.Result = myresult;
             }
             catch (Exception e)
             {

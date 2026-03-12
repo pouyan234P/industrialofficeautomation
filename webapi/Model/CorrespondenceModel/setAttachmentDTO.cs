@@ -10,7 +10,6 @@ namespace webapi.Model.CorrespondenceModel
 {
     public class setAttachmentDTO
     {
-        public int LetterID { get; set; }
         public string? FilePath { get; set; }
         public FileType MyProperty { get; set; }
     }

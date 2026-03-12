@@ -16,9 +16,10 @@ namespace webapi.Model.CorrespondenceModel
         public string LetterNo { get; set; }
         public DateTime SentDate { get; set; }
         public DateTime CreatedDate { get; set; }
-        public PriorityDTO MyProperty { get; set; }
+        public PriorityDTO priority { get; set; }
         public ConfidentialityDTO confidentiality { get; set; }
         public TypeDTO type { get; set; }
         public string? BodyHTML { get; set; }
+        public AttachmentDTO? attachmentID { get; set; }
     }
 }

@@ -19,5 +19,6 @@ namespace CorrespondenceCore.domain
         public Confidentiality confidentiality { get; set; }
         public Typecorrespondence type { get; set; }
         public string? BodyHTMLID { get; set; }
+        public Attachment? attachmentID { get; set; }
     }
 }

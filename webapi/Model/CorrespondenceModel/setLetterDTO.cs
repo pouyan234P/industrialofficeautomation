@@ -12,11 +12,12 @@ namespace webapi.Model.CorrespondenceModel
     {
         public string? Subject { get; set; }
         public string? Abstract { get; set; }
-        public string LetterNo { get; set; }
+        public string? LetterNo { get; set; }
         public DateTime SentDate { get; set; }
         public PriorityDTO priority { get; set; }
         public ConfidentialityDTO confidentiality { get; set; }
         public TypeDTO type { get; set; }
         public object? BodyHTML { get; set; }
+        public AttachmentDTO? attachmentID { get; set; }
     }
 }

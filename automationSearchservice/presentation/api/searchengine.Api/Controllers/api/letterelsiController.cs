@@ -14,15 +14,16 @@ namespace searchengine.Api.Controllers.api
     [ApiController]
     public class letterelsiController : ControllerBase
     {
-        protected ResponseDTO _responseDTO;
+        protected ResponseDTO _response;
         private readonly IMediator _mediator;
 
         public letterelsiController(IMediator mediator)
         {
             _mediator = mediator;
+            _response= new ResponseDTO();
         }
 
-        [HttpPost("search")]
+        [HttpPost("addorupdate")]
         public async Task<IActionResult> addorupdate([FromBody] LetterSearchDocument letterDocument)
         {
 
@@ -36,16 +37,25 @@ namespace searchengine.Api.Controllers.api
             return Ok(result);
         }
 
-        [HttpGet("search")]
+        [HttpPost("search")]
         public async Task<IActionResult> search([FromBody] SearchRequestDto dto)
         {
-            var result = await _mediator.Send(new SearchRequest
+            try
             {
-                keyword = dto.keyword,
-                fromDate = dto.fromDate,
-                toDate = dto.toDate
-            });
-            return Ok(result);
+                var result = await _mediator.Send(new SearchRequest
+                {
+                    keyword = dto.keyword,
+                    fromDate = dto.fromDate,
+                    toDate = dto.toDate
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages=new List<string>() { e.Message.ToString() };
+            }
+            return Ok(_response);
         }
     }
 }

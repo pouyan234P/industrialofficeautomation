@@ -4,6 +4,7 @@ using CorrespondenceCore.Presistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CorrespondenceCore.Presistence.Migrations
 {
     [DbContext(typeof(CorrespondenceCoreDB))]
-    partial class CorrespondenceCoreDBModelSnapshot : ModelSnapshot
+    [Migration("20260311164013_fixrelationshipfortables")]
+    partial class fixrelationshipfortables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
