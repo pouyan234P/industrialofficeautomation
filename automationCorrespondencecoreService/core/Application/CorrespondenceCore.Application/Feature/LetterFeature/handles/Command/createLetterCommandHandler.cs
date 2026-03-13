@@ -32,7 +32,7 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Command
             if(result!=null)
             {
                 response.Success= true;
-                response.Message = "Created succesful";
+                response.Message = result!;
                 response.id = result.ID;
             }
             return response;

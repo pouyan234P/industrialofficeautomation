@@ -26,10 +26,23 @@ namespace workflow.Appliction.Feature.referralFeature.handles.Queries
         }
         public async Task<IEnumerable<referralDTO>> Handle(getReferralbyPositionRequest request, CancellationToken cancellationToken)
         {
-            var result =await _repository.GetAllbyposition(request.SenderPositionID);
-            var myref =result.Select(doc => BsonSerializer.Deserialize<Referral>(doc)).ToList();
-            var map = _mapper.Map<IEnumerable<referralDTO>>(myref);
+            
+            
+                var result = await _repository.GetAllbyposition(request.SenderPositionID);
+                var myref = result.Select(doc => BsonSerializer.Deserialize<Referral>(doc));
+               var map = _mapper.Map<IEnumerable<referralDTO>>(myref.ToList());
+            //var map = new List<referralDTO>();
+           /* if (myref.Any())
+            {
+                var firstRef = myref.First();
+                map.Add(new referralDTO
+                {
+                    // Just map ONE simple string or int property here
+                    id =firstRef.id
+                });
+            }*/
             return map;
+            
         }
     }
 }

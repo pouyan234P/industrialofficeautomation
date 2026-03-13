@@ -361,6 +361,13 @@
           },
           "attachmentID": {
             "$ref": "#/components/schemas/AttachmentDTO"
+          },
+          "creatorPositionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDraft": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -470,6 +477,13 @@
           },
           "attachmentID": {
             "$ref": "#/components/schemas/AttachmentDTO"
+          },
+          "creatorPositionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDraft": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

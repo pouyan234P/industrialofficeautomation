@@ -61,6 +61,25 @@ namespace workflow.Api.Controllers.api
             return Ok(_response);
         }
 
+        [HttpGet("getAllByReciver/{id}")]
+        public async Task<IActionResult> getAllByReciver(int id)
+        {
+            try
+            {
+                string myid = id.ToString();
+                var result = await _mediator.Send(new getReferralbyreciverRequest
+                {
+                    id = myid
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
         [HttpGet("getreferral/{id}")]
         public async Task<IActionResult> getreferral(int id)
         {

@@ -11,6 +11,7 @@ using webapi.Model.Workflow;
 using webapi.Model.Workflow.Enum;
 using webapi.RabbmitmqSender;
 using webapi.Services.IServices.ICorrespondenceService;
+using webapi.Services.IServices.IWorkflowService;
 
 namespace webapi.Controllers.api.workflow
 {
@@ -24,14 +25,16 @@ namespace webapi.Controllers.api.workflow
         private readonly IConfiguration _configuration;
         private readonly ILetterCorrespondenceService _letterservice;
         private readonly IgenerateNextNumbeService _numberservice;
+        private readonly IreferralWorkflowService _referralservice;
 
-        public referralController(IRabbitMQreferralMessageSender messageSender,IRabbitMQsearchMessageSender rabbitMQsearch,IConfiguration configuration,ILetterCorrespondenceService letterservice,IgenerateNextNumbeService numberservice)
+        public referralController(IRabbitMQreferralMessageSender messageSender,IRabbitMQsearchMessageSender rabbitMQsearch,IConfiguration configuration,ILetterCorrespondenceService letterservice,IgenerateNextNumbeService numberservice,IreferralWorkflowService referralservice)
         {
             _messageSender = messageSender;
             _rabbitMQsearch = rabbitMQsearch;
             _configuration = configuration;
             _letterservice = letterservice;
             _numberservice = numberservice;
+            _referralservice = referralservice;
         }
 
         [HttpPost("createreferral/{type}/{id}")]
@@ -54,30 +57,64 @@ namespace webapi.Controllers.api.workflow
                 string mynumber = JsonConvert.DeserializeObject<string>(jsongenNumber);
                 dto.LetterNo =mynumber;
                 mydto.LetterNo = mynumber;
+                mydto.SentDate = DateTime.Now;
                 await _letterservice.updateLetter<ResponseDTO>(mydto);
-
+                var mysels = new LetterSearchDocument
+                {
+                    LetterId = mydto.id,
+                    LetterNo = mydto.LetterNo!,
+                    LetterType = mydto.type.ToString(),
+                    Abstract = mydto.Abstract,
+                    CreatedDate = mydto.CreatedDate,
+                    PlainTextBody = mydto.BodyHTML,
+                    Subject = mydto.Subject,
+                    CreatorPositionId = dto.SenderPositionID,
+                    SenderDepartmentId = id
+                };
+                _rabbitMQsearch.SendMessage(mysels, _configuration.GetValue<string>("TopicAndQueueNames:myels"));
             }
             else
                 dto.LetterNo=mydto.LetterNo;
-            var mysels = new LetterSearchDocument
-            {
-                LetterId=mydto.id,
-                LetterNo=mydto.LetterNo!,
-                LetterType=mydto.type.ToString(),
-                Abstract=mydto.Abstract,
-                CreatedDate=mydto.CreatedDate,
-                PlainTextBody=mydto.BodyHTML,
-                Subject=mydto.Subject,
-                CreatorPositionId=dto.SenderPositionID,
-                SenderDepartmentId=id
-            };
+           
             dto.LetterNo = mydto.LetterNo;
             dto.LetterSubject = mydto.Subject;
             dto.Timestamp=DateTime.Now;
             dto.Priority=Enum.Parse<priorityDTO>(mydto.priority.ToString());
             _messageSender.SendMessage(dto, _configuration.GetValue<string>("TopicAndQueueNames:myreferral"));
-            _rabbitMQsearch.SendMessage(mysels, _configuration.GetValue<string>("TopicAndQueueNames:myels"));
+            
             return Ok();
+        }
+
+        [HttpGet("getAllByPositon/{id}")]
+        public async Task<IActionResult> getAllByPositon(int id)
+        {
+            var response = await _referralservice.getAllByPositon<ResponseDTO>(id);
+            if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
+
+        [HttpGet("getAllByReciver/{id}")]
+        public async Task<IActionResult> getAllByReciver(int id)
+        {
+            var response = await _referralservice.getAllByReciver<ResponseDTO>(id);
+            if (response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll()
+        {
+            var response = await _referralservice.getAll<ResponseDTO>();
+            if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
         }
     }
 }

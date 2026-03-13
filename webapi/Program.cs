@@ -11,7 +11,9 @@ using webapi.Services.CorrespondenceService;
 using webapi.Services.IdentityService;
 using webapi.Services.IServices.ICorrespondenceService;
 using webapi.Services.IServices.Identity;
+using webapi.Services.IServices.ISearchEngineService;
 using webapi.Services.IServices.IWorkflowService;
+using webapi.Services.SearchEngineService;
 using webapi.Services.WorkflowService;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +24,7 @@ builder.Services.AddScoped<IreferralWorkflowService, referralWorkflowService>();
 builder.Services.AddScoped<IauthIdentityService, authIdentityService>();
 builder.Services.AddScoped<IdepartmentIdentityService,departmentIdentityService>();
 builder.Services.AddScoped<IpositionIdentityService, positionIdentityService>();
+builder.Services.AddScoped<IletterelsiSearchEngineService, letterelsiSearchEngineService>();
 builder.Services.AddScoped<IgenerateNextNumbeService,generateNextNumbeService>();
 builder.Services.AddScoped<IRabbitMQreferralMessageSender,RabbitMqreferralMessageSender>();
 builder.Services.AddScoped<IRabbitMQsearchMessageSender,RabbitMQsearchMessageSender>();

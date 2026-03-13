@@ -8,6 +8,6 @@ namespace workflow.Appliction.DTO.Common
 {
     public class baseDTO
     {
-        public int id { get; set; }
+        public string id { get; set; }
     }
 }

@@ -33,7 +33,7 @@ namespace workflow.Persistence.Repository
         public async Task<IEnumerable<BsonDocument>> GetAllbyposition(string SenderPositionID)
         {
             var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
-            var filter = new BsonDocument("_id", ObjectId.Parse(SenderPositionID));
+            var filter = new BsonDocument("SenderPositionID", int.Parse(SenderPositionID));
             var referral = await collection.Find(filter).ToListAsync();
             return referral;
         }
@@ -67,6 +67,14 @@ namespace workflow.Persistence.Repository
         public Task Delete(string id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<BsonDocument>> GetAllbyreciverposition(string reciverPositionID)
+        {
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            var filter = new BsonDocument("ReceiverPositionID", int.Parse(reciverPositionID));
+            var referral = await collection.Find(filter).ToListAsync();
+            return referral;
         }
     }
 }

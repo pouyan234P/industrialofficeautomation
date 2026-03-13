@@ -21,5 +21,10 @@ namespace webapi.Model.CorrespondenceModel
         public TypeDTO type { get; set; }
         public string? BodyHTML { get; set; }
         public AttachmentDTO? attachmentID { get; set; }
+        public int CreatorPositionID { get; set; }
+
+        // آیا این نامه هنوز پیش‌نویس است؟ 
+        // (می‌توانید از این فیلد استفاده کنید یا فقط چک کنید که SentDate مساوی Null باشد)
+        public bool? IsDraft { get; set; } = true;
     }
 }

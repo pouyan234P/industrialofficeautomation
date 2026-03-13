@@ -21,7 +21,8 @@ namespace CorrespondenceCore.Presistence.Repository
         {
             await _db.AddAsync(entity);
             await _db.SaveChangesAsync();
-            return entity;
+            var result = await _db.Set<T>().OrderBy(x=>x).LastOrDefaultAsync();
+            return result!;
         }
 
         public async Task Delete(int id)

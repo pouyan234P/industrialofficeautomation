@@ -14,7 +14,7 @@ namespace workflow.Appliction.helper
         public autoMapper()
         {
             CreateMap<Referral, referralDTO>().ReverseMap();
-            CreateMap<setReferralDTO, Referral>();
+            CreateMap<setReferralDTO, Referral>().ReverseMap();
         }
     }
 }

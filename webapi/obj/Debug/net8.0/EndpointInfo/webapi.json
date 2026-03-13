@@ -311,6 +311,42 @@
         }
       }
     },
+    "/api/letterelsi/search": {
+      "post": {
+        "tags": [
+          "letterelsi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequestDto"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/position/insertPosition": {
       "post": {
         "tags": [
@@ -418,6 +454,64 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getAllByPositon/{id}": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getAllByReciver/{id}": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getAll": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -575,6 +669,26 @@
         "type": "integer",
         "format": "int32"
       },
+      "SearchRequestDto": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "nullable": true
+          },
+          "fromDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "TypeDTO": {
         "enum": [
           0,
@@ -724,6 +838,14 @@
           },
           "attachmentID": {
             "$ref": "#/components/schemas/AttachmentDTO"
+          },
+          "creatorPositionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDraft": {
+            "type": "boolean",
+            "nullable": true
           }
         },
         "additionalProperties": false

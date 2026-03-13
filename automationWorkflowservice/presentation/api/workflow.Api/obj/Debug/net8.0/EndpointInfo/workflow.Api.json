@@ -59,6 +59,29 @@
         }
       }
     },
+    "/api/referral/getAllByReciver/{id}": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/referral/getreferral/{id}": {
       "get": {
         "tags": [

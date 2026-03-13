@@ -43,6 +43,22 @@
   },
   {
     "ContainingType": "workflow.Api.Controllers.api.referralController",
+    "Method": "getAllByReciver",
+    "RelativePath": "api/referral/getAllByReciver/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "workflow.Api.Controllers.api.referralController",
     "Method": "getreferral",
     "RelativePath": "api/referral/getreferral/{id}",
     "HttpMethod": "GET",

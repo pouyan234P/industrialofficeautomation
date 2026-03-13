@@ -40,6 +40,15 @@ namespace webapi.Services.WorkflowService
             });
         }
 
+        public async Task<T> getAllByReciver<T>(int id)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.GET,
+                Url=SD.gatewayApiBase+ "/api/referral/getAllByReciver/"+ id
+            });
+        }
+
         public async Task<T> getreferral<T>(int id)
         {
             return await this.SendAsync<T>(new ApiRequest

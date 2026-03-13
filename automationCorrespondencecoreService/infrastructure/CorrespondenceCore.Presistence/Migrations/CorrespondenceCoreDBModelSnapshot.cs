@@ -102,6 +102,12 @@ namespace CorrespondenceCore.Presistence.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("CreatorPositionID")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDraft")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LetterNo")
                         .HasColumnType("nvarchar(max)");
 
