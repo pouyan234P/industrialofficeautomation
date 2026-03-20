@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\services\\searchengineservice\\letterelsisearchengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\services\\searchengineservice\\letterelsisearchengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\search\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\search\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4047BDF9-BE37-493B-BA26-DA4006E75F0C}|Gateway\\industrialGateway\\industrialGateway.csproj|c:\\project\\industrial office automation\\gateway\\industrialgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4047BDF9-BE37-493B-BA26-DA4006E75F0C}|Gateway\\industrialGateway\\industrialGateway.csproj|solutionrelative:gateway\\industrialgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1274B197-EBBA-403C-B313-ECAF77E94069}|automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj|c:\\project\\industrial office automation\\automationsearchservice\\presentation\\api\\searchengine.api\\controllers\\api\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1274B197-EBBA-403C-B313-ECAF77E94069}|automationSearchservice\\presentation\\api\\searchengine.Api\\searchengine.Api.csproj|solutionrelative:automationsearchservice\\presentation\\api\\searchengine.api\\controllers\\api\\letterelsicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "letterelsiSearchEngineService.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Services\\SearchEngineService\\letterelsiSearchEngineService.cs",
-              "RelativeDocumentMoniker": "webapi\\Services\\SearchEngineService\\letterelsiSearchEngineService.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Services\\SearchEngineService\\letterelsiSearchEngineService.cs",
-              "RelativeToolTip": "webapi\\Services\\SearchEngineService\\letterelsiSearchEngineService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T02:27:36.184Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Gateway\\industrialGateway\\appsettings.json",
-              "RelativeDocumentMoniker": "Gateway\\industrialGateway\\appsettings.json",
-              "ToolTip": "C:\\Project\\Industrial office automation\\Gateway\\industrialGateway\\appsettings.json",
-              "RelativeToolTip": "Gateway\\industrialGateway\\appsettings.json",
-              "ViewState": "AgIAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-13T02:26:34.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "letterelsiController.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
-              "RelativeDocumentMoniker": "automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
-              "RelativeToolTip": "automationSearchservice\\presentation\\api\\searchengine.Api\\Controllers\\api\\letterelsiController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T02:11:10.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "letterelsiController.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\search\\letterelsiController.cs",
-              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\search\\letterelsiController.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\search\\letterelsiController.cs",
-              "RelativeToolTip": "webapi\\Controllers\\api\\search\\letterelsiController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAQwCUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T02:10:02.358Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
