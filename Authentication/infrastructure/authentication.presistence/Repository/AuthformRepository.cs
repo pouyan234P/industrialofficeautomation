@@ -54,11 +54,18 @@ namespace authentication.presistence.Repository
         public async Task<string> login(string email, string password)
         {
             var user = await _userManger.Users.Where(t => t.Email == email).Select(t => t).Include(t => t.userRoles).ThenInclude(t => t.Role).FirstOrDefaultAsync();
-            var result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
-            if (result.Succeeded)
+            if (user.CurrentStatus == true)
             {
-                string token = Generatejwt(user).Result;
-                return token;
+                var result = await _signInManager.CheckPasswordSignInAsync(user, password, false);
+                if (result.Succeeded)
+                {
+                    string token = Generatejwt(user).Result;
+                    return token;
+                }
+            }
+            else
+            {
+                return "is not active";
             }
             //next we will create token that use two information inside it
 
@@ -105,6 +112,12 @@ namespace authentication.presistence.Repository
                 return Myuser;
             }
             return null;
+        }
+
+        public async Task<IEnumerable<User>> getAll()
+        {
+            var user=await _userManger.Users.Include(x=>x.signitureimageid).ToListAsync();
+            return user;
         }
     }
 }

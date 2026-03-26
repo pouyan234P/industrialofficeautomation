@@ -5,7 +5,6 @@ using authentication.application.Responses;
 using authentication.domain;
 using AutoMapper;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +27,7 @@ namespace authentication.application.Feature.authfeature.handles.Commands
         public async Task<baseCommandResponse> Handle(createAuthCommand request, CancellationToken cancellationToken)
         {
             var response = new baseCommandResponse();
+            var mypicture=_mapper.Map<signitureimage>(request.registerdto.signitureid);
             var myuser = new User
             {
                 Email = request.registerdto.Email,
@@ -36,7 +36,8 @@ namespace authentication.application.Feature.authfeature.handles.Commands
                 PhoneNumber = request.registerdto.phoneNumber,
                 Country = request.registerdto.Country,
                 Date = DateTime.Now.Date,
-                UserName=request.registerdto.Name+"_"+request.registerdto.family
+                UserName=request.registerdto.Name+"_"+request.registerdto.family,
+                signitureimageid=mypicture
             };
             var myusersend = await _authformRepository.regiseter(myuser, request.registerdto.Password,request.registerdto.Role);
             if (myusersend != null)

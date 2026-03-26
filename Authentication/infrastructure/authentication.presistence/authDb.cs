@@ -18,6 +18,7 @@ namespace authentication.presistence
         }
         public DbSet<Department> departments { get; set; }
         public DbSet<Position> positions { get; set; }
+        public DbSet<signitureimage> signitureimages { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

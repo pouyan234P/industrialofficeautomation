@@ -1,4 +1,5 @@
-﻿using authentication.domain;
+﻿using authentication.application.DTO;
+using authentication.domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace authentication.application.IRepository
         Task<User?> regiseter(User user,string password,string role);
         Task<string> login(string email, string password);
         Task<string> createRole(string role);
+        Task<IEnumerable<User>> getAll();
     }
 }

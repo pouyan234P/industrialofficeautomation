@@ -24,6 +24,7 @@ builder.Services.AddScoped<IreferralWorkflowService, referralWorkflowService>();
 builder.Services.AddScoped<IauthIdentityService, authIdentityService>();
 builder.Services.AddScoped<IdepartmentIdentityService,departmentIdentityService>();
 builder.Services.AddScoped<IpositionIdentityService, positionIdentityService>();
+builder.Services.AddScoped<IpictureIdentityService, pictureIdentityService>();
 builder.Services.AddScoped<IletterelsiSearchEngineService, letterelsiSearchEngineService>();
 builder.Services.AddScoped<IgenerateNextNumbeService,generateNextNumbeService>();
 builder.Services.AddScoped<IRabbitMQreferralMessageSender,RabbitMqreferralMessageSender>();

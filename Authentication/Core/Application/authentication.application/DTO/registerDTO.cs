@@ -17,5 +17,7 @@ namespace authentication.application.DTO
         public string Country { get; set; }
         public string phoneNumber { get; set; }
         public string Role { get; set; }
+        public bool CurrentStatus { get; set; }
+        public getsignitureimageDTO signitureid { get; set; }
     }
 }

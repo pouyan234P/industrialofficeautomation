@@ -13,8 +13,11 @@ namespace authentication.application.helper
     {
         public autoMapper() 
         {
+            CreateMap<signitureimage, getsignitureimageDTO>().ReverseMap();
+            CreateMap<User, getuserDTO>().ForMember(des => des.signitureimageid, mapper => mapper.MapFrom(c => c.signitureimageid));
             CreateMap<Department, DepartmentDTO>().ReverseMap();
             CreateMap<Position, getPosition>().ForMember(dest=>dest.depID,mapper=>mapper.MapFrom(c=>c.Department)).ForPath(dest=>dest.userID.username,mapper=>mapper.MapFrom(c=>c.User.UserName));
+
         }
     }
 }

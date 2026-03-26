@@ -28,8 +28,8 @@ namespace webapi.Controllers.api.search
         [HttpPost("addorupdate")]
         public async Task<IActionResult> addorupdate([FromBody] LetterSearchDocument letterDocument)
         {
-            _sender.SendMessage(letterDocument, _configuration.GetValue<string>("TopicAndQueueNames:myels"));
-            return Ok();
+            _sender.SendMessage(letterDocument, _configuration.GetValue<string>("TopicAndQueueNames:myels")!);
+            return await Task.FromResult(Ok());
         }
 
         [HttpPost("search")]

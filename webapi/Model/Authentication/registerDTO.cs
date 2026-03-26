@@ -17,5 +17,6 @@ namespace webapi.Model.Authentication
         public string Country { get; set; }
         public string phoneNumber { get; set; }
         public string Role { get; set; }
+        public bool CurrentStatus { get; set; }
     }
 }

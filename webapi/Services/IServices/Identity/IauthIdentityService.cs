@@ -7,5 +7,6 @@ namespace webapi.Services.IServices.Identity
         Task<T> login<T>(loginDTO mylogin);
         Task<T> register<T>(registerDTO myregisterDTO);
         Task<T> CreateRole<T>(string myroleName);
+        Task<T> getAll<T>();
     }
 }

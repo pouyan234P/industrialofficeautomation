@@ -25,6 +25,7 @@ namespace authentication.presistence
             services.AddScoped<IAuthformRepository, AuthformRepository>();
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IPositionRepository, PositionRepository>();
+            services.AddScoped<IPictureRepository, PictureRepository>();
             IdentityBuilder builder = services.AddIdentityCore<User>();
 
             // Explicitly using the custom Role class

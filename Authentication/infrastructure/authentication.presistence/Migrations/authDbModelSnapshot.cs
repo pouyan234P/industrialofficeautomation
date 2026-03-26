@@ -263,6 +263,9 @@ namespace authentication.presistence.Migrations
                     b.Property<int>("personID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("signitureimageidId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("NormalizedEmail")
@@ -272,6 +275,8 @@ namespace authentication.presistence.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.HasIndex("signitureimageidId");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -294,6 +299,31 @@ namespace authentication.presistence.Migrations
                     b.HasIndex("UserId1");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("authentication.domain.signitureimage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<byte[]>("ImageData")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("signitureimages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -349,6 +379,15 @@ namespace authentication.presistence.Migrations
                     b.Navigation("Department");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("authentication.domain.User", b =>
+                {
+                    b.HasOne("authentication.domain.signitureimage", "signitureimageid")
+                        .WithMany()
+                        .HasForeignKey("signitureimageidId");
+
+                    b.Navigation("signitureimageid");
                 });
 
             modelBuilder.Entity("authentication.domain.UserRole", b =>

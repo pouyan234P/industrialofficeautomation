@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.23",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.23",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.22.1",
           "MongoDB.Bson": "3.6.0",
           "RabbitMQ.Client": "7.2.1",
           "Swashbuckle.AspNetCore": "6.6.2"
@@ -129,6 +130,7 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1": {},
       "MongoDB.Bson/3.6.0": {
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -317,6 +319,13 @@
       "sha512": "sha512-tTaBT8qjk3xINfESyOPE2rIellPvB7qpVqiWiyA/lACVvz+xOGiXhFUfohcx82NLbi5avzLW0lx+s6oAqQijfw==",
       "path": "microsoft.openapi/1.6.14",
       "hashPath": "microsoft.openapi.1.6.14.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.22.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EfYANhAWqmWKoLwN6bxoiPZSOfJSO9lzX+UrU6GVhLhPub1Hd+5f0zL0/tggIA6mRz6Ebw2xCNcIsM4k+7NPng==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.22.1",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.22.1.nupkg.sha512"
     },
     "MongoDB.Bson/3.6.0": {
       "type": "package",

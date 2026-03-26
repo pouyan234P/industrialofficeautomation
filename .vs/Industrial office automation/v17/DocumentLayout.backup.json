@@ -1,12 +1,105 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\helper\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\helper\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\authentication\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\authentication\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|c:\\project\\industrial office automation\\authentication\\infrastructure\\authentication.presistence\\repository\\authformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B8D61A9-8BF2-41DC-A17D-670A0BA89778}|Authentication\\infrastructure\\authentication.presistence\\authentication.presistence.csproj|solutionrelative:authentication\\infrastructure\\authentication.presistence\\repository\\authformrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|c:\\project\\industrial office automation\\authentication\\core\\application\\authentication.application\\dto\\getimageiddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26E3B323-F3EE-44AC-84E1-06C94863BE35}|Authentication\\Core\\Application\\authentication.application\\authentication.application.csproj|solutionrelative:authentication\\core\\application\\authentication.application\\dto\\getimageiddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\authentication\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\authentication\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthformRepository.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "RelativeDocumentMoniker": "Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "RelativeToolTip": "Authentication\\infrastructure\\authentication.presistence\\Repository\\AuthformRepository.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAA0wHYAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:45:09.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "getimageidDTO.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\DTO\\getimageidDTO.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\DTO\\getimageidDTO.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\DTO\\getimageidDTO.cs",
+              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\DTO\\getimageidDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:44:21.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "autoMapper.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\helper\\autoMapper.cs",
+              "RelativeDocumentMoniker": "Authentication\\Core\\Application\\authentication.application\\helper\\autoMapper.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Authentication\\Core\\Application\\authentication.application\\helper\\autoMapper.cs*",
+              "RelativeToolTip": "Authentication\\Core\\Application\\authentication.application\\helper\\autoMapper.cs*",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBAAAACCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:43:24.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "userController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\userController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\authentication\\userController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\userController.cs",
+              "RelativeToolTip": "webapi\\Controllers\\api\\authentication\\userController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:41:30.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "authController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\authController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\authentication\\authController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\authentication\\authController.cs",
+              "RelativeToolTip": "webapi\\Controllers\\api\\authentication\\authController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:40:19.636Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -85,19 +85,35 @@ namespace authentication.api.Controllers.api
                 {
                     RoleName = roleName
                 };
-                var roleResult = _mediator.Send(command);
+                var roleResult =await _mediator.Send(command);
 
-                if (roleResult.Result.Success == true)
+                if (roleResult.Success == true)
                 {
-                    _response.Result = roleResult.Result.Message;
+                    _response.Result = roleResult.Message;
                     return Ok(_response);
                 }
-                return Problem(roleResult.Result.Errors.FirstOrDefault(), null, 500);
+                return Problem(roleResult.Errors.FirstOrDefault(), null, 500);
             }
             catch (Exception e)
             {
                 _response.IsSuccess=false;
                 _response.ErrorMessages=new List<string>() { e.ToString()};
+            }
+            return Ok(_response);
+        }
+
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll()
+        {
+            try
+            {
+                var result = await _mediator.Send(new getAllRequest());
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages= new List<string>() { e.ToString()};
             }
             return Ok(_response);
         }

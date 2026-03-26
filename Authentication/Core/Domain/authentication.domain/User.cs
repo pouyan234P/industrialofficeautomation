@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace authentication.domain
         public string family { get; set; }
         public string Country { get; set; }
         public DateTime Date { get; set; }
+        public signitureimage? signitureimageid { get; set; }
     }
 }

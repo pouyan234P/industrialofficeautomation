@@ -21,6 +21,15 @@ namespace webapi.Services.IdentityService
             });
         }
 
+        public async Task<T> getAll<T>()
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.GET,
+                Url=SD.identityApiBase+ "/api/auth/getAll"
+            });
+        }
+
         public async Task<T> login<T>(loginDTO mylogin)
         {
             return await this.SendAsync<T>(new ApiRequest
