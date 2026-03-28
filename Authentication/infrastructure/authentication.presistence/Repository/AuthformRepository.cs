@@ -103,7 +103,14 @@ namespace authentication.presistence.Repository
         }
         public async Task<User?> regiseter(User user, string password,string role)
         {
-           
+            if (user.SignitureImage != null && user.SignitureImage.Id > 0)
+            {
+                // 2. Save the integer ID to the REAL database column property
+                user.SignitureImageId = user.SignitureImage.Id;
+
+                // 3. Null out the object to stop EF Core from trying to insert it again!
+                user.SignitureImage = null;
+            }
             var users = await _userManger.CreateAsync(user, password);
             var Myuser = _userManger.Users.SingleOrDefault(u => u.Email == user.Email);
             var result = await _userManger.AddToRoleAsync(Myuser!, role);
@@ -116,7 +123,7 @@ namespace authentication.presistence.Repository
 
         public async Task<IEnumerable<User>> getAll()
         {
-            var user=await _userManger.Users.Include(x=>x.signitureimageid).ToListAsync();
+            var user=await _userManger.Users.Include(x=>x.SignitureImage).ToListAsync();
             return user;
         }
     }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace authentication.application.DTO
+namespace webapi.Model.Authentication
 {
     public class getsignitureimageDTO
     {
         public int Id { get; set; }
         public string FileName { get; set; }
         public string ContentType { get; set; } // e.g., "image/jpeg"
-        public byte[] ImageData { get; set; }
+        public byte[]? ImageData { get; set; }
     }
 }

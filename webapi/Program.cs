@@ -17,6 +17,7 @@ using webapi.Services.SearchEngineService;
 using webapi.Services.WorkflowService;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ILetterCorrespondenceService, LetterCorrespondenceService>();
 builder.Services.AddScoped<IAttachmentCorrespondenceService,AttachmentCorrespondenceService>();
@@ -71,6 +72,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

@@ -22,6 +22,7 @@ namespace webapi.Controllers.api.authentication
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO dTO)
         {
+            dTO.Role = "Customer";
             var response = await _service.register<ResponseDTO>(dTO);
             if (response.IsSuccess)
             {

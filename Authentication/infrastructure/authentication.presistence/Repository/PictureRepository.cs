@@ -1,5 +1,6 @@
 ﻿using authentication.application.IRepository;
 using authentication.domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,24 @@ namespace authentication.presistence.Repository
 {
     public class PictureRepository : IPictureRepository
     {
-        public Task<signitureimage> addimage(signitureimage image)
+        private readonly authDb _db;
+
+        public PictureRepository(authDb db)
         {
-            throw new NotImplementedException();
+            _db = db;
+        }
+        public async Task<signitureimage> addimage(signitureimage image)
+        {
+            _db.signitureimages.Add(image);
+            _db.SaveChanges();
+            var myimage = await _db.signitureimages.Select(x => x).OrderBy(x => x).LastOrDefaultAsync();
+            return myimage;
         }
 
-        public Task<signitureimage> getimage(int id)
+        public async Task<signitureimage> getimage(int id)
         {
-            throw new NotImplementedException();
+            var image=await _db.signitureimages.Where(x=>x.Id==id).Select(x=>x).FirstOrDefaultAsync();
+            return image;
         }
     }
 }

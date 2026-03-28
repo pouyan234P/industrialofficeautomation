@@ -17,6 +17,12 @@ namespace authentication.domain
         public string family { get; set; }
         public string Country { get; set; }
         public DateTime Date { get; set; }
-        public signitureimage? signitureimageid { get; set; }
+        // --- THE FIX IS HERE ---
+
+        // 1. The actual Integer Foreign Key (Nullable so it doesn't crash if a user has no image)
+        public int? SignitureImageId { get; set; }
+
+        // 2. The Navigation Property (The Object)
+        public signitureimage? SignitureImage { get; set; }
     }
 }

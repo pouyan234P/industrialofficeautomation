@@ -1,4 +1,4 @@
-﻿using authentication.application.DTO;
+﻿
 using webapi.Model;
 using webapi.Model.Authentication;
 using webapi.Services.IServices.Identity;
@@ -14,22 +14,14 @@ namespace webapi.Services.IdentityService
             _clientFactory = clientFactory;
         }
 
-        public async Task<T> addPicture<T>(IFormFile file)
+        public async Task<T> addPicture<T>(IFormFile dto)
         {
-            using var memoryStream = new MemoryStream();
-            await file.CopyToAsync(memoryStream);
-
-            var fileDto = new
-            {
-                ImageData = memoryStream.ToArray(),
-                FileName = file.FileName,
-                ContentType = file.ContentType
-            };
+            
 
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.POST,
-                Data = fileDto,
+                Data = new {file=dto},
                 Url = SD.identityApiBase + "/api/picture/addPicture",
                 ContentType = "multipart/form-data"
             });

@@ -58,7 +58,16 @@ namespace webapi.Services
                         var value = prop.GetValue(apiRequest.Data);
                         if (value != null)
                         {
-                            if (value is byte[] fileBytes)
+                            // ADD THIS BLOCK: Handle IFormFile directly
+                            if (value is IFormFile formFile)
+                            {
+                                var streamContent = new StreamContent(formFile.OpenReadStream());
+                                // Adding Content-Type header helps the backend recognize it as an image
+                                streamContent.Headers.ContentType = new MediaTypeHeaderValue(formFile.ContentType);
+                                content.Add(streamContent, prop.Name, formFile.FileName);
+                            }
+                            // Keep your existing byte array check just in case you use it elsewhere
+                            else if (value is byte[] fileBytes)
                             {
                                 var fileContent = new ByteArrayContent(fileBytes);
                                 content.Add(fileContent, prop.Name, "upload.jpg");

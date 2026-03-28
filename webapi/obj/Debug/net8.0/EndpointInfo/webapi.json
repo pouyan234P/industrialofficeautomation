@@ -347,6 +347,61 @@
         }
       }
     },
+    "/api/picture/addPicture": {
+      "post": {
+        "tags": [
+          "picture"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "File": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "File": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/picture/getPicture/{id}": {
+      "get": {
+        "tags": [
+          "picture"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/position/insertPosition": {
       "post": {
         "tags": [
@@ -511,6 +566,18 @@
       "get": {
         "tags": [
           "referral"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/user/getAll": {
+      "get": {
+        "tags": [
+          "user"
         ],
         "responses": {
           "200": {
@@ -730,6 +797,29 @@
         "type": "integer",
         "format": "int32"
       },
+      "getsignitureimageDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          },
+          "contentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageData": {
+            "type": "string",
+            "format": "byte",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "loginDTO": {
         "type": "object",
         "properties": {
@@ -780,7 +870,8 @@
           },
           "date": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -801,6 +892,17 @@
           "role": {
             "type": "string",
             "nullable": true
+          },
+          "currentStatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "signitureid": {
+            "$ref": "#/components/schemas/getsignitureimageDTO"
+          },
+          "personID": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

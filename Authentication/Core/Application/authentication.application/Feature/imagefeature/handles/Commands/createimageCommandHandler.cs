@@ -33,6 +33,7 @@ namespace authentication.application.Feature.imagefeature.handles.Commands
             };
             var result = await _repository.addimage(insertimage);
             var resultmap = _mapper.Map<getsignitureimageDTO>(result);
+            resultmap.ImageData = null;
             return resultmap;
         }
     }

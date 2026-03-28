@@ -30,7 +30,7 @@ namespace authentication.presistence.Repository
 
         public async Task<Position> getPosition(int positionId)
         {
-            var pos=await _db.positions.Where(x=>x.Id==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();
+            var pos=await _db.positions.Where(x=>x.userId==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();
             return pos!;
         }
 

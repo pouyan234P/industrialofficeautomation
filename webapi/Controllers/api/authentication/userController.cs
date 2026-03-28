@@ -47,7 +47,7 @@ namespace webapi.Controllers.api.authentication
                         var getpos = await _service1.getPosition<ResponseDTO>(i.id);
                         if (getpos.IsSuccess)
                         {
-                            var mygetpos = JsonConvert.DeserializeObject<getPosition>(Convert.ToString(getpos)!);
+                            var mygetpos = JsonConvert.DeserializeObject<getPosition>(Convert.ToString(getpos.Result)!);
                             var myuser = new userModel
                             {
                                 Title = mygetpos.Title,

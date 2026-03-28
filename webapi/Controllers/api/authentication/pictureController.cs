@@ -1,4 +1,4 @@
-﻿using authentication.application.DTO;
+﻿
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,9 +21,9 @@ namespace webapi.Controllers.api.authentication
         }
 
         [HttpPost("addPicture")]
-        public async Task<IActionResult> addPicture([FromForm]IFormFile file)
+        public async Task<IActionResult> addPicture([FromForm]PictureUploadModel file)
         {
-            var result = await _service.addPicture<ResponseDTO>(file);
+            var result = await _service.addPicture<ResponseDTO>(file.File);
             if(result.IsSuccess)
             {
                 return Ok(result.Result);

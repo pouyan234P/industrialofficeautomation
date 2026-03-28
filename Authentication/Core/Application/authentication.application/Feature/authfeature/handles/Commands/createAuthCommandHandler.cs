@@ -37,7 +37,8 @@ namespace authentication.application.Feature.authfeature.handles.Commands
                 Country = request.registerdto.Country,
                 Date = DateTime.Now.Date,
                 UserName=request.registerdto.Name+"_"+request.registerdto.family,
-                signitureimageid=mypicture
+                SignitureImage = mypicture,
+                personID=request.registerdto.personID
             };
             var myusersend = await _authformRepository.regiseter(myuser, request.registerdto.Password,request.registerdto.Role);
             if (myusersend != null)
