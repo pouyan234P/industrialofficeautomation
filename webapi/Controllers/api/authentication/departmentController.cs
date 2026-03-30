@@ -23,27 +23,7 @@ namespace webapi.Controllers.api.authentication
         [HttpPost("addDepartment")]
         public async Task<IActionResult> addDepartment([FromBody] DepartmentDTO dTO)
         {
-           // string error;
-            /*var name = await _service.getDepartmentbyname<ResponseDTO>(dTO.Name!);
-            if (name.IsSuccess)
-            {
-                // 1. Convert the generic object back to a JSON string
-                string resultJson = JsonSerializer.Serialize(name.Result);
-
-                // 2. Deserialize the string into your specific DTO
-                // Note: PropertyNameCaseInsensitive is helpful so "ParentID" matches "parentId" from JSON
-                var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-                DepartmentDTO department = JsonSerializer.Deserialize<DepartmentDTO>(resultJson, options)!;
-                dTO.ParentID = department.ParentID;
-                var myresponse = await _service.addDepartment<ResponseDTO>(dTO);
-
-                if (myresponse.IsSuccess)
-                {
-                    return Ok(myresponse.Result);
-                }
-                error = myresponse.ErrorMessages.FirstOrDefault()!;
-                // Now you can use 'department.Id', 'department.Name', etc.
-            }*/
+         
           
                 var response = await _service.addDepartment<ResponseDTO>(dTO);
                 if (response.IsSuccess)

@@ -45,5 +45,16 @@ namespace webapi.Controllers.api.authentication
             }
             return BadRequest(response.ErrorMessages);
         }
+
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll()
+        {
+            var response = await _service.getAll<ResponseDTO>();
+            if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
     }
 }

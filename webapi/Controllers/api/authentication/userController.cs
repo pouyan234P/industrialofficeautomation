@@ -45,12 +45,23 @@ namespace webapi.Controllers.api.authentication
                             uploaded = "not uploaded";
                         }
                         var getpos = await _service1.getPosition<ResponseDTO>(i.id);
-                        if (getpos.IsSuccess)
+                        if (getpos.IsSuccess && getpos.Result!=null)
                         {
                             var mygetpos = JsonConvert.DeserializeObject<getPosition>(Convert.ToString(getpos.Result)!);
                             var myuser = new userModel
                             {
                                 Title = mygetpos.Title,
+                                CurrentStatus = i.CurrentStatus,
+                                username = i.username,
+                                signitureimageid = uploaded
+                            };
+                            usermodel.Add(myuser);
+                        }
+                        else
+                        {
+                            var myuser = new userModel
+                            {
+                                Title = null,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
                                 signitureimageid = uploaded

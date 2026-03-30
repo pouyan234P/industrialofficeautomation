@@ -30,5 +30,14 @@ namespace webapi.Services.IdentityService
                 Url=SD.identityApiBase+ "/api/position/insertPosition"
             });
         }
+
+        public async Task<T> getAll<T>()
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType=SD.ApiType.GET,
+                Url=SD.identityApiBase+ "/api/position/getAll"
+            });
+        }
     }
 }

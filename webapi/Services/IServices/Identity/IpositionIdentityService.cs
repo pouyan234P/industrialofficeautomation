@@ -6,5 +6,6 @@ namespace webapi.Services.IServices.Identity
     {
         Task<T> insertPosition<T>(setPosition setPositio);
         Task<T> getPosition<T>(int id);
+        Task<T> getAll<T>();
     }
 }

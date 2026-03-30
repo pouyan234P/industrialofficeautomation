@@ -13,6 +13,7 @@ namespace authentication.application.IRepository
         Task<bool> deletePosition(int id);
         Task<bool> insertPosition(Position position);
         Task<Position> getPosition(int  positionId);
+        Task<IEnumerable<Position>> getAll();
 
     }
 }

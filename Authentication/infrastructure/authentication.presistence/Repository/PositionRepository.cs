@@ -28,6 +28,12 @@ namespace authentication.presistence.Repository
             return false;
         }
 
+        public async Task<IEnumerable<Position>> getAll()
+        {
+            var pos=await _db.positions.Select(x=>x).Include(x=>x.Department).Include(x=>x.User).ToListAsync();
+            return pos;
+        }
+
         public async Task<Position> getPosition(int positionId)
         {
             var pos=await _db.positions.Where(x=>x.userId==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();

@@ -68,6 +68,22 @@ namespace authentication.api.Controllers.api
             }
             return Ok(_response);
         }
+
+        [HttpGet("getAll")]
+        public async Task<IActionResult> getAll()
+        {
+            try
+            {
+                var result = await _mediator.Send(new getPositionsRequest());
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
     }
 }
 

@@ -223,6 +223,16 @@
   },
   {
     "ContainingType": "webapi.Controllers.api.authentication.positionController",
+    "Method": "getAll",
+    "RelativePath": "api/position/getAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.positionController",
     "Method": "getPosition",
     "RelativePath": "api/position/getPosition/{id}",
     "HttpMethod": "GET",
