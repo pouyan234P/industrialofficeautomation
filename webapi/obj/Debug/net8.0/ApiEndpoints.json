@@ -65,7 +65,7 @@
   },
   {
     "ContainingType": "webapi.Controllers.api.authentication.departmentController",
-    "Method": "getDepartment",
+    "Method": "GetDepartment",
     "RelativePath": "api/department/getDepartment",
     "HttpMethod": "GET",
     "IsController": true,

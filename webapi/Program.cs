@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +17,12 @@ using webapi.Services.SearchEngineService;
 using webapi.Services.WorkflowService;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    // آدرس سرور Redis (در محیط توسعه معمولاً روی لوکال‌هاست است)
+    options.Configuration = builder.Configuration.GetConnectionString("Redis") ?? "192.168.1.173:6379";
+    options.InstanceName = "AutomationApp_"; // یک پیشوند برای کلیدهای کش شما
+});
 builder.Services.AddCors();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ILetterCorrespondenceService, LetterCorrespondenceService>();

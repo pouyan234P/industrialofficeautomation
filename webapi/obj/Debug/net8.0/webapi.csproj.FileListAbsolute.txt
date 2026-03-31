@@ -44,3 +44,10 @@ C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\refint\webapi.dl
 C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.pdb
 C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.genruntimeconfig.cache
 C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\ref\webapi.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\libman.json
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\StackExchange.Redis.dll
