@@ -4,6 +4,7 @@ namespace webapi.Model
 {
     public class userModel
     {
+        public int id { get; set; }
         public string username { get; set; }
         public int personID { get; set; }
         public bool CurrentStatus { get; set; }

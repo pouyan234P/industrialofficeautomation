@@ -50,6 +50,7 @@ namespace webapi.Controllers.api.authentication
                             var mygetpos = JsonConvert.DeserializeObject<getPosition>(Convert.ToString(getpos.Result)!);
                             var myuser = new userModel
                             {
+                                id=i.id,
                                 Title = mygetpos.Title,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
@@ -61,6 +62,7 @@ namespace webapi.Controllers.api.authentication
                         {
                             var myuser = new userModel
                             {
+                                id=i.id,
                                 Title = null,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
