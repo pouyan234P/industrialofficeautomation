@@ -1,4 +1,5 @@
-﻿using webapi.Model.Authentication;
+﻿using webapi.Model;
+using webapi.Model.Authentication;
 
 namespace webapi.Services.IServices.Identity
 {
@@ -7,5 +8,6 @@ namespace webapi.Services.IServices.Identity
         Task<T> insertPosition<T>(setPosition setPositio);
         Task<T> getPosition<T>(int id);
         Task<T> getAll<T>();
+        Task<T> getposanddept<T>(getposdep data);
     }
 }

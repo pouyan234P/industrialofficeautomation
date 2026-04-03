@@ -112,5 +112,16 @@ namespace webapi.Controllers.api.authentication
             }
             
         }
+
+        [HttpGet("getposanddept")]
+        public async Task<IActionResult> getposanddept([FromBody]getposdep data)
+        {
+            var response=await _service.getposanddept<ResponseDTO>(data);
+            if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response?.ErrorMessages);
+        }
     }
 }

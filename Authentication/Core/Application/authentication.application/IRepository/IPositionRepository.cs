@@ -14,6 +14,7 @@ namespace authentication.application.IRepository
         Task<bool> insertPosition(Position position);
         Task<Position> getPosition(int  positionId);
         Task<IEnumerable<Position>> getAll();
+        Task<Position> getPosdep(int deptid,int posid);
 
     }
 }

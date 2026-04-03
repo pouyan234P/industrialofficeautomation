@@ -233,6 +233,22 @@
   },
   {
     "ContainingType": "webapi.Controllers.api.authentication.positionController",
+    "Method": "getposanddept",
+    "RelativePath": "api/position/getposanddept",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "data",
+        "Type": "webapi.Model.getposdep",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.authentication.positionController",
     "Method": "getPosition",
     "RelativePath": "api/position/getPosition/{id}",
     "HttpMethod": "GET",

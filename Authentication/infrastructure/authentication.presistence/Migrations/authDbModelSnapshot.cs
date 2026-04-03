@@ -127,7 +127,7 @@ namespace authentication.presistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("departments");
+                    b.ToTable("departments", (string)null);
                 });
 
             modelBuilder.Entity("authentication.domain.Position", b =>
@@ -154,7 +154,7 @@ namespace authentication.presistence.Migrations
 
                     b.HasIndex("userId");
 
-                    b.ToTable("positions");
+                    b.ToTable("positions", (string)null);
                 });
 
             modelBuilder.Entity("authentication.domain.Role", b =>
@@ -322,7 +322,7 @@ namespace authentication.presistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("signitureimages");
+                    b.ToTable("signitureimages", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

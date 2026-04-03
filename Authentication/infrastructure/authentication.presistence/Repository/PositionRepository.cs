@@ -34,9 +34,15 @@ namespace authentication.presistence.Repository
             return pos;
         }
 
+        public async Task<Position> getPosdep(int deptid,int posid)
+        {
+            var pos = await _db.positions.Where(x => x.Department.Id == deptid && x.Id==posid).Select(x => x).Include(x => x.Department).Include(x => x.User).FirstOrDefaultAsync();
+            return pos;
+        }
+
         public async Task<Position> getPosition(int positionId)
         {
-            var pos=await _db.positions.Where(x=>x.userId==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();
+            var pos=await _db.positions.Where(x=>x.Department.Id==positionId).Select(x=>x).Include(x=>x.Department).Include(x=>x.User).FirstOrDefaultAsync();
             return pos!;
         }
 

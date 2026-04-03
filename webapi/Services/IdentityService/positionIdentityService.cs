@@ -39,5 +39,15 @@ namespace webapi.Services.IdentityService
                 Url=SD.identityApiBase+ "/api/position/getAll"
             });
         }
+
+        public async Task<T> getposanddept<T>(getposdep data)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType= SD.ApiType.GET,
+                Data=data,
+                Url=SD.identityApiBase+ "/api/position/getposanddept"
+            });
+        }
     }
 }

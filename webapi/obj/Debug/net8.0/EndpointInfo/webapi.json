@@ -473,6 +473,42 @@
         }
       }
     },
+    "/api/position/getposanddept": {
+      "get": {
+        "tags": [
+          "position"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/getposdep"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/getposdep"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/getposdep"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/getposdep"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/referral/createreferral/{type}/{id}": {
       "post": {
         "tags": [
@@ -808,6 +844,20 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "getposdep": {
+        "type": "object",
+        "properties": {
+          "posid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "depid": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
       },
       "getsignitureimageDTO": {
         "type": "object",

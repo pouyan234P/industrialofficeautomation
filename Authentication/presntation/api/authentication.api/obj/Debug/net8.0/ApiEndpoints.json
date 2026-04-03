@@ -184,6 +184,22 @@
   },
   {
     "ContainingType": "authentication.api.Controllers.api.positionController",
+    "Method": "getposanddept",
+    "RelativePath": "api/position/getposanddept",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pos",
+        "Type": "authentication.api.DTO.getposdep",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "authentication.api.Controllers.api.positionController",
     "Method": "getPosition",
     "RelativePath": "api/position/getPosition/{id}",
     "HttpMethod": "GET",

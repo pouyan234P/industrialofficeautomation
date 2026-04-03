@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using webapi.Model;
 using webapi.Model.Authentication;
 using webapi.Services.IServices.Identity;
@@ -36,7 +37,7 @@ namespace webapi.Controllers.api.authentication
             var response = await _service.login<ResponseDTO>(dTO);
             if (response.IsSuccess)
             {
-                return Ok(response.Result);
+                return Ok(new { token= response.Result });
             }
             return BadRequest(response.ErrorMessages);
         }

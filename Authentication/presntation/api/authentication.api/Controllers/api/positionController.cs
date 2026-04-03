@@ -84,6 +84,26 @@ namespace authentication.api.Controllers.api
             }
             return Ok(_response);
         }
+
+        [HttpGet("getposanddept")]
+        public async Task<IActionResult> getposanddept([FromBody]getposdep pos)
+        {
+            try
+            {
+                var result = await _mediator.Send(new getPositonbydepandposRequest
+                {
+                    depid = pos.depid,
+                    posid=pos.posid
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages= new List<string>() { e.ToString() } ;
+            }
+            return Ok(_response);
+        }
     }
 }
 

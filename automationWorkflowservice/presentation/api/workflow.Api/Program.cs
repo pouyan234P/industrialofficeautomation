@@ -1,6 +1,6 @@
 using workflow.Persistence;
 using workflow.Appliction;
-using workflow.Api.RabbitMQ;
+using workflow.Api.Rabbit;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.ConfigureApplicationService();
 builder.Services.configurePersistenceServices(builder.Configuration);
