@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CorrespondenceCore.Application.DTO;
+using CorrespondenceCore.domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,8 @@ namespace CorrespondenceCore.Application.IRepository
         Task<IEnumerable<T>> GetAll();
         Task<T> Add(T entity);
         Task<bool> Exists(int id);
-        Task Update(T entity);
+        Task Updatelettr(Letter entity);
         Task Delete(int id);
+        Task Update(T entity);
     }
 }

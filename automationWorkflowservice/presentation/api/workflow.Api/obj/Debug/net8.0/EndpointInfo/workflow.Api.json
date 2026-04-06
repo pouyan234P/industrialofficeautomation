@@ -159,6 +159,15 @@
   },
   "components": {
     "schemas": {
+      "TypeDTO": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -227,6 +236,9 @@
           },
           "priority": {
             "$ref": "#/components/schemas/priorityDTO"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
           },
           "senderPositionID": {
             "type": "integer",

@@ -216,6 +216,38 @@
   },
   {
     "ContainingType": "authentication.api.Controllers.api.positionController",
+    "Method": "getPositionbyDept",
+    "RelativePath": "api/position/getPositionbyDept/{deptid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deptid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "authentication.api.Controllers.api.positionController",
+    "Method": "getPositionbyuser",
+    "RelativePath": "api/position/getPositionbyuser/{userid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "authentication.api.Controllers.api.positionController",
     "Method": "insertPosition",
     "RelativePath": "api/position/insertPosition",
     "HttpMethod": "POST",

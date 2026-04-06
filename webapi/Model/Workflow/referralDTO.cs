@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using webapi.Model.CorrespondenceModel.Enum;
 using webapi.Model.Workflow.Enum;
 
 namespace webapi.Model.Workflow
@@ -17,8 +18,9 @@ namespace webapi.Model.Workflow
         // کپی شده برای سرعت (Denormalized)
         public string LetterSubject { get; set; }
         public string LetterNo { get; set; }
-        public priorityDTO Priority { get; set; }    // آنی، فوری، عادی
+        public priorityDTO priority { get; set; }    // آنی، فوری، عادی
 
+        public TypeDTO type { get; set; }
         // --- ارتباط با فرستنده (از SQL - Position) ---
         public int SenderPositionID { get; set; }
         public string SenderName { get; set; }    // نام شخص در لحظه ارسال (مثلاً: علی رضایی)

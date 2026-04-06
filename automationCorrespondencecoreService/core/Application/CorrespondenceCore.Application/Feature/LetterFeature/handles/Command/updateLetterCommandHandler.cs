@@ -25,7 +25,7 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Command
         public async Task<Unit> Handle(updateLetterCommand request, CancellationToken cancellationToken)
         {
             var map=_mapper.Map<Letter>(request.letterDTO);
-            await _repository.Update(map);
+            await _repository.Updatelettr(map);
             return Unit.Value;
         }
     }

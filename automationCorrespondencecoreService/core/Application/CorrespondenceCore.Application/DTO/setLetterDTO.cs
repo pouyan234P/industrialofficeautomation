@@ -16,7 +16,7 @@ namespace CorrespondenceCore.Application.DTO
         public PriorityDTO priority { get; set; }
         public ConfidentialityDTO confidentiality { get; set; }
         public TypeDTO type { get; set; }
-        public object? BodyHTML { get; set; }
+        public string? BodyHTML { get; set; }
         public AttachmentDTO? attachmentID { get; set; }
         // چه کسی این نامه را ایجاد کرده است؟ (مالک پیش‌نویس)
         public int CreatorPositionID { get; set; }

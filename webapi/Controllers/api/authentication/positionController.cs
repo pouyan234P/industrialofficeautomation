@@ -123,5 +123,27 @@ namespace webapi.Controllers.api.authentication
             }
             return BadRequest(response?.ErrorMessages);
         }
+
+        [HttpGet("getPositionbyuser/{userid}")]
+        public async Task<IActionResult> getPositionbyuser(int userid)
+        {
+            var response=await _service.getPositionbyuser<ResponseDTO>(userid);
+            if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
+
+        [HttpGet("getPositionbyDept/{deptid}")]
+        public async Task<IActionResult> getPositionbyDept(int deptid)
+        {
+            var response=await _service.getPositionbyDept<ResponseDTO>(deptid);
+            if( response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response!.ErrorMessages);
+        }
     }
 }

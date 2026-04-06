@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CorrespondenceCore.Application.DTO;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Command;
 using CorrespondenceCore.Application.IRepository;
 using CorrespondenceCore.Application.Responses;
@@ -29,10 +30,12 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.handles.Command
             map.CreatedDate=DateTime.Now;
             map.BodyHTMLID=request.setLetterDTO!.BodyHTML!.ToString();
             var result=await _repository.Add(map);
-            if(result!=null)
+            var resultmap = _mapper.Map<LetterDTO>(result);
+            resultmap.BodyHTML = result.BodyHTMLID;
+            if(resultmap!=null)
             {
                 response.Success= true;
-                response.Message = result!;
+                response.Message = resultmap!;
                 response.id = result.ID;
             }
             return response;

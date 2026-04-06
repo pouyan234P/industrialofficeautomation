@@ -509,20 +509,58 @@
         }
       }
     },
-    "/api/referral/createreferral/{type}/{id}": {
+    "/api/position/getPositionbyuser/{userid}": {
+      "get": {
+        "tags": [
+          "position"
+        ],
+        "parameters": [
+          {
+            "name": "userid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/position/getPositionbyDept/{deptid}": {
+      "get": {
+        "tags": [
+          "position"
+        ],
+        "parameters": [
+          {
+            "name": "deptid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/createreferral/{id}": {
       "post": {
         "tags": [
           "referral"
         ],
         "parameters": [
-          {
-            "name": "type",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/TypeDTO"
-            }
-          },
           {
             "name": "id",
             "in": "path",
@@ -1049,6 +1087,9 @@
           },
           "priority": {
             "$ref": "#/components/schemas/priorityDTO"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
           },
           "senderPositionID": {
             "type": "integer",

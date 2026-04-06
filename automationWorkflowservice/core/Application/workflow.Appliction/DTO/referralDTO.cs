@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using workflow.Application.DTO.Enum;
 using workflow.Appliction.DTO.Common;
 using workflow.Appliction.DTO.Enum;
 
@@ -17,7 +18,9 @@ namespace workflow.Appliction.DTO
         // کپی شده برای سرعت (Denormalized)
         public string LetterSubject { get; set; }
         public string LetterNo { get; set; }
-        public priorityDTO Priority { get; set; }    // آنی، فوری، عادی
+        public priorityDTO priority { get; set; }
+
+        public TypeDTO type { get; set; }
 
         // --- ارتباط با فرستنده (از SQL - Position) ---
         public int SenderPositionID { get; set; }

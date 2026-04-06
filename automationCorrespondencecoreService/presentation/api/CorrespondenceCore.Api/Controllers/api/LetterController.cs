@@ -31,7 +31,10 @@ namespace CorrespondenceCore.Api.Controllers.api
         {
             try
             {
-                var bsonDocument = BsonDocument.Parse(letterDTO.BodyHTML!.ToString());
+                var bsonDocument = new BsonDocument
+                {
+                    { "context", BsonValue.Create(letterDTO.BodyHTML.ToString()) } // Fix: Convert letterDTO.BodyHTML to BsonValue
+                };
                 var commandhtml = new createhtmlbodyCommand
                 {
                     elements = bsonDocument
@@ -78,6 +81,8 @@ namespace CorrespondenceCore.Api.Controllers.api
             }
             return Ok(_response);
         }
+
+
 
         [HttpGet("getLetters")]
         public async Task<IActionResult> getLetters()

@@ -9,5 +9,7 @@ namespace webapi.Services.IServices.Identity
         Task<T> getPosition<T>(int id);
         Task<T> getAll<T>();
         Task<T> getposanddept<T>(getposdep data);
+        Task<T> getPositionbyuser<T>(int userid);
+        Task<T> getPositionbyDept<T>(int deptid);
     }
 }

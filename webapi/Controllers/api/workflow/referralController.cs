@@ -37,8 +37,8 @@ namespace webapi.Controllers.api.workflow
             _referralservice = referralservice;
         }
 
-        [HttpPost("createreferral/{type}/{id}")]
-        public async Task<IActionResult> createreferral([FromBody] setReferralDTO dto, TypeDTO type,int id)
+        [HttpPost("createreferral/{id}")]
+        public async Task<IActionResult> createreferral([FromBody] setReferralDTO dto,int id)
         {
             var letter = await _letterservice.getLetter<ResponseDTO>(dto.LetterID);
             string jsonString = JsonConvert.SerializeObject(letter.Result);
@@ -49,7 +49,7 @@ namespace webapi.Controllers.api.workflow
                 var mygetdto = new getNextNumberDTO
                 {
                     year = DateTime.Now.Year,
-                    type = type,
+                    type = dto.type,
                     deptID = id
                 };
                 var generateNumber = await _numberservice.mynextnumber<ResponseDTO>(mygetdto);
@@ -79,7 +79,7 @@ namespace webapi.Controllers.api.workflow
             dto.LetterNo = mydto.LetterNo;
             dto.LetterSubject = mydto.Subject;
             dto.Timestamp=DateTime.Now;
-            dto.Priority=Enum.Parse<priorityDTO>(mydto.priority.ToString());
+            dto.priority=Enum.Parse<priorityDTO>(mydto.priority.ToString());
             _messageSender.SendMessage(dto, _configuration.GetValue<string>("TopicAndQueueNames:myreferral"));
             
             return Ok();

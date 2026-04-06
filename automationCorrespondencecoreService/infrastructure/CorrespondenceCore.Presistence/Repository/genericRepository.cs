@@ -1,4 +1,5 @@
 ﻿using CorrespondenceCore.Application.IRepository;
+using CorrespondenceCore.domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,15 @@ namespace CorrespondenceCore.Presistence.Repository
         {
             _db.Entry(entity).State = EntityState.Modified;
             await _db.SaveChangesAsync();
+        }
+
+        public async Task Updatelettr(Letter entity)
+        {
+            var myletter = await _db.letters.Where(x => x.ID == entity.ID).Select(x => x).FirstOrDefaultAsync();
+            myletter.LetterNo = entity.LetterNo;
+            myletter.SentDate = entity.SentDate;
+            _db.Update(myletter);
+            _db.SaveChanges();
         }
     }
 }

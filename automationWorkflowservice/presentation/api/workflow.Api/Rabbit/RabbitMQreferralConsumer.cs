@@ -23,7 +23,7 @@ namespace workflow.Api.Rabbit
             // Just set up the factory here, DO NOT connect yet.
             _factory = new ConnectionFactory
             {
-                HostName = "rabbitmq",
+                HostName = "192.168.1.173",
                 Password = "guest",
                 UserName = "guest",
                 // Optional: You can let the RabbitMQ client handle automatic recovery
