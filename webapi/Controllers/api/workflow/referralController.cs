@@ -38,12 +38,12 @@ namespace webapi.Controllers.api.workflow
         }
 
         [HttpPost("createreferral/{id}")]
-        public async Task<IActionResult> createreferral([FromBody] setReferralDTO dto,int id)
+        public async Task<IActionResult> createreferral([FromBody] setReferralDTO dto, int id)
         {
             var letter = await _letterservice.getLetter<ResponseDTO>(dto.LetterID);
             string jsonString = JsonConvert.SerializeObject(letter.Result);
             LetterDTO mydto = JsonConvert.DeserializeObject<LetterDTO>(jsonString)!;
-            
+
             if (mydto.LetterNo == null)
             {
                 var mygetdto = new getNextNumberDTO
@@ -53,10 +53,10 @@ namespace webapi.Controllers.api.workflow
                     deptID = id
                 };
                 var generateNumber = await _numberservice.mynextnumber<ResponseDTO>(mygetdto);
-                string jsongenNumber=JsonConvert.SerializeObject(generateNumber.Result);
-                string mynumber = JsonConvert.DeserializeObject<string>(jsongenNumber);
-                dto.LetterNo =mynumber;
-                mydto.LetterNo = mynumber;
+                string jsongenNumber = JsonConvert.SerializeObject(generateNumber.Result);
+                string mynumber = JsonConvert.DeserializeObject<string>(jsongenNumber)!;
+                dto.LetterNo = mynumber;
+                mydto.LetterNo = mynumber!;
                 mydto.SentDate = DateTime.Now;
                 await _letterservice.updateLetter<ResponseDTO>(mydto);
                 var mysels = new LetterSearchDocument
@@ -71,17 +71,21 @@ namespace webapi.Controllers.api.workflow
                     CreatorPositionId = dto.SenderPositionID,
                     SenderDepartmentId = id
                 };
-                _rabbitMQsearch.SendMessage(mysels, _configuration.GetValue<string>("TopicAndQueueNames:myels"));
+               
+
+                _rabbitMQsearch.SendMessage(mysels, _configuration.GetValue<string>("TopicAndQueueNames:myels")!);
             }
             else
-                dto.LetterNo=mydto.LetterNo;
-           
+                dto.LetterNo = mydto.LetterNo;
+
             dto.LetterNo = mydto.LetterNo;
             dto.LetterSubject = mydto.Subject;
-            dto.Timestamp=DateTime.Now;
-            dto.priority=Enum.Parse<priorityDTO>(mydto.priority.ToString());
-            _messageSender.SendMessage(dto, _configuration.GetValue<string>("TopicAndQueueNames:myreferral"));
-            
+            dto.Timestamp = DateTime.Now;
+            dto.priority = Enum.Parse<priorityDTO>(mydto.priority.ToString());
+
+
+            _messageSender.SendMessage(dto, _configuration.GetValue<string>("TopicAndQueueNames:myreferral")!);
+
             return Ok();
         }
 
@@ -111,6 +115,25 @@ namespace webapi.Controllers.api.workflow
         {
             var response = await _referralservice.getAll<ResponseDTO>();
             if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
+
+        [HttpPost("updatereferral")]
+        public async Task<IActionResult> updatereferral([FromBody] referralDTO dTO)
+        { 
+
+            _messageSender.UpdateMessage(dTO, _configuration.GetValue<string>("TopicAndQueueNames:updatereferral"));
+            return await Task.FromResult(Ok());
+        }
+
+        [HttpPost("getbytyperecvierid/{reciveid}")]
+        public async Task<IActionResult> getbytyperecvierid(int reciveid,[FromBody]TypeDTO type)
+        {
+            var response = await _referralservice.getbytyperecvierid<ResponseDTO>(reciveid, type);
+            if (response.IsSuccess)
             {
                 return Ok(response.Result);
             }

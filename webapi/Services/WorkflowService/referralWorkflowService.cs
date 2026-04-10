@@ -1,4 +1,5 @@
 ﻿using webapi.Model;
+using webapi.Model.CorrespondenceModel.Enum;
 using webapi.Model.Workflow;
 using webapi.Services.IServices.IWorkflowService;
 
@@ -46,6 +47,16 @@ namespace webapi.Services.WorkflowService
             {
                 ApiType = SD.ApiType.GET,
                 Url=SD.gatewayApiBase+ "/api/referral/getAllByReciver/"+ id
+            });
+        }
+
+        public async Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType=SD.ApiType.POST,
+                Data=type,
+                Url=SD.gatewayApiBase+ "/api/referral/getbytyperecvierid/"+reciveid
             });
         }
 

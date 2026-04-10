@@ -59,9 +59,29 @@ namespace workflow.Persistence.Repository
             throw new NotImplementedException();
         }
 
-        public Task Update(BsonDocument entity)
+        public async Task Update(BsonDocument entity)
         {
-            throw new NotImplementedException();
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            if (!entity.Contains("_id"))
+            {
+                throw new ArgumentException("برای بروزرسانی، فیلد _id الزامی است.");
+            }
+
+            var id = entity["_id"];
+
+            // ۲. ایجاد فیلتر برای پیدا کردن رکورد مورد نظر
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", id);
+
+            // ۳. آماده‌سازی فیلدهایی که باید تغییر کنند
+            // ما _id را از لیست فیلدهای آپدیت حذف می‌کنیم چون _id در مونگو غیرقابل تغییر است
+            var updateDefinition = new BsonDocument(entity);
+            updateDefinition.Remove("_id");
+
+            // استفاده از دستور $set برای اینکه فقط فیلدهای ارسالی تغییر کنند و مابقی ثابت بمانند
+            var update = new BsonDocument("$set", updateDefinition);
+
+            // ۴. اجرای عملیات در دیتابیس
+            await collection.UpdateOneAsync(filter, update);
         }
 
         public Task Delete(string id)

@@ -375,6 +375,43 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.Controllers.api.workflow.referralController",
+    "Method": "getbytyperecvierid",
+    "RelativePath": "api/referral/getbytyperecvierid/{reciveid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "reciveid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.workflow.referralController",
+    "Method": "updatereferral",
+    "RelativePath": "api/referral/updatereferral",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dTO",
+        "Type": "webapi.Model.Workflow.referralDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "webapi.Controllers.api.authentication.userController",
     "Method": "getAll",
     "RelativePath": "api/user/getAll",

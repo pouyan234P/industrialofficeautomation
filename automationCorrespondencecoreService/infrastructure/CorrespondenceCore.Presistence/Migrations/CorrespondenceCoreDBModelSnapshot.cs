@@ -111,6 +111,12 @@ namespace CorrespondenceCore.Presistence.Migrations
                     b.Property<string>("LetterNo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("ParentLetterID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ReplyToLetterID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("SentDate")
                         .HasColumnType("datetime2");
 
@@ -131,6 +137,8 @@ namespace CorrespondenceCore.Presistence.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("ParentLetterID");
+
                     b.HasIndex("attachmentIDID");
 
                     b.ToTable("letters");
@@ -138,9 +146,15 @@ namespace CorrespondenceCore.Presistence.Migrations
 
             modelBuilder.Entity("CorrespondenceCore.domain.Letter", b =>
                 {
+                    b.HasOne("CorrespondenceCore.domain.Letter", "ParentLetter")
+                        .WithMany()
+                        .HasForeignKey("ParentLetterID");
+
                     b.HasOne("CorrespondenceCore.domain.Attachment", "attachmentID")
                         .WithMany()
                         .HasForeignKey("attachmentIDID");
+
+                    b.Navigation("ParentLetter");
 
                     b.Navigation("attachmentID");
                 });

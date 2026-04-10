@@ -26,5 +26,6 @@ namespace CorrespondenceCore.Application.DTO
         // آیا این نامه هنوز پیش‌نویس است؟ 
         // (می‌توانید از این فیلد استفاده کنید یا فقط چک کنید که SentDate مساوی Null باشد)
         public bool IsDraft { get; set; }
+        public int? ReplyToLetterID { get; set; }
     }
 }

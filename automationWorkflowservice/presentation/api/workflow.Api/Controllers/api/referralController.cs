@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using workflow.Api.DTO;
+using workflow.Application.DTO.Enum;
 using workflow.Appliction.DTO;
 using workflow.Appliction.Feature.referralFeature.request.Command;
 using workflow.Appliction.Feature.referralFeature.request.Queries;
@@ -111,6 +112,27 @@ namespace workflow.Api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess=false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
+
+        [HttpPost("getbytyperecvierid/{receverid}")]
+        public async Task<IActionResult> getbytyperecvierid(int receverid, [FromBody]TypeDTO type)
+        {
+            try
+            {
+                string id = Convert.ToString(receverid);
+                var result = await _mediator.Send(new getReferralbyTypeRequest
+                {
+                    mytype = type,
+                    reciverID = id
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);

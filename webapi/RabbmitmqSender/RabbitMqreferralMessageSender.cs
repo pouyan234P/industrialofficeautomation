@@ -32,6 +32,22 @@ namespace webapi.RabbmitmqSender
             await channel.BasicPublishAsync(exchange: "", routingKey: queueName, body: body);
 
         }
+
+        public async void UpdateMessage(object message, string queueName)
+        {
+            var factory = new ConnectionFactory
+            {
+                HostName = _hostname,
+                Password = _password,
+                UserName = _username
+            };
+            _connection = await factory.CreateConnectionAsync();
+            using var channel = await _connection.CreateChannelAsync();
+            await channel.QueueDeclareAsync(queueName, false, false, false, null);
+            var json = JsonConvert.SerializeObject(message);
+            var body = Encoding.UTF8.GetBytes(json);
+            await channel.BasicPublishAsync(exchange: "", routingKey: queueName, body: body);
+        }
     }
     }
 

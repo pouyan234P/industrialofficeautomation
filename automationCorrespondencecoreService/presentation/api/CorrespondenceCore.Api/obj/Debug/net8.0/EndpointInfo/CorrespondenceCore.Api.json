@@ -230,18 +230,6 @@
         }
       }
     },
-    "/api/Letter/ping": {
-      "get": {
-        "tags": [
-          "Letter"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -368,6 +356,11 @@
           },
           "isDraft": {
             "type": "boolean"
+          },
+          "replyToLetterID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -485,6 +478,11 @@
           },
           "isDraft": {
             "type": "boolean"
+          },
+          "replyToLetterID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
           }
         },
         "additionalProperties": false

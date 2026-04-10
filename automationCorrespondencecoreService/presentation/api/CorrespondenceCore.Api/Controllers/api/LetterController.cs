@@ -1,5 +1,6 @@
 ﻿using CorrespondenceCore.Api.DTO;
 using CorrespondenceCore.Application.DTO;
+using CorrespondenceCore.Application.DTO.Enum;
 using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Commands;
 using CorrespondenceCore.Application.Feature.htmlbodyFeature.request.Queries;
 using CorrespondenceCore.Application.Feature.LetterFeature.request.Command;
@@ -120,12 +121,7 @@ namespace CorrespondenceCore.Api.Controllers.api
             return Ok(_response);
         }
 
-        [HttpGet("ping")]
-        public IActionResult Ping()
-        {
-            _response.Result = "Pong from Letter Service!";
-            return Ok(_response);
-        }
+        
 
         /* public async Task<IActionResult> deleteLetter(int id)
          {

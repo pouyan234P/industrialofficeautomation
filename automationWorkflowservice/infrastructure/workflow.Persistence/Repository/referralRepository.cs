@@ -1,11 +1,15 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Bson;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using workflow.Application.DTO.Enum;
 using workflow.Appliction.IRepository;
+using workflow.domain;
+using workflow.domain.Enum;
 using workflow.Persistence.helper;
 
 namespace workflow.Persistence.Repository
@@ -13,10 +17,28 @@ namespace workflow.Persistence.Repository
     public class referralRepository:genericRepository<BsonDocument>,IReferralRepository
     {
         private readonly IOptions<Mongosettings> _configuration;
-
+        private IMongoDatabase _db { get; set; }
+        private MongoClient _mongoClient { get; set; }
         public referralRepository(IOptions<Mongosettings> configuration):base(configuration) 
         {
             _configuration = configuration;
+            _mongoClient = new MongoClient(configuration.Value.Connection);
+            _db = _mongoClient.GetDatabase(configuration.Value.DatabaseName);
+        }
+
+        public async Task<IEnumerable<BsonDocument>> getRefferalBytpeandreciverid(string reciverid, type mytype)
+        {
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            var filter = Builders<BsonDocument>.Filter.Eq("ReceiverPositionID", int.Parse(reciverid));
+            var filter2 = Builders<BsonDocument>.Filter.Eq("type", mytype);
+            var combinedFilter = Builders<BsonDocument>.Filter.And(filter, filter2);
+
+            var referralDocuments = await collection.Find(combinedFilter).ToListAsync();
+
+            // Map BsonDocument to Referral
+            
+
+            return referralDocuments;
         }
     }
 }

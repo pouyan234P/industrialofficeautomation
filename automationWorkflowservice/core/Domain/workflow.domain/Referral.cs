@@ -23,6 +23,8 @@ namespace workflow.domain
         public string LetterNo { get; set; }
         public Priority Priority { get; set; }    // آنی، فوری، عادی
 
+        public type type { get; set; }
+
         // --- ارتباط با فرستنده (از SQL - Position) ---
         public int SenderPositionID { get; set; }
         public string SenderName { get; set; }    // نام شخص در لحظه ارسال (مثلاً: علی رضایی)

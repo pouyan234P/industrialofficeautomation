@@ -6,6 +6,7 @@ builder.Services.ConfigureApplicationService();
 builder.Services.configurePersistenceServices(builder.Configuration);
 // Add services to the container.
 builder.Services.AddHostedService<RabbitMQreferralConsumer>();
+builder.Services.AddHostedService<RabbitMQupdatereferralConsumer>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

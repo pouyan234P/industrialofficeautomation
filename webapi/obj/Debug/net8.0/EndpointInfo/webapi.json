@@ -660,6 +660,89 @@
         }
       }
     },
+    "/api/referral/updatereferral": {
+      "post": {
+        "tags": [
+          "referral"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/referralDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/referralDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/referralDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/referralDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getbytyperecvierid/{reciveid}": {
+      "post": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "reciveid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/user/getAll": {
       "get": {
         "tags": [
@@ -943,6 +1026,88 @@
         "type": "integer",
         "format": "int32"
       },
+      "referralDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "letterID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "letterSubject": {
+            "type": "string",
+            "nullable": true
+          },
+          "letterNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "priority": {
+            "$ref": "#/components/schemas/priorityDTO"
+          },
+          "type": {
+            "$ref": "#/components/schemas/TypeDTO"
+          },
+          "senderPositionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "senderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "senderTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "receiverPositionID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "receiverName": {
+            "type": "string",
+            "nullable": true
+          },
+          "receiverTitle": {
+            "type": "string",
+            "nullable": true
+          },
+          "actionType": {
+            "$ref": "#/components/schemas/actionTypeDTO"
+          },
+          "status": {
+            "$ref": "#/components/schemas/referralStatusDTO"
+          },
+          "paraph": {
+            "type": "string",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "viewDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "actionDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "deadline": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "referralStatusDTO": {
         "enum": [
           0,
@@ -1047,6 +1212,11 @@
           },
           "isDraft": {
             "type": "boolean",
+            "nullable": true
+          },
+          "replyToLetterID": {
+            "type": "integer",
+            "format": "int32",
             "nullable": true
           }
         },

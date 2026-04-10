@@ -26,5 +26,10 @@ namespace CorrespondenceCore.domain
         // آیا این نامه هنوز پیش‌نویس است؟ 
         // (می‌توانید از این فیلد استفاده کنید یا فقط چک کنید که SentDate مساوی Null باشد)
         public bool IsDraft { get; set; } = true;
+
+        public int? ReplyToLetterID { get; set; }
+
+        // Navigation Property (اختیاری در EF Core برای گرفتن اطلاعات نامه والد)
+        public virtual Letter? ParentLetter { get; set; }
     }
 }

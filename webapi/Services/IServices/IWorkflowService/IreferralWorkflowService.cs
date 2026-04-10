@@ -1,4 +1,5 @@
-﻿using webapi.Model.Workflow;
+﻿using webapi.Model.CorrespondenceModel.Enum;
+using webapi.Model.Workflow;
 
 namespace webapi.Services.IServices.IWorkflowService
 {
@@ -9,5 +10,6 @@ namespace webapi.Services.IServices.IWorkflowService
         Task<T> getAllByReciver<T>(int id);
         Task<T> getreferral<T>(int id);
         Task<T> getAll<T>();
+        Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type);
     }
 }
