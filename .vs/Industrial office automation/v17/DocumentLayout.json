@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\model\\workflow\\setreferraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\model\\workflow\\setreferraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A6F3C5E0-8AB9-4DD4-A8FA-05E34632FF30}|automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\presentation\\api\\workflow.api\\rabbit\\rabbitmqupdatereferralconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6F3C5E0-8AB9-4DD4-A8FA-05E34632FF30}|automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj|solutionrelative:automationworkflowservice\\presentation\\api\\workflow.api\\rabbit\\rabbitmqupdatereferralconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D92EF7-9A34-453E-86BB-376E0A22E77C}|automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\domain\\workflow.domain\\referral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D92EF7-9A34-453E-86BB-376E0A22E77C}|automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj|solutionrelative:automationworkflowservice\\core\\domain\\workflow.domain\\referral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D978FB27-A6EC-4456-92A6-74E3E4F8B61F}|automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\core\\domain\\correspondencecore.domain\\letter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D978FB27-A6EC-4456-92A6-74E3E4F8B61F}|automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\CorrespondenceCore.domain.csproj|solutionrelative:automationcorrespondencecoreservice\\core\\domain\\correspondencecore.domain\\letter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\application\\workflow.appliction\\dto\\referraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|solutionrelative:automationworkflowservice\\core\\application\\workflow.appliction\\dto\\referraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\application\\workflow.appliction\\dto\\setreferraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{83BAB2D4-075E-4772-8A3C-7C89C15799C0}|automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj|solutionrelative:automationworkflowservice\\core\\application\\workflow.appliction\\dto\\setreferraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31D92EF7-9A34-453E-86BB-376E0A22E77C}|automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\core\\domain\\workflow.domain\\enum\\referralstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31D92EF7-9A34-453E-86BB-376E0A22E77C}|automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj|solutionrelative:automationworkflowservice\\core\\domain\\workflow.domain\\enum\\referralstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6F3C5E0-8AB9-4DD4-A8FA-05E34632FF30}|automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj|c:\\project\\industrial office automation\\automationworkflowservice\\presentation\\api\\workflow.api\\rabbit\\rabbitmqreferralconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6F3C5E0-8AB9-4DD4-A8FA-05E34632FF30}|automationWorkflowservice\\presentation\\api\\workflow.Api\\workflow.Api.csproj|solutionrelative:automationworkflowservice\\presentation\\api\\workflow.api\\rabbit\\rabbitmqreferralconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "setReferralDTO.cs",
-              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Model\\Workflow\\setReferralDTO.cs",
-              "RelativeDocumentMoniker": "webapi\\Model\\Workflow\\setReferralDTO.cs",
-              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Model\\Workflow\\setReferralDTO.cs",
-              "RelativeToolTip": "webapi\\Model\\Workflow\\setReferralDTO.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCUAAAAgAAAAAAAAAA==",
+              "Title": "RabbitMQupdatereferralConsumer.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQupdatereferralConsumer.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQupdatereferralConsumer.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQupdatereferralConsumer.cs",
+              "RelativeToolTip": "automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQupdatereferralConsumer.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-10T00:26:29.131Z",
+              "WhenOpened": "2026-04-11T04:39:37.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Letter.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\Letter.cs",
+              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\Letter.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\Letter.cs",
+              "RelativeToolTip": "automationCorrespondencecoreService\\core\\Domain\\CorrespondenceCore.domain\\Letter.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T04:32:26.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "referralDTO.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\referralDTO.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\referralDTO.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\referralDTO.cs",
+              "RelativeToolTip": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\referralDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T04:07:03.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "setReferralDTO.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\setReferralDTO.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\setReferralDTO.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\setReferralDTO.cs",
+              "RelativeToolTip": "automationWorkflowservice\\core\\Application\\workflow.Appliction\\DTO\\setReferralDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T04:06:55.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReferralStatus.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\Enum\\ReferralStatus.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Domain\\workflow.domain\\Enum\\ReferralStatus.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\Enum\\ReferralStatus.cs",
+              "RelativeToolTip": "automationWorkflowservice\\core\\Domain\\workflow.domain\\Enum\\ReferralStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T04:04:49.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Referral.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\Referral.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\core\\Domain\\workflow.domain\\Referral.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\Referral.cs",
+              "RelativeToolTip": "automationWorkflowservice\\core\\Domain\\workflow.domain\\Referral.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA8wDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T03:40:38.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RabbitMQreferralConsumer.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQreferralConsumer.cs",
+              "RelativeDocumentMoniker": "automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQreferralConsumer.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQreferralConsumer.cs",
+              "RelativeToolTip": "automationWorkflowservice\\presentation\\api\\workflow.Api\\Rabbit\\RabbitMQreferralConsumer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-11T01:53:13.625Z",
               "EditorCaption": ""
             }
           ]

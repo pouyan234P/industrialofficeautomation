@@ -17,7 +17,8 @@ namespace webapi.Model.CorrespondenceModel
         public PriorityDTO priority { get; set; }
         public ConfidentialityDTO confidentiality { get; set; }
         public TypeDTO type { get; set; }
-        public object? BodyHTML { get; set; }
+        public string? BodyHTML { get; set; }
+        public string? BodyReplay { get; set; }
         public AttachmentDTO? attachmentID { get; set; }
         public int CreatorPositionID { get; set; }
 

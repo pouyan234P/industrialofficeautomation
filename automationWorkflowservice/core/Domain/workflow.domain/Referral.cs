@@ -14,6 +14,10 @@ namespace workflow.domain
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
+        // --- زنجیره ارجاعات ---
+        // کلید طلایی برای ردیابیِ اینکه این ارجاع در نتیجه‌یِ یک Forward یا Reject ساخته شده است
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? ParentReferralId { get; set; }
 
         // --- ارتباط با نامه (از SQL) ---
         public int LetterID { get; set; }
@@ -47,7 +51,7 @@ namespace workflow.domain
         // --- زمان‌بندی ---
         public DateTime Timestamp { get; set; }      // زمان دقیق ارسال
         public DateTime? ViewDate { get; set; }      // زمان دقیق دیده شدن (برای تیک دوم)
-        public DateTime? ActionDate { get; set; }    // زمانی که گیرنده کار را تمام کرد
+        public DateTime? ActionDate { get; set; }    // // لحظه‌ای که Status به 2 یا 4 تغییر کرد
         public DateTime? Deadline { get; set; }      // مهلت اقدام
     }
 }

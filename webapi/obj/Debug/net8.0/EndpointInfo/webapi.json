@@ -1201,6 +1201,11 @@
             "$ref": "#/components/schemas/TypeDTO"
           },
           "bodyHTML": {
+            "type": "string",
+            "nullable": true
+          },
+          "bodyReplay": {
+            "type": "string",
             "nullable": true
           },
           "attachmentID": {

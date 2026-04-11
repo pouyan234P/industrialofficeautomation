@@ -13,6 +13,7 @@ namespace webapi.Model.Workflow
     public class setReferralDTO
     {
         public int LetterID { get; set; }
+        public string? ParentReferralId { get; set; }
 
         // کپی شده برای سرعت (Denormalized)
         public string? LetterSubject { get; set; }

@@ -11,6 +11,7 @@ namespace workflow.domain.Enum
         Unread=0,
         Viewed=1,
         Done=2,
-        Archived=3
+        Archived=3,
+        Rejected = 4
     }
 }

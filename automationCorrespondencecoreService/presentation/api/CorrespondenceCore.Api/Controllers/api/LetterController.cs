@@ -32,10 +32,17 @@ namespace CorrespondenceCore.Api.Controllers.api
         {
             try
             {
-                var bsonDocument = new BsonDocument
+                var bsonDocument = new BsonDocument();
+                if (letterDTO.ReplyToLetterID == null)
                 {
-                    { "context", BsonValue.Create(letterDTO.BodyHTML.ToString()) } // Fix: Convert letterDTO.BodyHTML to BsonValue
-                };
+                    bsonDocument.Add("context", BsonValue.Create(letterDTO.BodyHTML.ToString()));
+                    // Fix: Corrected syntax for Add method and ensured BodyHTML is not null
+                }
+                else
+                {
+                    bsonDocument.Add("context", BsonValue.Create(letterDTO.BodyHTML.ToString()));
+                    bsonDocument.Add("replaycontext", BsonValue.Create(letterDTO.BodyReplay.ToString()));
+                }
                 var commandhtml = new createhtmlbodyCommand
                 {
                     elements = bsonDocument
@@ -73,6 +80,10 @@ namespace CorrespondenceCore.Api.Controllers.api
                     id = response.BodyHTML.ToString()
                 });
                 response.BodyHTML = result["context"].ToString();
+                if (response.ReplyToLetterID != null)
+                {
+                    response.BodyReplay = result["replaycontext"].ToString();
+                }
                 _response.Result = response;
             }
             catch (Exception e)
