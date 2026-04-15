@@ -9,7 +9,7 @@ namespace webapi.Services.WorkflowService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public referralWorkflowService(IHttpClientFactory clientFactory): base(clientFactory)
+        public referralWorkflowService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }

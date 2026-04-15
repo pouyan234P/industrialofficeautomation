@@ -256,7 +256,8 @@
           0,
           1,
           2,
-          3
+          3,
+          4
         ],
         "type": "integer",
         "format": "int32"
@@ -267,6 +268,10 @@
           "letterID": {
             "type": "integer",
             "format": "int32"
+          },
+          "parentReferralId": {
+            "type": "string",
+            "nullable": true
           },
           "letterSubject": {
             "type": "string",

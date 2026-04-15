@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Shared.Infrastructure.Middleware;
 using System.Net.Http.Headers;
 using System.Text;
 using webapi.Model;
@@ -6,24 +7,39 @@ using webapi.Services.IServices;
 
 namespace webapi.Services
 {
+    /// <summary>
+    /// Base HTTP service for all downstream calls.
+    ///
+    /// Changes from original:
+    ///   1. Forwards X-Correlation-Id on every outbound HTTP request
+    ///      so downstream services (Correspondence, Workflow, Search) log
+    ///      the same CorrelationId as the originating WebAPI request
+    ///   2. IHttpContextAccessor injected to read the current CorrelationId
+    ///      from the ambient request context
+    /// </summary>
     public class BaseService : IBaseService
     {
-        private readonly IHttpClientFactory httpClient;
+        private readonly IHttpClientFactory _httpClient;
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
         public ResponseDTO responseDTO { get; set; }
 
-        public BaseService(IHttpClientFactory httpClient)
+        public BaseService(IHttpClientFactory httpClient, IHttpContextAccessor httpContextAccessor)
         {
-            this.httpClient = httpClient;
+            _httpClient = httpClient;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<(byte[] Data, string ContentType)> SendFileAsync(ApiRequest apiRequest)
         {
-            var client = httpClient.CreateClient("industrial");
-            HttpRequestMessage message = new()
+            var client = _httpClient.CreateClient("industrial");
+            var message = new HttpRequestMessage
             {
                 RequestUri = new Uri(apiRequest.Url),
                 Method = HttpMethod.Get
             };
+
+            ForwardCorrelationId(message);
 
             if (!string.IsNullOrEmpty(apiRequest.AccessToken))
                 client.DefaultRequestHeaders.Authorization =
@@ -36,7 +52,6 @@ namespace webapi.Services
 
             var bytes = await apiResponse.Content.ReadAsByteArrayAsync();
             var contentType = apiResponse.Content.Headers.ContentType?.MediaType ?? "application/octet-stream";
-
             return (bytes, contentType);
         }
 
@@ -44,11 +59,16 @@ namespace webapi.Services
         {
             try
             {
-                var client = httpClient.CreateClient("industrial");
-                HttpRequestMessage message = new();
+                var client = _httpClient.CreateClient("industrial");
+                var message = new HttpRequestMessage();
                 message.Headers.Add("Accept", "application/json");
                 message.RequestUri = new Uri(apiRequest.Url);
                 client.DefaultRequestHeaders.Clear();
+
+                // ── Forward CorrelationId to every downstream service ────────
+                // This is what links log lines across WebAPI → Correspondence →
+                // Workflow → Search into one traceable chain
+                ForwardCorrelationId(message);
 
                 if (apiRequest.ContentType == "multipart/form-data" && apiRequest.Data != null)
                 {
@@ -58,15 +78,12 @@ namespace webapi.Services
                         var value = prop.GetValue(apiRequest.Data);
                         if (value != null)
                         {
-                            // ADD THIS BLOCK: Handle IFormFile directly
                             if (value is IFormFile formFile)
                             {
                                 var streamContent = new StreamContent(formFile.OpenReadStream());
-                                // Adding Content-Type header helps the backend recognize it as an image
                                 streamContent.Headers.ContentType = new MediaTypeHeaderValue(formFile.ContentType);
                                 content.Add(streamContent, prop.Name, formFile.FileName);
                             }
-                            // Keep your existing byte array check just in case you use it elsewhere
                             else if (value is byte[] fileBytes)
                             {
                                 var fileContent = new ByteArrayContent(fileBytes);
@@ -74,7 +91,7 @@ namespace webapi.Services
                             }
                             else
                             {
-                                content.Add(new StringContent(value.ToString()), prop.Name);
+                                content.Add(new StringContent(value.ToString()!), prop.Name);
                             }
                         }
                     }
@@ -92,25 +109,17 @@ namespace webapi.Services
                     client.DefaultRequestHeaders.Authorization =
                         new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
 
-                switch (apiRequest.ApiType)
+                message.Method = apiRequest.ApiType switch
                 {
-                    case SD.ApiType.POST:
-                        message.Method = HttpMethod.Post;
-                        break;
-                    case SD.ApiType.PUT:
-                        message.Method = HttpMethod.Put;
-                        break;
-                    case SD.ApiType.DELETE:
-                        message.Method = HttpMethod.Delete;
-                        break;
-                    default:
-                        message.Method = HttpMethod.Get;
-                        break;
-                }
+                    SD.ApiType.POST => HttpMethod.Post,
+                    SD.ApiType.PUT => HttpMethod.Put,
+                    SD.ApiType.DELETE => HttpMethod.Delete,
+                    _ => HttpMethod.Get
+                };
 
                 var apiresponse = await client.SendAsync(message);
                 var apicontent = await apiresponse.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<T>(apicontent);
+                return JsonConvert.DeserializeObject<T>(apicontent)!;
             }
             catch (Exception e)
             {
@@ -120,13 +129,24 @@ namespace webapi.Services
                     ErrorMessages = new List<string> { e.Message },
                     IsSuccess = false
                 };
-                return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(dto));
+                return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(dto))!;
             }
         }
 
-        public void Dispose()
+        /// <summary>
+        /// Reads the CorrelationId that CorrelationIdMiddleware stored in HttpContext.Items
+        /// and adds it as a request header so the downstream service receives it.
+        /// </summary>
+        private void ForwardCorrelationId(HttpRequestMessage message)
         {
-            GC.SuppressFinalize(true);
+            var correlationId = _httpContextAccessor.HttpContext?
+                                    .Items[CorrelationIdMiddleware.HeaderName]?.ToString();
+
+            if (!string.IsNullOrEmpty(correlationId))
+                message.Headers.TryAddWithoutValidation(
+                    CorrelationIdMiddleware.HeaderName, correlationId);
         }
+
+        public void Dispose() => GC.SuppressFinalize(true);
     }
 }

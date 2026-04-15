@@ -9,7 +9,7 @@ namespace webapi.Services.IdentityService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public pictureIdentityService(IHttpClientFactory clientFactory) : base(clientFactory)
+        public pictureIdentityService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }

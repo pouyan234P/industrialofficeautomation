@@ -1,25 +1,70 @@
 using MediatR;
-using searchengine.Api.RabbitMQ;
+using searchengine.Api.Rabbit;
 using searchengine.Application;
 using searchengine.Application.Feature.leatterFeature.request.Command;
 using searchengine.Persistence;
+using Shared.Infrastructure.Logging;
+using Shared.Infrastructure.Middleware;
+using Shared.Infrastructure.HealthChecks;
+using Shared.Infrastructure.Middleware;
+using Serilog;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddSerilog("SearchService");
+
+// ?? 2. Application + Persistence ?????????????????????????????????????????????
 builder.Services.ConfigureApplicationService();
 builder.Services.configurePersistenceServices();
+
+// ?? 3. RabbitMQ consumer (BackgroundService) ??????????????????????????????????
+// Consumes the myels queue and indexes letters into Elasticsearch.
+// Consumer has DLQ, retry, and structured logging built in from the resilience batch.
 builder.Services.AddHostedService<RabbitMQsearchConsumer>();
-// Add services to the container.
+
+// ?? 4. Health checks ??????????????????????????????????????????????????????????
+// Requires AspNetCore.HealthChecks.Elasticsearch and .Rabbitmq in the .csproj.
+
+builder.Services.AddServiceHealthChecks(hc =>
+{
+    hc.AddElasticsearch(options =>
+    {
+        // Modern configuration pattern
+        options.UseServer("http://192.168.1.173:9200");
+    },
+    name: "elasticsearch",
+    failureStatus: HealthStatus.Degraded,
+    tags: ["search"]);
+    hc.AddRabbitMQ(
+        // Modern package requirement: Use a factory to instantiate the connection
+        sp =>
+        {
+            var factory = new RabbitMQ.Client.ConnectionFactory()
+            {
+                Uri = new Uri(builder.Configuration["RabbitMQ:ConnectionString"]!)
+            };
+
+            // v9 packages use RabbitMQ.Client v7+, which requires Async creation.
+            return factory.CreateConnectionAsync().GetAwaiter().GetResult();
+        },
+        name: "rabbitmq",
+        failureStatus: HealthStatus.Degraded,
+        tags: ["messaging"]
+    );
+});
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// ?? 5. Serilog request logging ????????????????????????????????????????????????
+app.UseSerilogRequestLogging();
 
+// ?? 6. Correlation ID ?????????????????????????????????????????????????????????
+app.UseMiddleware<CorrelationIdMiddleware>();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -27,9 +72,22 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
 
-app.Run();
+// ?? 7. Health endpoints ???????????????????????????????????????????????????????
+app.MapHealthEndpoints();
+
+try
+{
+    Log.Information("Starting SearchService");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "SearchService failed to start");
+}
+finally
+{
+    Log.CloseAndFlush();
+}

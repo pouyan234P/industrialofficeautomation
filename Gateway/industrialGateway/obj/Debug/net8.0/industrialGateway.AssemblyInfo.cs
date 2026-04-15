@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("industrialGateway")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb7866f3d663af50dda7420f3b0d18442a3b023d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f82a2d1e5188b6e0aba684f408f036ada58d9730")]
 [assembly: System.Reflection.AssemblyProductAttribute("industrialGateway")]
 [assembly: System.Reflection.AssemblyTitleAttribute("industrialGateway")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
-﻿using webapi.Model;
+﻿using Microsoft.AspNetCore.Http;
+using webapi.Model;
 using webapi.Model.CorrespondenceModel;
 using webapi.Services.IServices.ICorrespondenceService;
 
@@ -8,7 +9,7 @@ namespace webapi.Services.CorrespondenceService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public AttachmentCorrespondenceService(IHttpClientFactory clientFactory): base(clientFactory)
+        public AttachmentCorrespondenceService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("searchengine.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c7497a6879c4047ed070da4ae838de4caf87529")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f82a2d1e5188b6e0aba684f408f036ada58d9730")]
 [assembly: System.Reflection.AssemblyProductAttribute("searchengine.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("searchengine.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

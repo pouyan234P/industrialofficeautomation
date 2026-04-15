@@ -2,6 +2,6 @@
 {
     public interface IRabbitMQsearchMessageSender
     {
-        void SendMessage(Object message, string queueName);
+        Task SendMessage(Object message, string queueName, string? correlationId = null);
     }
 }

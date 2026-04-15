@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+	<ItemGroup>
+		<!-- ── Serilog ─────────────────────────────────────────────────────────── -->
+		<PackageReference Include="Serilog.AspNetCore"           Version="8.0.2" />
+		<PackageReference Include="Serilog.Formatting.Compact"   Version="2.0.0" />
+		<PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+		<PackageReference Include="Serilog.Enrichers.Thread"     Version="3.1.0" />
+
+		<!-- ── Health checks — core only (DB-specific ones stay in each service) -->
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="8.0.23" />
+
+		<!--
+      DB-specific health check packages are intentionally NOT listed here.
+      Each service's own .csproj adds only what it needs:
+ 
+        CorrespondenceCore.Api  →  AspNetCore.HealthChecks.SqlServer
+                                   AspNetCore.HealthChecks.MongoDb
+        workflow.Api            →  AspNetCore.HealthChecks.MongoDb
+                                   AspNetCore.HealthChecks.Rabbitmq
+        searchengine.Api        →  AspNetCore.HealthChecks.Elasticsearch
+                                   AspNetCore.HealthChecks.Rabbitmq
+        webapi                  →  AspNetCore.HealthChecks.Redis
+        AIService               →  (none — stateless)
+ 
+      HealthCheckExtensions.AddServiceHealthChecks() calls AddSqlServer(),
+      AddMongoDb(), etc. by name. Those extension methods only exist if the
+      matching NuGet package is present in the consuming project.
+      This is why the method uses bool flags (hasSql, hasMongo…) — you only
+      pass true for the flag when the package is also present.
+    -->
+	</ItemGroup>
+
+</Project>
