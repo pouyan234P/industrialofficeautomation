@@ -9,7 +9,7 @@ namespace webapi.Services.WorkflowService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public referralWorkflowService(IHttpClientFactory clientFactory): base(clientFactory)
+        public referralWorkflowService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }
@@ -50,6 +50,15 @@ namespace webapi.Services.WorkflowService
             });
         }
 
+        public async Task<T> getAllbySenderposition<T>(int senderid)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType=SD.ApiType.GET,
+                Url=SD.gatewayApiBase+ "/api/referral/getAllbySenderposition/"+ senderid
+            });
+        }
+
         public async Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type)
         {
             return await this.SendAsync<T>(new ApiRequest
@@ -65,7 +74,17 @@ namespace webapi.Services.WorkflowService
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType= SD.ApiType.GET,
-                Url=SD.gatewayApiBase+ "/api/referral/getreferral"+id
+                Url=SD.gatewayApiBase+ "/api/referral/getreferral/"+id
+            });
+        }
+
+        public async Task<T> getReferralbyTypeSenderid<T>(int senderid, TypeDTO type)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.POST,
+                Data=type,
+                Url=SD.gatewayApiBase+ "/api/referral/getReferralbyTypeSenderid/"+senderid
             });
         }
     }

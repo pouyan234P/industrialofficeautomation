@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "workflow.Api.Controllers.api.referralController",
+    "Method": "getAllbySenderposition",
+    "RelativePath": "api/referral/getAllbySenderposition/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "workflow.Api.Controllers.api.referralController",
     "Method": "getbytyperecvierid",
     "RelativePath": "api/referral/getbytyperecvierid/{receverid}",
     "HttpMethod": "POST",
@@ -89,6 +105,27 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "workflow.Api.Controllers.api.referralController",
+    "Method": "getReferralbyTypeSenderid",
+    "RelativePath": "api/referral/getReferralbyTypeSenderid/{senderid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

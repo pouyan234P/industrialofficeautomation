@@ -3,7 +3,6 @@ C:\Project\Industrial office automation\automationWorkflowservice\infrastructure
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.AssemblyInfoInputs.cache
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.AssemblyInfo.cs
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.csproj.CoreCompileInputs.cache
-C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.sourcelink.json
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\bin\Debug\net8.0\workflow.Persistence.deps.json
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\bin\Debug\net8.0\workflow.Persistence.dll
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\bin\Debug\net8.0\workflow.Persistence.pdb

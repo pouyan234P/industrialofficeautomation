@@ -96,5 +96,15 @@ namespace workflow.Persistence.Repository
             var referral = await collection.Find(filter).ToListAsync();
             return referral;
         }
+
+        public async Task<IEnumerable<BsonDocument>> getAllbySenderposition(string SenderPositionID)
+        {
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            
+            var filter = new BsonDocument("SenderPositionID", int.Parse(SenderPositionID));
+            var referral = await collection.Find(filter).ToListAsync();
+            return referral;
+
+        }
     }
 }

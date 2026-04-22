@@ -23,7 +23,7 @@ namespace workflow.Api.Controllers.api
         }
 
         [HttpPost("createreferral")]
-        public async Task<IActionResult> createreferral([FromBody]setReferralDTO setReferralDTO)
+        public async Task<IActionResult> createreferral([FromBody] setReferralDTO setReferralDTO)
         {
             try
             {
@@ -36,8 +36,8 @@ namespace workflow.Api.Controllers.api
             }
             catch (Exception e)
             {
-                _response.IsSuccess=false;
-                _response.ErrorMessages=new List<string>() { e.ToString() };
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
         }
@@ -56,7 +56,7 @@ namespace workflow.Api.Controllers.api
             }
             catch (Exception e)
             {
-                _response.IsSuccess=false;
+                _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
@@ -95,8 +95,8 @@ namespace workflow.Api.Controllers.api
             }
             catch (Exception e)
             {
-                _response.IsSuccess=false;
-                _response.ErrorMessages= new List<string>() { e.ToString() } ;
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
         }
@@ -111,14 +111,14 @@ namespace workflow.Api.Controllers.api
             }
             catch (Exception e)
             {
-                _response.IsSuccess=false;
+                _response.IsSuccess = false;
                 _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
         }
 
         [HttpPost("getbytyperecvierid/{receverid}")]
-        public async Task<IActionResult> getbytyperecvierid(int receverid, [FromBody]TypeDTO type)
+        public async Task<IActionResult> getbytyperecvierid(int receverid, [FromBody] TypeDTO type)
         {
             try
             {
@@ -127,6 +127,47 @@ namespace workflow.Api.Controllers.api
                 {
                     mytype = type,
                     reciverID = id
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
+
+        [HttpGet("getAllbySenderposition/{id}")]
+        public async Task<IActionResult> getAllbySenderposition(int id)
+        {
+            try
+            {
+                string myid = Convert.ToString(id);
+                var result = await _mediator.Send(new getAllbySenderpositionRequest
+                {
+                    id = myid
+                });
+                _response.Result = result;
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
+
+        [HttpPost("getReferralbyTypeSenderid/{senderid}")]
+        public async Task<IActionResult> getReferralbyTypeSenderid(int senderid, [FromBody] TypeDTO type)
+        {
+            try
+            {
+                string id = Convert.ToString(senderid);
+                var result = await _mediator.Send(new getReferralbyTypeSenderidRequest
+                {
+                    mytype = type,
+                    senderid = id
                 });
                 _response.Result = result;
             }

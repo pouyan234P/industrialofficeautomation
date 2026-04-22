@@ -8,7 +8,7 @@ namespace webapi.Services.SearchEngineService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public letterelsiSearchEngineService(IHttpClientFactory clientFactory):base(clientFactory) 
+        public letterelsiSearchEngineService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor) 
         {
             _clientFactory = clientFactory;
         }

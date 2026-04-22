@@ -8,7 +8,7 @@ namespace webapi.Services.IdentityService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public departmentIdentityService(IHttpClientFactory clientFactory): base(clientFactory)
+        public departmentIdentityService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor) : base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }

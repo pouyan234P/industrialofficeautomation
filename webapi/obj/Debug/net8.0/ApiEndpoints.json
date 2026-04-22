@@ -106,6 +106,64 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.Controllers.api.admin.DlqController",
+    "Method": "PeekDlq",
+    "RelativePath": "api/Dlq/peek/{queue}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queue",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.admin.DlqController",
+    "Method": "PurgeDlq",
+    "RelativePath": "api/Dlq/purge/{queue}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queue",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.admin.DlqController",
+    "Method": "ReplayDlq",
+    "RelativePath": "api/Dlq/replay/{queue}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "queue",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.admin.DlqController",
+    "Method": "GetStatus",
+    "RelativePath": "api/Dlq/status",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "webapi.Controllers.api.correspondece.LetterController",
     "Method": "addLetter",
     "RelativePath": "api/Letter/addLetter",
@@ -376,6 +434,22 @@
   },
   {
     "ContainingType": "webapi.Controllers.api.workflow.referralController",
+    "Method": "getAllbySenderposition",
+    "RelativePath": "api/referral/getAllbySenderposition/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.workflow.referralController",
     "Method": "getbytyperecvierid",
     "RelativePath": "api/referral/getbytyperecvierid/{reciveid}",
     "HttpMethod": "POST",
@@ -384,6 +458,27 @@
     "Parameters": [
       {
         "Name": "reciveid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.workflow.referralController",
+    "Method": "getReferralbyTypeSenderid",
+    "RelativePath": "api/referral/getReferralbyTypeSenderid/{senderid}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "senderid",
         "Type": "System.Int32",
         "IsRequired": true
       },

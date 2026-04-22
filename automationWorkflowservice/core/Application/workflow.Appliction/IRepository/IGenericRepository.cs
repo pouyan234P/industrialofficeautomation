@@ -13,6 +13,7 @@ namespace workflow.Appliction.IRepository
         Task<BsonDocument> Get(string id);
         Task<IEnumerable<BsonDocument>> GetAllbyposition(string SenderPositionID);
         Task<IEnumerable<BsonDocument>> GetAllbyreciverposition(string reciverPositionID);
+        Task<IEnumerable<BsonDocument>> getAllbySenderposition(string SenderPositionID);
         Task<IEnumerable<BsonDocument>> GetAll();
         Task<BsonDocument> Add(BsonDocument entity);
         Task<bool> Exists(int id);

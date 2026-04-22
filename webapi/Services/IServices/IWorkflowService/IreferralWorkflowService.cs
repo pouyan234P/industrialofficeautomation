@@ -11,5 +11,7 @@ namespace webapi.Services.IServices.IWorkflowService
         Task<T> getreferral<T>(int id);
         Task<T> getAll<T>();
         Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type);
+        Task<T> getAllbySenderposition<T>(int senderid);
+        Task<T> getReferralbyTypeSenderid<T>(int senderid, TypeDTO type);
     }
 }

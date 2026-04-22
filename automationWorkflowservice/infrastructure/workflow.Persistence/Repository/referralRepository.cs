@@ -40,5 +40,20 @@ namespace workflow.Persistence.Repository
 
             return referralDocuments;
         }
+
+        public async Task<IEnumerable<BsonDocument>> getRefferalBytpeandsenderid(string senderid, type mytype)
+        {
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            var filter = Builders<BsonDocument>.Filter.Eq("SenderPositionID", int.Parse(senderid));
+            var filter2 = Builders<BsonDocument>.Filter.Eq("type", mytype);
+            var combinedFilter = Builders<BsonDocument>.Filter.And(filter, filter2);
+
+            var referralDocuments = await collection.Find(combinedFilter).ToListAsync();
+
+            // Map BsonDocument to Referral
+
+
+            return referralDocuments;
+        }
     }
 }

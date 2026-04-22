@@ -25,6 +25,7 @@ namespace workflow.domain
         // کپی شده برای سرعت (Denormalized)
         public string LetterSubject { get; set; }
         public string LetterNo { get; set; }
+        public string? replayToLetterNo { get; set; }
         public Priority Priority { get; set; }    // آنی، فوری، عادی
 
         public type type { get; set; }

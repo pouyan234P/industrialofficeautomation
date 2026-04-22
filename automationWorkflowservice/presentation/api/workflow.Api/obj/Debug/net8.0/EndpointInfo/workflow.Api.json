@@ -159,6 +159,71 @@
         }
       }
     },
+    "/api/referral/getAllbySenderposition/{id}": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getReferralbyTypeSenderid/{senderid}": {
+      "post": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "senderid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -256,7 +321,8 @@
           0,
           1,
           2,
-          3
+          3,
+          4
         ],
         "type": "integer",
         "format": "int32"
@@ -267,6 +333,10 @@
           "letterID": {
             "type": "integer",
             "format": "int32"
+          },
+          "parentReferralId": {
+            "type": "string",
+            "nullable": true
           },
           "letterSubject": {
             "type": "string",

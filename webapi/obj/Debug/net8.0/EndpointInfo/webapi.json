@@ -192,6 +192,84 @@
         }
       }
     },
+    "/api/Dlq/status": {
+      "get": {
+        "tags": [
+          "Dlq"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dlq/peek/{queue}": {
+      "get": {
+        "tags": [
+          "Dlq"
+        ],
+        "parameters": [
+          {
+            "name": "queue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dlq/replay/{queue}": {
+      "post": {
+        "tags": [
+          "Dlq"
+        ],
+        "parameters": [
+          {
+            "name": "queue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Dlq/purge/{queue}": {
+      "delete": {
+        "tags": [
+          "Dlq"
+        ],
+        "parameters": [
+          {
+            "name": "queue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Letter/addLetter": {
       "post": {
         "tags": [
@@ -743,6 +821,76 @@
         }
       }
     },
+    "/api/referral/getAllbySenderposition/{id}": {
+      "get": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/referral/getReferralbyTypeSenderid/{senderid}": {
+      "post": {
+        "tags": [
+          "referral"
+        ],
+        "parameters": [
+          {
+            "name": "senderid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TypeDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/user/getAll": {
       "get": {
         "tags": [
@@ -1033,6 +1181,10 @@
             "type": "string",
             "nullable": true
           },
+          "parentReferralId": {
+            "type": "string",
+            "nullable": true
+          },
           "letterID": {
             "type": "integer",
             "format": "int32"
@@ -1251,6 +1403,10 @@
           "letterID": {
             "type": "integer",
             "format": "int32"
+          },
+          "parentReferralId": {
+            "type": "string",
+            "nullable": true
           },
           "letterSubject": {
             "type": "string",

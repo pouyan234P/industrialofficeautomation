@@ -19,6 +19,7 @@ namespace workflow.Appliction.DTO
         // کپی شده برای سرعت (Denormalized)
         public string LetterSubject { get; set; }
         public string LetterNo { get; set; }
+        public string? replayToLetterNo { get; set; }
         public priorityDTO priority { get; set; }
 
         public TypeDTO type { get; set; }

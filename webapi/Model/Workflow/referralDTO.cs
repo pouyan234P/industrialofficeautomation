@@ -15,6 +15,7 @@ namespace webapi.Model.Workflow
         public string id { get; set; }
         public string? ParentReferralId { get; set; }
         public int LetterID { get; set; }
+        public int replayToLetterNo { get; set; }
 
         // کپی شده برای سرعت (Denormalized)
         public string? LetterSubject { get; set; }

@@ -2,7 +2,7 @@
 {
     public interface IRabbitMQreferralMessageSender
     {
-        void SendMessage(Object message, string queueName);
-        void UpdateMessage(Object message, string queueName);
+        Task SendMessage(Object message, string queueName, string? correlationId = null);
+        Task UpdateMessage(Object message, string queueName, string? correlationId = null);
     }
 }

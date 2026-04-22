@@ -13,5 +13,7 @@ namespace workflow.Appliction.IRepository
     public interface IReferralRepository:IGenericRepository<Referral>
     {
         Task<IEnumerable<BsonDocument>> getRefferalBytpeandreciverid(string reciverid,type mytype);
+        Task<IEnumerable<BsonDocument>> getRefferalBytpeandsenderid(string senderid,type mytype);
+
     }
 }

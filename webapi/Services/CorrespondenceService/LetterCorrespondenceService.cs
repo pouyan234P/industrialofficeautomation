@@ -9,7 +9,7 @@ namespace webapi.Services.CorrespondenceService
     {
         private readonly IHttpClientFactory _clientFactory;
 
-        public LetterCorrespondenceService(IHttpClientFactory clientFactory):base(clientFactory)
+        public LetterCorrespondenceService(IHttpClientFactory clientFactory, IHttpContextAccessor httpContextAccessor):base(clientFactory, httpContextAccessor)
         {
             _clientFactory = clientFactory;
         }
