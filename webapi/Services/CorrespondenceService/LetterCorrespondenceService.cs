@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using webapi.Model;
 using webapi.Model.CorrespondenceModel;
+using webapi.Model.CorrespondenceModel.Enum;
 using webapi.Services.IServices.ICorrespondenceService;
 
 namespace webapi.Services.CorrespondenceService
@@ -60,6 +61,13 @@ namespace webapi.Services.CorrespondenceService
             });
         }
 
-        
+        public async Task<T> GetLetterbyType<T>(TypeDTO type)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType=SD.ApiType.GET,
+                Url=SD.gatewayApiBase+ "/api/Letter/GetLetterbyType/"+type
+            });
+        }
     }
 }

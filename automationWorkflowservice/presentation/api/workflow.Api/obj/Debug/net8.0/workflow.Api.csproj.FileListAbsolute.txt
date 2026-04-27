@@ -79,3 +79,4 @@ C:\Project\Industrial office automation\automationWorkflowservice\presentation\a
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Serilog.Sinks.File.dll
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Shared.Infrastructure.dll
 C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\bin\Debug\net8.0\Shared.Infrastructure.pdb
+C:\Project\Industrial office automation\automationWorkflowservice\presentation\api\workflow.Api\obj\Debug\net8.0\workflow.Api.sourcelink.json

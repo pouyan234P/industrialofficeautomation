@@ -346,6 +346,10 @@
             "type": "string",
             "nullable": true
           },
+          "replayToLetterNo": {
+            "type": "string",
+            "nullable": true
+          },
           "priority": {
             "$ref": "#/components/schemas/priorityDTO"
           },

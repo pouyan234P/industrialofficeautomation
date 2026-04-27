@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using webapi.Model;
 using webapi.Model.CorrespondenceModel;
+using webapi.Model.CorrespondenceModel.Enum;
 using webapi.Services.IServices.ICorrespondenceService;
 
 namespace webapi.Controllers.api.correspondece
@@ -47,6 +48,17 @@ namespace webapi.Controllers.api.correspondece
         {
             var response = await _service.getLetters<ResponseDTO>();
             if(response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response.ErrorMessages);
+        }
+
+        [HttpGet("GetLetterbyType/{type}")]
+        public async Task<IActionResult> GetLetterbyType(TypeDTO type)
+        {
+            var response=await _service.GetLetterbyType<ResponseDTO>(type);
+            if( response.IsSuccess)
             {
                 return Ok(response.Result);
             }

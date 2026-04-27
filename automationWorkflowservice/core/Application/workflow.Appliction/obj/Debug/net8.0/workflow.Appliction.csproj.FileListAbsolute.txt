@@ -13,3 +13,4 @@ C:\Project\Industrial office automation\automationWorkflowservice\core\Applicati
 C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\refint\workflow.Appliction.dll
 C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.pdb
 C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\ref\workflow.Appliction.dll
+C:\Project\Industrial office automation\automationWorkflowservice\core\Application\workflow.Appliction\obj\Debug\net8.0\workflow.Appliction.sourcelink.json

@@ -1,4 +1,6 @@
 ﻿using CorrespondenceCore.Application.DTO.Enum;
+using CorrespondenceCore.domain;
+using CorrespondenceCore.domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +12,6 @@ namespace CorrespondenceCore.Application.IRepository
     public interface IGenerateNextNumberAsyncRepository
     {
         Task<string> mynextnumber(TypeDTO type, int year, int? deptId = 0);
+        Task<long> lastNumber(Typecorrespondence type,int depid,int date);
     }
 }

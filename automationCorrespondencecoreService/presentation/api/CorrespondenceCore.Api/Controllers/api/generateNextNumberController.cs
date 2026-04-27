@@ -1,5 +1,7 @@
 ﻿using CorrespondenceCore.Api.DTO;
+using CorrespondenceCore.Application.DTO.Enum;
 using CorrespondenceCore.Application.Feature.GenerateNextNumberAsyncFeature.request;
+using CorrespondenceCore.Application.Feature.GenerateNextNumberAsyncFeature.request.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +32,19 @@ namespace CorrespondenceCore.Api.Controllers.api
             _response.Result = result;
             return Ok(_response);
 
+        }
+
+        [HttpGet("getlastNumberbyType/{type}/{depid}/{year}")]
+        public async Task<IActionResult> getlastNumberbyType(TypeDTO type,int depid,int year)
+        {
+            var result = await _mediator.Send(new getlastNumberbyTypeRequest
+            {
+                type = type,
+                depid = depid,
+                year = year
+            });
+            _response.Result = result;
+            return Ok(_response);
         }
     }
 }

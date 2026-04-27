@@ -59,6 +59,32 @@
   },
   {
     "ContainingType": "CorrespondenceCore.Api.Controllers.api.generateNextNumberController",
+    "Method": "getlastNumberbyType",
+    "RelativePath": "api/generateNextNumber/getlastNumberbyType/{type}/{depid}/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "depid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CorrespondenceCore.Api.Controllers.api.generateNextNumberController",
     "Method": "getnextnumber",
     "RelativePath": "api/generateNextNumber/getnextnumber",
     "HttpMethod": "GET",

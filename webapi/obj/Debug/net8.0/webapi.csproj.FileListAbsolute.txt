@@ -76,3 +76,4 @@ C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extens
 C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Polly.dll
 C:\Project\Industrial office automation\webapi\bin\Debug\net8.0\Polly.Extensions.Http.dll
+C:\Project\Industrial office automation\webapi\obj\Debug\net8.0\webapi.sourcelink.json

@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Project\\Industrial office automation\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\correspondece\\indicatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\correspondece\\indicatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|c:\\project\\industrial office automation\\automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\generatenextnumbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5A0861A5-3979-465C-A04F-95112D743380}|automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\CorrespondenceCore.Api.csproj|solutionrelative:automationcorrespondencecoreservice\\presentation\\api\\correspondencecore.api\\controllers\\api\\generatenextnumbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\services\\correspondenceservice\\generatenextnumbeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\services\\correspondenceservice\\generatenextnumbeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4047BDF9-BE37-493B-BA26-DA4006E75F0C}|Gateway\\industrialGateway\\industrialGateway.csproj|c:\\project\\industrial office automation\\gateway\\industrialgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4047BDF9-BE37-493B-BA26-DA4006E75F0C}|Gateway\\industrialGateway\\industrialGateway.csproj|solutionrelative:gateway\\industrialgateway\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\services\\iservices\\icorrespondenceservice\\igeneratenextnumbeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\services\\iservices\\icorrespondenceservice\\igeneratenextnumbeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|c:\\project\\industrial office automation\\webapi\\controllers\\api\\workflow\\referralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7034A343-C223-4265-BB0A-3F29FA822A1A}|webapi\\webapi.csproj|solutionrelative:webapi\\controllers\\api\\workflow\\referralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IndicatorController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\correspondece\\IndicatorController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\correspondece\\IndicatorController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\correspondece\\IndicatorController.cs*",
+              "RelativeToolTip": "webapi\\Controllers\\api\\correspondece\\IndicatorController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T03:44:29.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "referralController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\workflow\\referralController.cs",
+              "RelativeDocumentMoniker": "webapi\\Controllers\\api\\workflow\\referralController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\workflow\\referralController.cs",
+              "RelativeToolTip": "webapi\\Controllers\\api\\workflow\\referralController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAowCMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T03:42:46.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "generateNextNumbeService.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Services\\CorrespondenceService\\generateNextNumbeService.cs",
+              "RelativeDocumentMoniker": "webapi\\Services\\CorrespondenceService\\generateNextNumbeService.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Services\\CorrespondenceService\\generateNextNumbeService.cs",
+              "RelativeToolTip": "webapi\\Services\\CorrespondenceService\\generateNextNumbeService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T03:40:35.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IgenerateNextNumbeService.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\webapi\\Services\\IServices\\ICorrespondenceService\\IgenerateNextNumbeService.cs",
+              "RelativeDocumentMoniker": "webapi\\Services\\IServices\\ICorrespondenceService\\IgenerateNextNumbeService.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Services\\IServices\\ICorrespondenceService\\IgenerateNextNumbeService.cs",
+              "RelativeToolTip": "webapi\\Services\\IServices\\ICorrespondenceService\\IgenerateNextNumbeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T03:39:49.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\Gateway\\industrialGateway\\appsettings.json",
+              "RelativeDocumentMoniker": "Gateway\\industrialGateway\\appsettings.json",
+              "ToolTip": "C:\\Project\\Industrial office automation\\Gateway\\industrialGateway\\appsettings.json",
+              "RelativeToolTip": "Gateway\\industrialGateway\\appsettings.json",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAIcAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-25T03:37:40.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "generateNextNumberController.cs",
+              "DocumentMoniker": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\generateNextNumberController.cs",
+              "RelativeDocumentMoniker": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\generateNextNumberController.cs",
+              "ToolTip": "C:\\Project\\Industrial office automation\\automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\generateNextNumberController.cs",
+              "RelativeToolTip": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\generateNextNumberController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T19:41:44.034Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -133,6 +133,46 @@
         }
       }
     },
+    "/api/generateNextNumber/getlastNumberbyType/{type}/{depid}/{year}": {
+      "get": {
+        "tags": [
+          "generateNextNumber"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/TypeDTO"
+            }
+          },
+          {
+            "name": "depid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Letter/addLetter": {
       "post": {
         "tags": [

@@ -132,7 +132,25 @@ namespace CorrespondenceCore.Api.Controllers.api
             return Ok(_response);
         }
 
-        
+        [HttpGet("GetLetterbyType/{type}")]
+        public async Task<IActionResult> GetLetterbyType(TypeDTO type)
+        {
+            try
+            {
+                var response=await _mediator.Send(new getLetterbyTypeRequest
+                {
+                    type = type
+                });
+                _response.Result = response;
+            }
+            catch (Exception e) 
+                {
+                    _response.IsSuccess = false;
+                    _response.ErrorMessages= new List<string>() { e.ToString()};
+                }
+                return Ok(_response);
+        }
+
 
         /* public async Task<IActionResult> deleteLetter(int id)
          {

@@ -270,6 +270,46 @@
         }
       }
     },
+    "/api/Indicator/getlastNumberbyType/{type}/{depid}/{year}": {
+      "get": {
+        "tags": [
+          "Indicator"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/TypeDTO"
+            }
+          },
+          {
+            "name": "depid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "year",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Letter/addLetter": {
       "post": {
         "tags": [
@@ -1189,6 +1229,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "replayToLetterNo": {
+            "type": "integer",
+            "format": "int32"
+          },
           "letterSubject": {
             "type": "string",
             "nullable": true
@@ -1413,6 +1457,10 @@
             "nullable": true
           },
           "letterNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "replayToLetterNo": {
             "type": "string",
             "nullable": true
           },

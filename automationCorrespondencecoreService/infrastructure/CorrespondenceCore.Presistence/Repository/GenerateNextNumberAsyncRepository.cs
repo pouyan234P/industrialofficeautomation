@@ -20,6 +20,13 @@ namespace CorrespondenceCore.Presistence.Repository
         {
             _db = db;
         }
+
+        public async Task<long> lastNumber(Typecorrespondence type, int depid, int date)
+        {
+            var result = await _db.indicatorBook.Where(x => x.type == type && x.DepartmentID==depid && x.FiscalYear==date).Select(x=>x.LastNumber).FirstOrDefaultAsync();
+            return result;
+        }
+
         public async Task<string> mynextnumber(TypeDTO type, int year, int? deptId = 0)
         {
             using var transaction = await _db.Database.BeginTransactionAsync(IsolationLevel.Serializable);

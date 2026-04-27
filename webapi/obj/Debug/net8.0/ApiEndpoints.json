@@ -164,6 +164,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "webapi.Controllers.api.correspondece.IndicatorController",
+    "Method": "getlastNumberbyType",
+    "RelativePath": "api/Indicator/getlastNumberbyType/{type}/{depid}/{year}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "depid",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "year",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "webapi.Controllers.api.correspondece.LetterController",
     "Method": "addLetter",
     "RelativePath": "api/Letter/addLetter",
