@@ -223,6 +223,22 @@
   },
   {
     "ContainingType": "webapi.Controllers.api.correspondece.LetterController",
+    "Method": "GetLetterbyType",
+    "RelativePath": "api/Letter/GetLetterbyType/{type}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "webapi.Controllers.api.correspondece.LetterController",
     "Method": "getLetters",
     "RelativePath": "api/Letter/getLetters",
     "HttpMethod": "GET",

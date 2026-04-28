@@ -58,8 +58,7 @@
               "RelativeToolTip": "webapi\\Services\\CorrespondenceService\\LetterCorrespondenceService.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAIwEQAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:39:46.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:39:46.248Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "webapi\\Services\\IServices\\ICorrespondenceService\\ILetterCorrespondenceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:39:13.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:39:13.189Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "Gateway\\industrialGateway\\appsettings.json",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAEYAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-27T17:37:44.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:37:44.062Z"
             },
             {
               "$type": "Document",
@@ -97,8 +94,7 @@
               "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\handles\\Queries\\getLetterbyTypeRequestHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:18:57.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:18:57.815Z"
             },
             {
               "$type": "Document",
@@ -110,8 +106,7 @@
               "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\request\\Queries\\getLetterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:15:11.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:15:11.541Z"
             },
             {
               "$type": "Document",
@@ -123,8 +118,7 @@
               "RelativeToolTip": "automationCorrespondencecoreService\\core\\Application\\CorrespondenceCore.Application\\Feature\\LetterFeature\\request\\Queries\\getLetterbyTypeRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:14:48.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:14:48.202Z"
             },
             {
               "$type": "Document",
@@ -136,8 +130,7 @@
               "RelativeToolTip": "automationCorrespondencecoreService\\presentation\\api\\CorrespondenceCore.Api\\Controllers\\api\\LetterController.cs",
               "ViewState": "AgIAAHMAAAAAAAAAAAA0wIcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:13:16.912Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:13:16.912Z"
             },
             {
               "$type": "Document",
@@ -147,7 +140,7 @@
               "RelativeDocumentMoniker": "webapi\\Controllers\\api\\correspondece\\LetterController.cs",
               "ToolTip": "C:\\Project\\Industrial office automation\\webapi\\Controllers\\api\\correspondece\\LetterController.cs",
               "RelativeToolTip": "webapi\\Controllers\\api\\correspondece\\LetterController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAowDgAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAwwC4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-27T17:12:52.943Z",
               "EditorCaption": ""
@@ -162,8 +155,7 @@
               "RelativeToolTip": "webapi\\Controllers\\api\\workflow\\referralController.cs",
               "ViewState": "AgIAAHsAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-27T17:12:30.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-27T17:12:30.515Z"
             }
           ]
         }

@@ -381,6 +381,28 @@
         }
       }
     },
+    "/api/Letter/GetLetterbyType/{type}": {
+      "get": {
+        "tags": [
+          "Letter"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/TypeDTO"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Letter/ping": {
       "get": {
         "tags": [
