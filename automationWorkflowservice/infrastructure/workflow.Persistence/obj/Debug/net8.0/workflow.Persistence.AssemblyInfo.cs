@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("workflow.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c2d670258891036f054d3216b18487cd5b3a260")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d13a212b12658a650050c7a2b0da2eb1484d5380")]
 [assembly: System.Reflection.AssemblyProductAttribute("workflow.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("workflow.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

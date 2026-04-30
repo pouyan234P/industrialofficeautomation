@@ -3,6 +3,7 @@ using authentication.application.DTO;
 using authentication.application.Feature.authfeature.request.Commands;
 using authentication.application.Feature.authfeature.request.Queries;
 using authentication.domain;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -37,10 +38,17 @@ namespace authentication.api.Controllers.api
                 var response = await _mediator.Send(command);
                 _response.Result = response;
             }
-            catch (Exception e)
+            catch (ValidationException ex)                              // ← catch this first
             {
-                _response.IsSuccess=false;
-                _response.ErrorMessages=new List<string>() { e.ToString()};
+                _response.IsSuccess = false;
+                _response.ErrorMessages = ex.Errors
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+            }
+            catch (Exception e)                                         // ← fallback stays
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
         }
@@ -56,10 +64,17 @@ namespace authentication.api.Controllers.api
                 });
                 _response.Result=response;
             }
-            catch (Exception e)
+            catch (ValidationException ex)                              // ← catch this first
             {
-                _response.IsSuccess=false;
-                _response.ErrorMessages= new List<string>() { e.ToString()};
+                _response.IsSuccess = false;
+                _response.ErrorMessages = ex.Errors
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+            }
+            catch (Exception e)                                         // ← fallback stays
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
             }
             return Ok(_response);
         }

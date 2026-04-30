@@ -178,6 +178,7 @@ namespace workflow.Api.Rabbit
                     await mediator.Send(new createReferralCommand { setReferral = dto }, ct);
                     return true;
                 }
+                
                 catch (Exception ex) when (attempt < MaxRetries)
                 {
                     var delay = TimeSpan.FromSeconds(Math.Pow(2, attempt)); // 2s, 4s
