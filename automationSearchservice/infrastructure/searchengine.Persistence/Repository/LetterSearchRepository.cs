@@ -77,6 +77,7 @@ namespace searchengine.Persistence.Repository
             return true;
         }
 
+        [Obsolete]
         public async Task<IEnumerable<LetterSearchDocument>> SearchAsync(
             string keyword,
             DateTime? fromDate,

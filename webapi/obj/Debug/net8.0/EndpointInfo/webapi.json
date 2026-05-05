@@ -1253,7 +1253,8 @@
           },
           "replayToLetterNo": {
             "type": "integer",
-            "format": "int32"
+            "format": "int32",
+            "nullable": true
           },
           "letterSubject": {
             "type": "string",

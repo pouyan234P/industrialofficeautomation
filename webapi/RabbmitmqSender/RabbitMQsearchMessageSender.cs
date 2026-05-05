@@ -46,7 +46,8 @@ namespace webapi.RabbmitmqSender
                 // durable: true — queue survives RabbitMQ restarts
                 var queueArgs = new Dictionary<string, object>
                 {
-                    { "x-dead-letter-exchange", "" }
+                    { "x-dead-letter-exchange", "" },
+                    { "x-dead-letter-routing-key", "myels.dlq" }
                 };
 
                 // 2. Pass the dictionary to the arguments parameter

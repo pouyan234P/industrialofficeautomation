@@ -50,9 +50,6 @@ namespace workflow.Appliction.Feature.referralFeature.Validation
 
                 RuleFor(x => x.referral.Status)
                     .IsInEnum().WithMessage("Status must be a valid value.");
-
-                RuleFor(x => x.referral.Timestamp)
-                    .NotEmpty().WithMessage("Timestamp is required.");
             });
         }
     }

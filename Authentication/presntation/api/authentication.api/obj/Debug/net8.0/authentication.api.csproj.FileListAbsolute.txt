@@ -177,3 +177,6 @@ C:\Project\Industrial office automation\Authentication\presntation\api\authentic
 C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\obj\Debug\net8.0\authentication.api.pdb
 C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\obj\Debug\net8.0\authentication.api.genruntimeconfig.cache
 C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\obj\Debug\net8.0\ref\authentication.api.dll
+C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\bin\Debug\net8.0\FluentValidation.dll
+C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Project\Industrial office automation\Authentication\presntation\api\authentication.api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll

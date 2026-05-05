@@ -38,7 +38,8 @@ namespace webapi.RabbmitmqSender
                 // 1. Create the arguments dictionary matching the existing queue
                 var queueArgs = new Dictionary<string, object>
                 {
-                    { "x-dead-letter-exchange", "" }
+                    { "x-dead-letter-exchange", "" },
+                    { "x-dead-letter-routing-key", "myreferral.dlq" }
                 };
 
                 // 2. Pass the dictionary to the arguments parameter
@@ -86,7 +87,8 @@ namespace webapi.RabbmitmqSender
 
                 var queueArgs = new Dictionary<string, object>
                 {
-                    { "x-dead-letter-exchange", "" }
+                    { "x-dead-letter-exchange", "" },
+                    { "x-dead-letter-routing-key", "updatereferral.dlq" }
                 };
 
                 // 2. Pass the dictionary to the arguments parameter

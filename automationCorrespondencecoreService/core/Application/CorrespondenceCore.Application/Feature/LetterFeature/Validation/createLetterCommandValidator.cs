@@ -21,9 +21,6 @@ namespace CorrespondenceCore.Application.Feature.LetterFeature.Validation
                     .NotEmpty().WithMessage("Subject is required.")
                     .MaximumLength(250).WithMessage("Subject must not exceed 250 characters.");
 
-                RuleFor(x => x.setLetterDTO!.SentDate)
-                    .NotEmpty().WithMessage("Sent date is required.");
-
                 RuleFor(x => x.setLetterDTO!.priority)
                     .IsInEnum().WithMessage("Priority must be a valid value (Normal, immediate, instantaneous).");
 
