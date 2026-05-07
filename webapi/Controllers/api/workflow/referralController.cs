@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Shared.Infrastructure.Middleware;
+using webapi.Helper;
 using webapi.Model;
 using webapi.Model.CorrespondenceModel;
 using webapi.Model.CorrespondenceModel.Enum;
@@ -142,11 +143,16 @@ namespace webapi.Controllers.api.workflow
         }
 
         [HttpGet("getAllByReciver/{id}")]
-        public async Task<IActionResult> getAllByReciver(int id)
+        public async Task<IActionResult> getAllByReciver(int id, [FromQuery] UserParams userParams)
         {
             _logger.LogInformation("GetAllByReceiver called. PositionId: {PositionId}", id);
-            var response = await _referralservice.getAllByReciver<ResponseDTO>(id);
-            if (response.IsSuccess) return Ok(response.Result);
+            var response = await _referralservice.getAllByReciver<ResponseDTO>(id,userParams);
+            if (response.IsSuccess)
+            {
+                Response.AddPagination((int)response.currentPage, (int)response.itemsPerPage, (int)response.totalItems, (int)response.totalPages);
+                return Ok(response.Result);
+            }
+
             return BadRequest(response.ErrorMessages);
         }
 
@@ -177,33 +183,36 @@ namespace webapi.Controllers.api.workflow
         }
 
         [HttpPost("getbytyperecvierid/{reciveid}")]
-        public async Task<IActionResult> getbytyperecvierid(int reciveid, [FromBody] TypeDTO type)
+        public async Task<IActionResult> getbytyperecvierid(int reciveid, [FromBody] TypeDTO type, [FromQuery] UserParams userParams)
         {
-            var response = await _referralservice.getbytyperecvierid<ResponseDTO>(reciveid, type);
+            var response = await _referralservice.getbytyperecvierid<ResponseDTO>(reciveid, type,userParams);
             if (response.IsSuccess)
             {
+                Response.AddPagination((int)response.currentPage, (int)response.itemsPerPage, (int)response.totalItems, (int)response.totalPages);
                 return Ok(response.Result);
             }
             return BadRequest(response.ErrorMessages);
         }
 
         [HttpGet("getAllbySenderposition/{id}")]
-        public async Task<IActionResult> getAllbySenderposition(int id)
+        public async Task<IActionResult> getAllbySenderposition(int id, [FromQuery] UserParams userParams)
         {
-            var response = await _referralservice.getAllbySenderposition<ResponseDTO>(id);
+            var response = await _referralservice.getAllbySenderposition<ResponseDTO>(id, userParams);
             if(response.IsSuccess)
             {
+                Response.AddPagination((int)response.currentPage, (int)response.itemsPerPage, (int)response.totalItems, (int)response.totalPages);
                 return Ok(response.Result);
             }
             return BadRequest(response.ErrorMessages);
         }
 
         [HttpPost("getReferralbyTypeSenderid/{senderid}")]
-        public async Task<IActionResult> getReferralbyTypeSenderid(int senderid, [FromBody] TypeDTO type)
+        public async Task<IActionResult> getReferralbyTypeSenderid(int senderid, [FromBody] TypeDTO type, [FromQuery] UserParams userParams)
         {
-            var response = await _referralservice.getReferralbyTypeSenderid<ResponseDTO>(senderid, type);
+            var response = await _referralservice.getReferralbyTypeSenderid<ResponseDTO>(senderid, type, userParams);
             if (response.IsSuccess)
             {
+                Response.AddPagination((int)response.currentPage, (int)response.itemsPerPage, (int)response.totalItems, (int)response.totalPages);
                 return Ok(response.Result);
             }
             return BadRequest(response.ErrorMessages);

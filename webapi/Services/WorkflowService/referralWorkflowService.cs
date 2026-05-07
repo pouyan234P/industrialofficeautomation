@@ -41,31 +41,31 @@ namespace webapi.Services.WorkflowService
             });
         }
 
-        public async Task<T> getAllByReciver<T>(int id)
+        public async Task<T> getAllByReciver<T>(int id, UserParams userParams)
         {
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.GET,
-                Url=SD.gatewayApiBase+ "/api/referral/getAllByReciver/"+ id
+                Url=SD.gatewayApiBase+ "/api/referral/getAllByReciver/"+ id + "?" + "PageNumber=" + userParams.PageNumber
             });
         }
 
-        public async Task<T> getAllbySenderposition<T>(int senderid)
+        public async Task<T> getAllbySenderposition<T>(int senderid, UserParams userParams)
         {
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.GET,
-                Url=SD.gatewayApiBase+ "/api/referral/getAllbySenderposition/"+ senderid
+                Url=SD.gatewayApiBase+ "/api/referral/getAllbySenderposition/"+ senderid + "?" + "PageNumber=" + userParams.PageNumber
             });
         }
 
-        public async Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type)
+        public async Task<T> getbytyperecvierid<T>(int reciveid, TypeDTO type, UserParams userParams)
         {
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType=SD.ApiType.POST,
                 Data=type,
-                Url=SD.gatewayApiBase+ "/api/referral/getbytyperecvierid/"+reciveid
+                Url=SD.gatewayApiBase + "/api/referral/getbytyperecvierid/" + reciveid + "?" + "PageNumber=" + userParams.PageNumber
             });
         }
 
@@ -78,13 +78,13 @@ namespace webapi.Services.WorkflowService
             });
         }
 
-        public async Task<T> getReferralbyTypeSenderid<T>(int senderid, TypeDTO type)
+        public async Task<T> getReferralbyTypeSenderid<T>(int senderid, TypeDTO type, UserParams userParams)
         {
             return await this.SendAsync<T>(new ApiRequest
             {
                 ApiType = SD.ApiType.POST,
                 Data=type,
-                Url=SD.gatewayApiBase+ "/api/referral/getReferralbyTypeSenderid/"+senderid
+                Url=SD.gatewayApiBase + "/api/referral/getReferralbyTypeSenderid/" + senderid + "?" + "PageNumber=" + userParams.PageNumber
             });
         }
     }

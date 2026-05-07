@@ -779,6 +779,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
@@ -850,6 +858,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "requestBody": {
@@ -897,6 +913,14 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         ],
         "responses": {
@@ -916,6 +940,14 @@
             "name": "senderid",
             "in": "path",
             "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "PageNumber",
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"

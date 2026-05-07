@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj": {
                 "projectPath": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Domain\\workflow.domain\\workflow.domain.csproj"
+              },
+              "C:\\Project\\Industrial office automation\\Shared.Infrastructure\\Shared.Infrastructure\\Shared.Infrastructure.csproj": {
+                "projectPath": "C:\\Project\\Industrial office automation\\Shared.Infrastructure\\Shared.Infrastructure\\Shared.Infrastructure.csproj"
               }
             }
           }
@@ -192,6 +195,9 @@
             "projectReferences": {
               "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj": {
                 "projectPath": "C:\\Project\\Industrial office automation\\automationWorkflowservice\\core\\Application\\workflow.Appliction\\workflow.Appliction.csproj"
+              },
+              "C:\\Project\\Industrial office automation\\Shared.Infrastructure\\Shared.Infrastructure\\Shared.Infrastructure.csproj": {
+                "projectPath": "C:\\Project\\Industrial office automation\\Shared.Infrastructure\\Shared.Infrastructure\\Shared.Infrastructure.csproj"
               }
             }
           }

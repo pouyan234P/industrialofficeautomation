@@ -1123,6 +1123,7 @@
           "FluentValidation.AspNetCore": "11.3.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "MongoDB.Bson": "3.6.0",
+          "Shared.Infrastructure": "1.0.0",
           "workflow.domain": "1.0.0"
         },
         "compile": {
@@ -1151,6 +1152,7 @@
         "dependencies": {
           "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.3",
           "MongoDB.Driver": "3.6.0",
+          "Shared.Infrastructure": "1.0.0",
           "workflow.Appliction": "1.0.0"
         },
         "compile": {

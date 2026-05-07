@@ -1,11 +1,14 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using Shared.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using workflow.Application.helper;
 using workflow.Appliction.IRepository;
 using workflow.Persistence.helper;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -89,22 +92,41 @@ namespace workflow.Persistence.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<BsonDocument>> GetAllbyreciverposition(string reciverPositionID)
+        public async Task<(IEnumerable<BsonDocument> Items, int TotalCount)> GetAllbyreciverposition(string reciverPositionID, UserParams userParams)
         {
             var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
-            var filter = new BsonDocument("ReceiverPositionID", int.Parse(reciverPositionID));
-            var referral = await collection.Find(filter).ToListAsync();
-            return referral;
+            var filter = Builders<BsonDocument>.Filter.Eq("ReceiverPositionID", int.Parse(reciverPositionID));
+
+            // 1. Get the total count asynchronously
+            var count = await collection.CountDocumentsAsync(filter);
+
+            // 2. Fetch the specific page of items
+            var items = await collection.Find(filter)
+                                        .Skip((userParams.PageNumber - 1) * userParams.pageSize)
+                                        .Limit(userParams.pageSize)
+                                        .ToListAsync();
+
+            // 3. Return a Tuple containing the raw data and the count. NO PagedList here!
+            return (items, (int)count);
         }
 
-        public async Task<IEnumerable<BsonDocument>> getAllbySenderposition(string SenderPositionID)
+        public async Task<(IEnumerable<BsonDocument> Items, int TotalCount)> getAllbySenderposition(string SenderPositionID, UserParams userParams)
         {
-            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
-            
-            var filter = new BsonDocument("SenderPositionID", int.Parse(SenderPositionID));
-            var referral = await collection.Find(filter).ToListAsync();
-            return referral;
 
+            var collection = _db.GetCollection<BsonDocument>("myreferraldocument");
+            var filter = Builders<BsonDocument>.Filter.Eq("SenderPositionID", int.Parse(SenderPositionID));
+
+            // 1. Get the total count asynchronously
+            var count = await collection.CountDocumentsAsync(filter);
+
+            // 2. Fetch the specific page of items
+            var items = await collection.Find(filter)
+                                        .Skip((userParams.PageNumber - 1) * userParams.pageSize)
+                                        .Limit(userParams.pageSize)
+                                        .ToListAsync();
+
+            // 3. Return a Tuple containing the raw data and the count. NO PagedList here!
+            return (items, (int)count);
         }
     }
 }

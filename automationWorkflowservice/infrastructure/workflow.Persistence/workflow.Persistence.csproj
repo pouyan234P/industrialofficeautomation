@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared.Infrastructure\Shared.Infrastructure\Shared.Infrastructure.csproj" />
     <ProjectReference Include="..\..\core\Application\workflow.Appliction\workflow.Appliction.csproj" />
   </ItemGroup>
 

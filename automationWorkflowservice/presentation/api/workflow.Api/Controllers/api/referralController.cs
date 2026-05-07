@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using workflow.Api.DTO;
 using workflow.Application.DTO.Enum;
+using workflow.Application.helper;
 using workflow.Appliction.DTO;
 using workflow.Appliction.Feature.referralFeature.request.Command;
 using workflow.Appliction.Feature.referralFeature.request.Queries;
@@ -63,16 +64,21 @@ namespace workflow.Api.Controllers.api
         }
 
         [HttpGet("getAllByReciver/{id}")]
-        public async Task<IActionResult> getAllByReciver(int id)
+        public async Task<IActionResult> getAllByReciver(int id, [FromQuery] UserParams userParams)
         {
             try
             {
                 string myid = id.ToString();
                 var result = await _mediator.Send(new getReferralbyreciverRequest
                 {
-                    id = myid
+                    id = myid,
+                    userParams = userParams
                 });
                 _response.Result = result;
+                _response.currentPage = result.CurrentPage;
+                _response.itemsPerPage = result.PageSize;
+                _response.totalItems = result.TotalCount;
+                _response.totalPages = result.TotalPage;
             }
             catch (Exception e)
             {
@@ -118,7 +124,7 @@ namespace workflow.Api.Controllers.api
         }
 
         [HttpPost("getbytyperecvierid/{receverid}")]
-        public async Task<IActionResult> getbytyperecvierid(int receverid, [FromBody] TypeDTO type)
+        public async Task<IActionResult> getbytyperecvierid(int receverid, [FromBody] TypeDTO type, [FromQuery] UserParams userParams)
         {
             try
             {
@@ -126,9 +132,14 @@ namespace workflow.Api.Controllers.api
                 var result = await _mediator.Send(new getReferralbyTypeRequest
                 {
                     mytype = type,
-                    reciverID = id
+                    reciverID = id,
+                    UserParams=userParams
                 });
                 _response.Result = result;
+                _response.currentPage = result.CurrentPage;
+                _response.itemsPerPage = result.PageSize;
+                _response.totalItems = result.TotalCount;
+                _response.totalPages = result.TotalPage;
             }
             catch (Exception e)
             {
@@ -139,16 +150,21 @@ namespace workflow.Api.Controllers.api
         }
 
         [HttpGet("getAllbySenderposition/{id}")]
-        public async Task<IActionResult> getAllbySenderposition(int id)
+        public async Task<IActionResult> getAllbySenderposition(int id, [FromQuery] UserParams userParams)
         {
             try
             {
                 string myid = Convert.ToString(id);
                 var result = await _mediator.Send(new getAllbySenderpositionRequest
                 {
-                    id = myid
+                    id = myid,
+                    userparams=userParams
                 });
                 _response.Result = result;
+                _response.currentPage = result.CurrentPage;
+                _response.itemsPerPage = result.PageSize;
+                _response.totalItems = result.TotalCount;
+                _response.totalPages = result.TotalPage;
             }
             catch (Exception e)
             {
@@ -159,7 +175,7 @@ namespace workflow.Api.Controllers.api
         }
 
         [HttpPost("getReferralbyTypeSenderid/{senderid}")]
-        public async Task<IActionResult> getReferralbyTypeSenderid(int senderid, [FromBody] TypeDTO type)
+        public async Task<IActionResult> getReferralbyTypeSenderid(int senderid, [FromBody] TypeDTO type, [FromQuery] UserParams userParams)
         {
             try
             {
@@ -167,9 +183,14 @@ namespace workflow.Api.Controllers.api
                 var result = await _mediator.Send(new getReferralbyTypeSenderidRequest
                 {
                     mytype = type,
-                    senderid = id
+                    senderid = id,
+                    userParams=userParams
                 });
                 _response.Result = result;
+                _response.currentPage = result.CurrentPage;
+                _response.itemsPerPage = result.PageSize;
+                _response.totalItems = result.TotalCount;
+                _response.totalPages = result.TotalPage;
             }
             catch (Exception e)
             {

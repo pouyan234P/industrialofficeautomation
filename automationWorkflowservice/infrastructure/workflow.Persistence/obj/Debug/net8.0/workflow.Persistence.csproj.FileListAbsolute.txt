@@ -16,3 +16,5 @@ C:\Project\Industrial office automation\automationWorkflowservice\infrastructure
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.pdb
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\ref\workflow.Persistence.dll
 C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\obj\Debug\net8.0\workflow.Persistence.sourcelink.json
+C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\bin\Debug\net8.0\Shared.Infrastructure.dll
+C:\Project\Industrial office automation\automationWorkflowservice\infrastructure\workflow.Persistence\bin\Debug\net8.0\Shared.Infrastructure.pdb

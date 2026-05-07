@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using MongoDB.Bson.Serialization;
+using Shared.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ using workflow.domain;
 
 namespace workflow.Appliction.Feature.referralFeature.handles.Queries
 {
-    public class getReferralbyreciverRequestHandler : IRequestHandler<getReferralbyreciverRequest, IEnumerable<referralDTO>>
+    public class getReferralbyreciverRequestHandler : IRequestHandler<getReferralbyreciverRequest, PagedList<referralDTO>>
     {
         private readonly IReferralRepository _repository;
         private readonly IMapper _mapper;
@@ -23,12 +24,23 @@ namespace workflow.Appliction.Feature.referralFeature.handles.Queries
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<referralDTO>> Handle(getReferralbyreciverRequest request, CancellationToken cancellationToken)
+        public async Task<PagedList<referralDTO>> Handle(getReferralbyreciverRequest request, CancellationToken cancellationToken)
         {
-            var result = await _repository.GetAllbyreciverposition(request.id);
-            var myref = result.Select(doc => BsonSerializer.Deserialize<Referral>(doc));
-            var map = _mapper.Map<IEnumerable<referralDTO>>(myref.ToList());
-            return map;
+            var (items, totalCount) = await _repository.GetAllbyreciverposition(request.id, request.userParams);
+
+            // 2. Deserialize and Map
+            var myref = items.Select(doc => BsonSerializer.Deserialize<Referral>(doc));
+            var dtoItems = _mapper.Map<IEnumerable<referralDTO>>(myref);
+
+            // 3. Instantiate the PagedList exactly ONCE with the mapped items
+            var pagedDtoList = new PagedList<referralDTO>(
+                dtoItems,
+                totalCount,
+                request.userParams.PageNumber,
+                request.userParams.pageSize
+            );
+
+            return pagedDtoList;
         }
     }
 }
