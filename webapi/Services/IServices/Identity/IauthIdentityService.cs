@@ -8,5 +8,6 @@ namespace webapi.Services.IServices.Identity
         Task<T> register<T>(registerDTO myregisterDTO);
         Task<T> CreateRole<T>(string myroleName);
         Task<T> getAll<T>();
+        Task<T> updateUser<T>(int id, updateUserDTO dto);
     }
 }

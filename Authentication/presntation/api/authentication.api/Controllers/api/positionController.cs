@@ -150,6 +150,38 @@ namespace authentication.api.Controllers.api
             }
             return Ok(_response);
         }
+
+        [HttpPut("updatePosition/{id}")]
+        public async Task<IActionResult> updatePosition(int id, [FromBody] setPosition dto)
+        {
+            try
+            {
+                var result = await _mediator.Send(new updatePositionCommand
+                {
+                    id = id,
+                    positionDTO = dto
+                });
+                _response.Result = result;
+                if (!result.Success)
+                {
+                    _response.IsSuccess = false;
+                    _response.ErrorMessages = result.Errors ?? new List<string>() { "Position update failed" };
+                }
+            }
+            catch (ValidationException ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = ex.Errors
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
     }
 }
 

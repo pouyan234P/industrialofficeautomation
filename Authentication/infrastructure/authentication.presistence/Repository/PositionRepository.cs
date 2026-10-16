@@ -72,11 +72,17 @@ namespace authentication.presistence.Repository
 
         public async Task<Position> updatePosition(int id,Position position)
         {
-            var pos = await _db.positions.Where(x => x.Id == id).Select(x => x).Include(x=>x.User).Include(x=>x.Department).FirstOrDefaultAsync();
-            pos.Title= position.Title;
-            pos.Department= position.Department;
-            pos.User= position.User;
-            _db.SaveChanges();
+            // Load without Include(): we change the foreign keys directly, and loaded
+            // navigation objects would conflict with the new IDs.
+            var pos = await _db.positions.FirstOrDefaultAsync(x => x.Id == id);
+            if (pos == null)
+            {
+                return null!;
+            }
+            pos.Title = position.Title;
+            pos.departmentId = position.departmentId;
+            pos.userId = position.userId;
+            await _db.SaveChangesAsync();
             return pos;
         }
     }

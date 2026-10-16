@@ -49,5 +49,15 @@ namespace webapi.Services.IdentityService
                 Url=SD.identityApiBase+ "/api/auth/register"
             });
         }
+
+        public async Task<T> updateUser<T>(int id, updateUserDTO dto)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.PUT,
+                Data = dto,
+                Url = SD.identityApiBase + "/api/auth/updateUser/" + id
+            });
+        }
     }
 }

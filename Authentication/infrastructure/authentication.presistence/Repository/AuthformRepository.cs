@@ -126,5 +126,72 @@ namespace authentication.presistence.Repository
             var user=await _userManger.Users.Include(x=>x.SignitureImage).ToListAsync();
             return user;
         }
+
+        public async Task<List<string>> updateUser(int id, updateUserDTO dto)
+        {
+            var user = await _userManger.Users.FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null)
+            {
+                return new List<string>() { $"User {id} was not found." };
+            }
+
+            var newUsername = dto.username!.Trim();
+
+            // Validate the new password BEFORE changing anything, so a weak password
+            // can never leave the user half-updated or without a password.
+            if (!string.IsNullOrEmpty(dto.password))
+            {
+                var passwordErrors = new List<string>();
+                foreach (var validator in _userManger.PasswordValidators)
+                {
+                    var check = await validator.ValidateAsync(_userManger, user, dto.password);
+                    if (!check.Succeeded)
+                        passwordErrors.AddRange(check.Errors.Select(e => e.Description));
+                }
+                if (passwordErrors.Count > 0)
+                    return passwordErrors;
+            }
+
+            // Usernames must stay unique
+            if (!string.Equals(user.UserName, newUsername, StringComparison.Ordinal))
+            {
+                var existing = await _userManger.FindByNameAsync(newUsername);
+                if (existing != null && existing.Id != user.Id)
+                    return new List<string>() { $"Username '{newUsername}' is already taken." };
+                user.UserName = newUsername;
+            }
+
+            user.personID = dto.personID;
+            user.CurrentStatus = dto.CurrentStatus;
+
+            // Only replace the signature when a new image was uploaded
+            if (dto.signitureImageId.HasValue)
+            {
+                user.SignitureImageId = dto.signitureImageId.Value;
+                user.SignitureImage = null;
+            }
+
+            // UpdateAsync also refreshes NormalizedUserName and the concurrency stamp
+            var updateResult = await _userManger.UpdateAsync(user);
+            if (!updateResult.Succeeded)
+                return updateResult.Errors.Select(e => e.Description).ToList();
+
+            if (!string.IsNullOrEmpty(dto.password))
+            {
+                // No reset-token providers are registered, so swap the password directly.
+                // It was validated above, so AddPasswordAsync is not expected to fail.
+                if (await _userManger.HasPasswordAsync(user))
+                {
+                    var removeResult = await _userManger.RemovePasswordAsync(user);
+                    if (!removeResult.Succeeded)
+                        return removeResult.Errors.Select(e => e.Description).ToList();
+                }
+                var addResult = await _userManger.AddPasswordAsync(user, dto.password);
+                if (!addResult.Succeeded)
+                    return addResult.Errors.Select(e => e.Description).ToList();
+            }
+
+            return new List<string>();
+        }
     }
 }
