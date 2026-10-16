@@ -132,5 +132,37 @@ namespace authentication.api.Controllers.api
             }
             return Ok(_response);
         }
+
+        [HttpPut("updateUser/{id}")]
+        public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
+        {
+            try
+            {
+                var result = await _mediator.Send(new updateUserCommand
+                {
+                    id = id,
+                    userDTO = dto
+                });
+                _response.Result = result;
+                if (!result.Success)
+                {
+                    _response.IsSuccess = false;
+                    _response.ErrorMessages = result.Errors ?? new List<string>() { "User update failed" };
+                }
+            }
+            catch (ValidationException ex)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = ex.Errors
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+            }
+            catch (Exception e)
+            {
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string>() { e.ToString() };
+            }
+            return Ok(_response);
+        }
     }
 }

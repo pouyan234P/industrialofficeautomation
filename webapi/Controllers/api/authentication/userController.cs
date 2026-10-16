@@ -44,14 +44,16 @@ namespace webapi.Controllers.api.authentication
                         {
                             uploaded = "not uploaded";
                         }
-                        var getpos = await _service1.getPosition<ResponseDTO>(i.id);
+                        // look up the position HELD by this user (getPosition expects a position id)
+                        var getpos = await _service1.getPositionbyuser<ResponseDTO>(i.id);
                         if (getpos.IsSuccess && getpos.Result!=null)
                         {
                             var mygetpos = JsonConvert.DeserializeObject<getPosition>(Convert.ToString(getpos.Result)!);
                             var myuser = new userModel
                             {
                                 id=i.id,
-                                Title = mygetpos.Title,
+                                personID = i.personID,
+                                Title = mygetpos?.Title,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
                                 signitureimageid = uploaded
@@ -63,6 +65,7 @@ namespace webapi.Controllers.api.authentication
                             var myuser = new userModel
                             {
                                 id=i.id,
+                                personID = i.personID,
                                 Title = null,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
@@ -76,6 +79,17 @@ namespace webapi.Controllers.api.authentication
                 return Ok(usermodel);
             }
             return BadRequest(response.ErrorMessages);
+        }
+
+        [HttpPut("updateUser/{id}")]
+        public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
+        {
+            var response = await _service.updateUser<ResponseDTO>(id, dto);
+            if (response != null && response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response?.ErrorMessages);
         }
     }
 }

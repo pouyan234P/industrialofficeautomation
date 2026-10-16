@@ -67,5 +67,15 @@ namespace webapi.Services.IdentityService
                 Url=SD.identityApiBase+ "/api/position/getPositionbyDept/"+deptid
             });
         }
+
+        public async Task<T> updatePosition<T>(int id, setPosition setPosition)
+        {
+            return await this.SendAsync<T>(new ApiRequest
+            {
+                ApiType = SD.ApiType.PUT,
+                Data = setPosition,
+                Url = SD.identityApiBase + "/api/position/updatePosition/" + id
+            });
+        }
     }
 }

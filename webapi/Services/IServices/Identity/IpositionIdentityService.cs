@@ -11,5 +11,6 @@ namespace webapi.Services.IServices.Identity
         Task<T> getposanddept<T>(getposdep data);
         Task<T> getPositionbyuser<T>(int userid);
         Task<T> getPositionbyDept<T>(int deptid);
+        Task<T> updatePosition<T>(int id, setPosition setPosition);
     }
 }

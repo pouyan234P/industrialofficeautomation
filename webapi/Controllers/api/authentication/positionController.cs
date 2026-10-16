@@ -23,6 +23,8 @@ namespace webapi.Controllers.api.authentication
         private readonly IDistributedCache _cache;
         // یک نام ثابت برای کلید کش در نظر می‌گیریم
         private const string POSITION_CACHE_KEY = "all_position_list";
+        // key actually used by getAll (changed earlier to bypass old bad data)
+        private const string POSITION_LIST_CACHE_KEY = "POSITION_CACHE_KEY_V2";
         public positionController(IpositionIdentityService service,IdepartmentIdentityService service1, IDistributedCache cache)
         {
             _service = service;
@@ -37,6 +39,8 @@ namespace webapi.Controllers.api.authentication
             var response=await _service.insertPosition<ResponseDTO>(setPosition);
             if(response.IsSuccess)
             {
+                // the cached list no longer contains every position
+                await _cache.RemoveAsync(POSITION_LIST_CACHE_KEY);
                 return Ok(response.Result);
             }
             return BadRequest(response.ErrorMessages);
@@ -65,7 +69,7 @@ namespace webapi.Controllers.api.authentication
             try
             {
                 // 1. Check the Cache
-                var cachedDepartments = await _cache.GetStringAsync("POSITION_CACHE_KEY_V2"); // Changed key to bypass old bad data
+                var cachedDepartments = await _cache.GetStringAsync(POSITION_LIST_CACHE_KEY); // Changed key to bypass old bad data
 
                 if (!string.IsNullOrEmpty(cachedDepartments))
                 {
@@ -93,7 +97,7 @@ namespace webapi.Controllers.api.authentication
                     var depresult = JsonConvert.DeserializeObject<IEnumerable<getPosition>>(Convert.ToString(response.Result)!);
                     // 4. Save to Redis
                     string serializedData = JsonSerializer.Serialize(depresult, jsonOptions);
-                    await _cache.SetStringAsync("POSITION_CACHE_KEY_V2", serializedData, cacheOptions);
+                    await _cache.SetStringAsync(POSITION_LIST_CACHE_KEY, serializedData, cacheOptions);
 
                     return Ok(response.Result);
                 }
@@ -144,6 +148,19 @@ namespace webapi.Controllers.api.authentication
                 return Ok(response.Result);
             }
             return BadRequest(response!.ErrorMessages);
+        }
+
+        [HttpPut("updatePosition/{id}")]
+        public async Task<IActionResult> updatePosition(int id, [FromBody] setPosition setPosition)
+        {
+            var response = await _service.updatePosition<ResponseDTO>(id, setPosition);
+            if (response != null && response.IsSuccess)
+            {
+                // drop the cached list so the Positions page shows the change right away
+                await _cache.RemoveAsync(POSITION_LIST_CACHE_KEY);
+                return Ok(response.Result);
+            }
+            return BadRequest(response?.ErrorMessages);
         }
     }
 }
