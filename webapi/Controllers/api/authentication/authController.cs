@@ -17,12 +17,13 @@ namespace webapi.Controllers.api.authentication
             _service = service;
         }
 
-        /// <summary>Creates a user. Any signed-in user may do this; only an Admin may choose the new user's role.</summary>
+        /// <summary>Creates a user. Admin-only.</summary>
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO dTO)
         {
-            // Non-admins always create Customers (putting someone in a role is Admin-only).
-            if (string.IsNullOrWhiteSpace(dTO.Role) || !User.IsInRole(Policies.AdminRole))
+            // The admin picks the role on the New User form; default to Customer.
+            if (string.IsNullOrWhiteSpace(dTO.Role))
                 dTO.Role = "Customer";
 
             var response = await _service.register<ResponseDTO>(dTO);

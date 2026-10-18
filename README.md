@@ -101,7 +101,7 @@ Provides **full-text search** over letter documents.
 Manages users, roles, departments, and positions. Issues **JWT tokens** consumed by the rest of the platform.
 
 **Key features:**
-- Login (JWT) and user registration (any signed-in user)
+- Login (JWT) and user registration (Admin only)
 - Role management — creating roles and assigning them is Admin-only
 - Department and position CRUD
 - Signature image upload/retrieval per user
@@ -117,11 +117,11 @@ The public-facing Web API that clients interact with directly. It acts as a **Ba
 
 | Controller | Responsibility |
 |---|---|
-| `authController` | Login (public), register (signed-in; only Admin picks the role) |
+| `authController` | Login (public), register (Admin) |
 | `roleController` | List and create roles (Admin) |
 | `departmentController` | Department management |
 | `positionController` | Position management |
-| `userController` | List/edit users (signed-in), assign roles (Admin) |
+| `userController` | List users; Admin edits anyone, others only themselves; assign roles (Admin) |
 | `pictureController` | Signature image upload |
 | `LetterController` | Letter CRUD (calls Correspondence Core) |
 | `referralController` | Create & manage referrals (calls Workflow Service + publishes to RabbitMQ) |
@@ -218,9 +218,10 @@ dotnet user-secrets set "appSetting:Token" "<same long random string>"
 ```
 
 Environment variables work too: `appSetting__Token`, `BootstrapAdmin__Email`, `BootstrapAdmin__Password`.
-The `Admin` and `Customer` roles are created automatically. Only admins can create roles,
-put users in roles, and create or assign positions. Everything else needs a signed-in user;
-users created by non-admins always get the `Customer` role, and non-admins can't edit admin accounts.
+The `Admin` and `Customer` roles are created automatically. Only admins can create users,
+create roles, put users in roles, and create or assign positions. Admins can edit any account;
+everyone else can only edit their own (username, password, signature — not PersonID or status).
+Everything else needs a signed-in user.
 
 ### 3. Run the services
 

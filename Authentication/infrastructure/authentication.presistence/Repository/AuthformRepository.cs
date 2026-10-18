@@ -235,12 +235,6 @@ namespace authentication.presistence.Repository
                 return new List<string>() { $"User {id} was not found." };
             }
 
-            // Otherwise a non-admin could reset an admin's password and sign in as them,
-            // which would get around "only admins assign roles".
-            if (!callerIsAdmin && await _userManger.IsInRoleAsync(user, AppRoles.Admin))
-            {
-                return new List<string>() { "Only an admin can edit an admin account." };
-            }
 
             var newUsername = dto.username!.Trim();
 
@@ -268,8 +262,13 @@ namespace authentication.presistence.Repository
                 user.UserName = newUsername;
             }
 
-            user.personID = dto.personID;
-            user.CurrentStatus = dto.CurrentStatus;
+            // PersonID and Active/Inactive are administrative fields: when people edit
+            // their own account, those two keep their current values.
+            if (callerIsAdmin)
+            {
+                user.personID = dto.personID;
+                user.CurrentStatus = dto.CurrentStatus;
+            }
 
             // Only replace the signature when a new image was uploaded
             if (dto.signitureImageId.HasValue)

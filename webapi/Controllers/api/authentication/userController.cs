@@ -8,7 +8,10 @@ using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    /// <summary>User list and editing for any signed-in user; assigning roles is Admin-only.</summary>
+    /// <summary>
+    /// Any signed-in user can see the list. Admins can edit anyone; others only their own account.
+    /// Assigning roles is Admin-only.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class userController : ControllerBase
@@ -86,6 +89,12 @@ namespace webapi.Controllers.api.authentication
         [HttpPut("updateUser/{id}")]
         public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
         {
+            var callerId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (!User.IsInRole(Policies.AdminRole) && callerId != id.ToString())
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, new List<string> { "You can only edit your own account." });
+            }
+
             var response = await _service.updateUser<ResponseDTO>(id, dto);
             if (response != null && response.IsSuccess)
             {

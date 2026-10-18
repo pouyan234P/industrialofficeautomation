@@ -13,9 +13,8 @@ using System.Security.Claims;
 namespace authentication.api.Controllers.api
 {
     /// <summary>
-    /// Login is public. Any signed-in user may create, list and edit users.
-    /// Creating roles and putting people in roles is Admin-only; when a non-admin
-    /// creates a user, the new account always gets the default Customer role.
+    /// Login is public. Creating users, creating roles and putting people in roles is Admin-only.
+    /// Admins can edit any account; everyone else can only edit their own.
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -60,13 +59,10 @@ namespace authentication.api.Controllers.api
             return Ok(_response);
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO myregisterDTO)
         {
-            // Choosing a role = adding someone to a role, which only admins may do.
-            if (myregisterDTO != null && !User.IsInRole(AppRoles.Admin))
-                myregisterDTO.Role = AppRoles.Customer;
-
             return await Run(async () =>
             {
                 var result = await _mediator.Send(new createAuthCommand { registerdto = myregisterDTO });
@@ -86,13 +82,23 @@ namespace authentication.api.Controllers.api
         [HttpPut("updateUser/{id}")]
         public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
         {
+            var isAdmin = User.IsInRole(AppRoles.Admin);
+            var callerId = int.TryParse(User.FindFirstValue(ClaimTypes.NameIdentifier), out var me) ? me : (int?)null;
+            if (!isAdmin && callerId != id)
+            {
+                // 403: non-admins may only edit their own account
+                _response.IsSuccess = false;
+                _response.ErrorMessages = new List<string> { "You can only edit your own account." };
+                return StatusCode(StatusCodes.Status403Forbidden, _response);
+            }
+
             return await Run(async () =>
             {
                 var result = await _mediator.Send(new updateUserCommand
                 {
                     id = id,
                     userDTO = dto,
-                    callerIsAdmin = User.IsInRole(AppRoles.Admin),
+                    callerIsAdmin = isAdmin,
                 });
                 ApplyCommandResult(result);
             });
