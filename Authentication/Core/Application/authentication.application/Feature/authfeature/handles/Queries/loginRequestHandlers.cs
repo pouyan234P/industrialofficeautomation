@@ -1,15 +1,11 @@
-﻿using authentication.application.Feature.authfeature.request.Queries;
+using authentication.application.DTO;
+using authentication.application.Feature.authfeature.request.Queries;
 using authentication.application.IRepository;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace authentication.application.Feature.authfeature.handles.Queries
 {
-    public class loginRequestHandlers : IRequestHandler<loginRequest, string>
+    public class loginRequestHandlers : IRequestHandler<loginRequest, loginResultDTO>
     {
         private readonly IAuthformRepository _authform;
 
@@ -17,10 +13,8 @@ namespace authentication.application.Feature.authfeature.handles.Queries
         {
             _authform = authform;
         }
-        public async Task<string> Handle(loginRequest request, CancellationToken cancellationToken)
-        {
-            var login=await _authform.login(request.myslogindto!.Email!,request.myslogindto.Password!);
-            return login;
-        }
+
+        public Task<loginResultDTO> Handle(loginRequest request, CancellationToken cancellationToken)
+            => _authform.login(request.myslogindto!.Email!.Trim(), request.myslogindto.Password!);
     }
 }

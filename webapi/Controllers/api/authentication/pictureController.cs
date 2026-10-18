@@ -8,7 +8,6 @@ using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class pictureController : ControllerBase
@@ -20,6 +19,7 @@ namespace webapi.Controllers.api.authentication
             _service = service;
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("addPicture")]
         public async Task<IActionResult> addPicture([FromForm]PictureUploadModel file)
         {

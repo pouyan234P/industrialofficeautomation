@@ -13,7 +13,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace authentication.api.Controllers.api
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class positionController : ControllerBase
@@ -29,6 +28,7 @@ namespace authentication.api.Controllers.api
             _response = new ResponseDTO();
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("insertPosition")]
         public async Task<IActionResult> insertPosition([FromBody] setPosition myPosition)
         {
@@ -52,7 +52,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)                                         // ← fallback stays
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
@@ -71,7 +71,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
                 
             }
             return Ok(_response);
@@ -88,7 +88,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
@@ -108,7 +108,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages= new List<string>() { e.ToString() } ;
+                _response.ErrorMessages= Errors.Unexpected(HttpContext, e) ;
             }
             return Ok(_response);
         }
@@ -127,7 +127,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages=new List<string> { e.ToString() } ;
+                _response.ErrorMessages=Errors.Unexpected(HttpContext, e) ;
             }
             return Ok(_response);
         }
@@ -146,11 +146,12 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPut("updatePosition/{id}")]
         public async Task<IActionResult> updatePosition(int id, [FromBody] setPosition dto)
         {
@@ -178,7 +179,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }

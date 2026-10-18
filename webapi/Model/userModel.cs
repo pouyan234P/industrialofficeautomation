@@ -10,5 +10,6 @@ namespace webapi.Model
         public bool CurrentStatus { get; set; }
         public string? signitureimageid { get; set; }
         public string? Title { get; set; }
+        public List<string> roles { get; set; } = new();
     }
 }

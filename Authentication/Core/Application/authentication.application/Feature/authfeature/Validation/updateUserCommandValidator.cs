@@ -23,7 +23,7 @@ namespace authentication.application.Feature.authfeature.Validation
                     .GreaterThan(0).WithMessage("A valid PersonID is required.");
 
                 RuleFor(x => x.userDTO!.password)
-                    .MinimumLength(6).WithMessage("Password must be at least 6 characters.")
+                    .MinimumLength(8).WithMessage("Password must be at least 8 characters.")
                     .When(x => !string.IsNullOrEmpty(x.userDTO!.password));
 
                 RuleFor(x => x.userDTO!.signitureImageId)

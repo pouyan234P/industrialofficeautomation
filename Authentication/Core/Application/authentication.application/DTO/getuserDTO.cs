@@ -14,5 +14,7 @@ namespace authentication.application.DTO
         public int personID { get; set; }
         public bool CurrentStatus { get; set; }
         public getimageidDTO? signitureimageid { get; set; }
+        /// <summary>Names of the roles this user holds (filled by the repository, not AutoMapper).</summary>
+        public List<string> roles { get; set; } = new();
     }
 }

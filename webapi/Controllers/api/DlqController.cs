@@ -18,7 +18,7 @@ namespace webapi.Controllers.api.admin
     /// When a RabbitMQ consumer fails a message 3 times it NACKs it to the DLQ.
     /// Use /peek to inspect the payload, fix the bug, deploy, then /replay to reprocess.
     /// </summary>
-    [AllowAnonymous]   // TODO: lock down to Admin role before production
+    [Authorize(Policy = Policies.RequireAdminRole)]
     [Route("api/[controller]")]
     [ApiController]
     public class DlqController : ControllerBase

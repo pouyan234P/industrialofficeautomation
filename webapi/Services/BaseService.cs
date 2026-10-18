@@ -40,10 +40,7 @@ namespace webapi.Services
             };
 
             ForwardCorrelationId(message);
-
-            if (!string.IsNullOrEmpty(apiRequest.AccessToken))
-                client.DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+            SetAuthorization(message, apiRequest);
 
             var apiResponse = await client.SendAsync(message);
 
@@ -105,9 +102,7 @@ namespace webapi.Services
                         "application/json");
                 }
 
-                if (!string.IsNullOrEmpty(apiRequest.AccessToken))
-                    client.DefaultRequestHeaders.Authorization =
-                        new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+                SetAuthorization(message, apiRequest);
 
                 message.Method = apiRequest.ApiType switch
                 {
@@ -119,18 +114,62 @@ namespace webapi.Services
 
                 var apiresponse = await client.SendAsync(message);
                 var apicontent = await apiresponse.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<T>(apicontent)!;
+
+                // 401/403 and some errors come back with an empty or non-JSON body;
+                // turn those into a normal failed ResponseDTO instead of a null.
+                T? parsed = default;
+                if (!string.IsNullOrWhiteSpace(apicontent))
+                {
+                    try { parsed = JsonConvert.DeserializeObject<T>(apicontent); }
+                    catch (JsonException) { parsed = default; }
+                }
+                if (parsed != null)
+                    return parsed;
+
+                Serilog.Log.Warning("Downstream call {Method} {Url} returned {Status} without a usable body",
+                    message.Method, apiRequest.Url, (int)apiresponse.StatusCode);
+                return Failure<T>(apiresponse.StatusCode switch
+                {
+                    System.Net.HttpStatusCode.Unauthorized => "You are not signed in or your session has expired.",
+                    System.Net.HttpStatusCode.Forbidden => "You do not have permission to do this.",
+                    _ => $"The service responded with {(int)apiresponse.StatusCode}."
+                });
             }
             catch (Exception e)
             {
-                var dto = new ResponseDTO
-                {
-                    DisplayMessage = "ERROR",
-                    ErrorMessages = new List<string> { e.Message },
-                    IsSuccess = false
-                };
-                return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(dto))!;
+                // Log the details; don't send internal hosts/ports/stack traces to the browser.
+                Serilog.Log.Error(e, "Downstream call {Method} {Url} failed", apiRequest.ApiType, apiRequest.Url);
+                return Failure<T>("A backend service is unavailable. Please try again shortly.");
             }
+        }
+
+        private static T Failure<T>(string message)
+        {
+            var dto = new ResponseDTO
+            {
+                DisplayMessage = "ERROR",
+                ErrorMessages = new List<string> { message },
+                IsSuccess = false
+            };
+            return JsonConvert.DeserializeObject<T>(JsonConvert.SerializeObject(dto))!;
+        }
+
+        /// <summary>
+        /// Uses the explicit token if one was given, otherwise forwards the caller's own
+        /// "Authorization: Bearer ..." header so downstream services can authorize the same user.
+        /// Set on the message (not the client) so it can never leak into another request.
+        /// </summary>
+        private void SetAuthorization(HttpRequestMessage message, ApiRequest apiRequest)
+        {
+            if (!string.IsNullOrEmpty(apiRequest.AccessToken))
+            {
+                message.Headers.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+                return;
+            }
+
+            var incoming = _httpContextAccessor.HttpContext?.Request.Headers.Authorization.ToString();
+            if (!string.IsNullOrEmpty(incoming) && AuthenticationHeaderValue.TryParse(incoming, out var header))
+                message.Headers.Authorization = header;
         }
 
         /// <summary>

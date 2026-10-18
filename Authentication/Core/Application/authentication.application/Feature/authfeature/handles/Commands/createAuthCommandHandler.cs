@@ -1,4 +1,4 @@
-﻿using authentication.application.DTO;
+using authentication.application.DTO;
 using authentication.application.Feature.authfeature.request.Commands;
 using authentication.application.IRepository;
 using authentication.application.Responses;
@@ -13,39 +13,51 @@ using System.Threading.Tasks;
 
 namespace authentication.application.Feature.authfeature.handles.Commands
 {
-    
     public class createAuthCommandHandler : IRequestHandler<createAuthCommand, baseCommandResponse>
     {
         private readonly IMapper _mapper;
         private readonly IAuthformRepository _authformRepository;
 
-        public createAuthCommandHandler(IMapper mapper,IAuthformRepository authformRepository)
+        public createAuthCommandHandler(IMapper mapper, IAuthformRepository authformRepository)
         {
             _mapper = mapper;
             _authformRepository = authformRepository;
         }
+
         public async Task<baseCommandResponse> Handle(createAuthCommand request, CancellationToken cancellationToken)
         {
             var response = new baseCommandResponse();
-            var mypicture=_mapper.Map<signitureimage>(request.registerdto.signitureid);
+            var dto = request.registerdto!;
+            var mypicture = _mapper.Map<signitureimage>(dto.signitureid);
             var myuser = new User
             {
-                Email = request.registerdto.Email,
-                family = request.registerdto.family,
-                Name = request.registerdto.Name,
-                PhoneNumber = request.registerdto.phoneNumber,
-                Country = request.registerdto.Country,
+                Email = dto.Email!.Trim(),
+                family = dto.family!.Trim(),
+                Name = dto.Name!.Trim(),
+                PhoneNumber = dto.phoneNumber,
+                Country = dto.Country,
                 Date = DateTime.Now.Date,
-                UserName=request.registerdto.Name+"_"+request.registerdto.family,
+                // An explicit username wins; otherwise fall back to the old "Name_family" convention.
+                UserName = string.IsNullOrWhiteSpace(dto.Username)
+                    ? dto.Name!.Trim() + "_" + dto.family!.Trim()
+                    : dto.Username.Trim(),
+                CurrentStatus = dto.CurrentStatus ?? true,
                 SignitureImage = mypicture,
-                personID=request.registerdto.personID
+                personID = dto.personID
             };
-            var myusersend = await _authformRepository.regiseter(myuser, request.registerdto.Password,request.registerdto.Role);
-            if (myusersend != null)
+
+            var errors = await _authformRepository.regiseter(myuser, dto.Password!, dto.Role!);
+            if (errors.Count == 0)
             {
                 response.Success = true;
                 response.Message = "Creation was Successful";
-                response.id=myuser.Id;
+                response.id = myuser.Id;
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = "User creation failed";
+                response.Errors = errors;
             }
             return response;
         }

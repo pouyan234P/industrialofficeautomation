@@ -1,14 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 using webapi.Model;
 using webapi.Model.Authentication;
 using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class authController : ControllerBase
@@ -20,28 +17,37 @@ namespace webapi.Controllers.api.authentication
             _service = service;
         }
 
+        /// <summary>Creates a user. Admin-only: anonymous self-registration was a way in for anyone.</summary>
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO dTO)
         {
-            dTO.Role = "Customer";
+            // The admin may pick a role on the New User form; default to Customer.
+            if (string.IsNullOrWhiteSpace(dTO.Role))
+                dTO.Role = "Customer";
+
             var response = await _service.register<ResponseDTO>(dTO);
             if (response.IsSuccess)
             {
                 return Ok(response.Result);
             }
-            return BadRequest(false);
+            return BadRequest(response.ErrorMessages);
         }
+
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> login([FromBody] loginDTO dTO)
         {
             var response = await _service.login<ResponseDTO>(dTO);
-            if (response.IsSuccess)
+            if (response.IsSuccess && response.Result is not null)
             {
-                return Ok(new { token= response.Result });
+                return Ok(new { token = response.Result });
             }
             return BadRequest(response.ErrorMessages);
         }
 
+        /// <summary>Kept for older callers; the Roles page uses POST api/role/create.</summary>
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("CreateRole/{name}")]
         public async Task<IActionResult> CreateRole(string name)
         {
@@ -50,7 +56,7 @@ namespace webapi.Controllers.api.authentication
             {
                 return Ok(response.Result);
             }
-            return BadRequest();
+            return BadRequest(response.ErrorMessages);
         }
     }
 }

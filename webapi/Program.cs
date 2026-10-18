@@ -48,18 +48,44 @@ builder.Services.AddStackExchangeRedisCache(options =>
 });
 
 // ─── 5. JWT AUTHENTICATION ───────────────────────────────────────────────────
-var secret = builder.Configuration["appSetting:Token"]!;
+// The key must be the same one the auth service signs with. It is read from
+// user-secrets / the appSetting__Token environment variable, never from appsettings.json.
+var secret = builder.Configuration["appSetting:Token"];
+if (string.IsNullOrWhiteSpace(secret) || Encoding.UTF8.GetByteCount(secret) < 32)
+    throw new InvalidOperationException(
+        "JWT signing key 'appSetting:Token' is missing or shorter than 32 bytes. Set it with " +
+        "`dotnet user-secrets set \"appSetting:Token\" \"<same value as the auth service>\"` or appSetting__Token.");
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secret)),
-            ValidateIssuer = false,
-            ValidateAudience = false
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)),
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["appSetting:Issuer"] ?? "industrial-office-auth",
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["appSetting:Audience"] ?? "industrial-office",
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.FromMinutes(1),
         };
     });
+
+builder.Services.AddAuthorization(opt =>
+{
+    opt.AddPolicy(Policies.RequireAdminRole, p => p.RequireRole(Policies.AdminRole));
+});
+
+// ─── 5b. CORS ────────────────────────────────────────────────────────────────
+// Only the Angular app's origin(s) may call the API from a browser.
+var allowedOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
+                     ?? new[] { "http://localhost:4200" };
+builder.Services.AddCors(o => o.AddPolicy("frontend", p => p
+    .WithOrigins(allowedOrigins)
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .WithExposedHeaders("Pagination")));
 
 // ─── 6. DEPENDENCY INJECTION ─────────────────────────────────────────────────
 builder.Services.AddScoped<ILetterCorrespondenceService, LetterCorrespondenceService>();
@@ -94,7 +120,11 @@ builder.Services.AddServiceHealthChecks(hc =>
     );
 });
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(opt =>
+{
+    // Every endpoint needs a valid token unless it is marked [AllowAnonymous] (only login is).
+    opt.Filters.Add(new AuthorizeFilter(new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build()));
+}).AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -119,7 +149,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+app.UseCors("frontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

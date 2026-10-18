@@ -16,7 +16,6 @@ using webapi.Services.IServices.IWorkflowService;
 
 namespace webapi.Controllers.api.workflow
 {
-    [AllowAnonymous]   // TODO: replace with [Authorize] once Identity service is ready
     [Route("api/[controller]")]
     [ApiController]
     public class referralController : ControllerBase

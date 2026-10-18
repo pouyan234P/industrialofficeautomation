@@ -9,7 +9,7 @@ namespace authentication.application.Responses
     public class baseCommandResponse
     {
         public int? id { get; set; }
-        public bool Success { get; set; } = true;
+        public bool Success { get; set; }
         public string Message { get; set; }
         public List<string> Errors { get; set; }
     }

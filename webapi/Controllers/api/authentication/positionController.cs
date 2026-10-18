@@ -13,7 +13,6 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class positionController : ControllerBase
@@ -32,6 +31,7 @@ namespace webapi.Controllers.api.authentication
             _cache = cache;
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("insertPosition")]
         public async Task<IActionResult> insertPosition([FromBody] setPosition setPosition)
         {
@@ -108,11 +108,13 @@ namespace webapi.Controllers.api.authentication
             catch (JsonException jsonEx)
             {
                 // If the cache somehow gets corrupted again, we catch it here so the app doesn't crash
-                return StatusCode(500, $"خطای پردازش داده‌های کش: {jsonEx.Message}");
+                Serilog.Log.Error(jsonEx, "Cached list could not be read");
+                return StatusCode(500, "خطای پردازش داده‌های کش.");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"خطای داخلی سرور: {ex.Message}");
+                Serilog.Log.Error(ex, "Unhandled error while loading list");
+                return StatusCode(500, "خطای داخلی سرور.");
             }
             
         }
@@ -150,6 +152,7 @@ namespace webapi.Controllers.api.authentication
             return BadRequest(response!.ErrorMessages);
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPut("updatePosition/{id}")]
         public async Task<IActionResult> updatePosition(int id, [FromBody] setPosition setPosition)
         {

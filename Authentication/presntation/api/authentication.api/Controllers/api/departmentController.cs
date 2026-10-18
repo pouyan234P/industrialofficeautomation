@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace authentication.api.Controllers.api
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class departmentController : ControllerBase
@@ -24,6 +23,7 @@ namespace authentication.api.Controllers.api
             this._response = new ResponseDTO();
         }
 
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("addDepartment")]
         public async Task<IActionResult> addDepartment([FromBody] DepartmentDTO mydepartmentDTO)
         {
@@ -47,7 +47,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)                                         // ← fallback stays
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
@@ -66,7 +66,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess = false;
-                _response.ErrorMessages=new List<string> { e.ToString() };
+                _response.ErrorMessages=Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
@@ -82,7 +82,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess=false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
@@ -101,7 +101,7 @@ namespace authentication.api.Controllers.api
             catch (Exception e)
             {
                 _response.IsSuccess=false;
-                _response.ErrorMessages = new List<string>() { e.ToString() };
+                _response.ErrorMessages = Errors.Unexpected(HttpContext, e);
             }
             return Ok(_response);
         }
