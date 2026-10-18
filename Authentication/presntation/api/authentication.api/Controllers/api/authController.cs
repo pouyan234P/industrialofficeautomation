@@ -1,4 +1,5 @@
-using authentication.api.DTO;
+﻿using authentication.api.DTO;
+using authentication.application;
 using authentication.application.DTO;
 using authentication.application.Feature.authfeature.request.Commands;
 using authentication.application.Feature.authfeature.request.Queries;
@@ -12,9 +13,9 @@ using System.Security.Claims;
 namespace authentication.api.Controllers.api
 {
     /// <summary>
-    /// Login is public. Everything else here manages users and roles and is Admin-only.
-    /// (This controller used to be [AllowAnonymous] as a whole, which let anyone create users,
-    /// create roles, list every user and change any user's password.)
+    /// Login is public. Any signed-in user may create, list and edit users.
+    /// Creating roles and putting people in roles is Admin-only; when a non-admin
+    /// creates a user, the new account always gets the default Customer role.
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
@@ -59,10 +60,13 @@ namespace authentication.api.Controllers.api
             return Ok(_response);
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO myregisterDTO)
         {
+            // Choosing a role = adding someone to a role, which only admins may do.
+            if (myregisterDTO != null && !User.IsInRole(AppRoles.Admin))
+                myregisterDTO.Role = AppRoles.Customer;
+
             return await Run(async () =>
             {
                 var result = await _mediator.Send(new createAuthCommand { registerdto = myregisterDTO });
@@ -70,7 +74,6 @@ namespace authentication.api.Controllers.api
             });
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpGet("getAll")]
         public async Task<IActionResult> getAll()
         {
@@ -80,13 +83,17 @@ namespace authentication.api.Controllers.api
             });
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPut("updateUser/{id}")]
         public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
         {
             return await Run(async () =>
             {
-                var result = await _mediator.Send(new updateUserCommand { id = id, userDTO = dto });
+                var result = await _mediator.Send(new updateUserCommand
+                {
+                    id = id,
+                    userDTO = dto,
+                    callerIsAdmin = User.IsInRole(AppRoles.Admin),
+                });
                 ApplyCommandResult(result);
             });
         }

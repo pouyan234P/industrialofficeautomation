@@ -23,7 +23,6 @@ namespace authentication.api.Controllers.api
             this._response = new ResponseDTO();
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("addDepartment")]
         public async Task<IActionResult> addDepartment([FromBody] DepartmentDTO mydepartmentDTO)
         {

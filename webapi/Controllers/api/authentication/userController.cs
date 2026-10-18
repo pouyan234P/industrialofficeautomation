@@ -8,8 +8,7 @@ using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    /// <summary>User management. Admin-only (it lists every account and can change passwords).</summary>
-    [Authorize(Policy = Policies.RequireAdminRole)]
+    /// <summary>User list and editing for any signed-in user; assigning roles is Admin-only.</summary>
     [Route("api/[controller]")]
     [ApiController]
     public class userController : ControllerBase
@@ -96,6 +95,7 @@ namespace webapi.Controllers.api.authentication
         }
 
         /// <summary>PUT api/user/{id}/roles — body { "roles": ["Admin", "Manager"] } replaces the user's roles.</summary>
+        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPut("{id:int}/roles")]
         public async Task<IActionResult> setRoles(int id, [FromBody] setUserRolesDTO dto)
         {

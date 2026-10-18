@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using webapi.Model;
 using webapi.Model.Authentication;
@@ -17,13 +17,12 @@ namespace webapi.Controllers.api.authentication
             _service = service;
         }
 
-        /// <summary>Creates a user. Admin-only: anonymous self-registration was a way in for anyone.</summary>
-        [Authorize(Policy = Policies.RequireAdminRole)]
+        /// <summary>Creates a user. Any signed-in user may do this; only an Admin may choose the new user's role.</summary>
         [HttpPost("register")]
         public async Task<IActionResult> register([FromBody] registerDTO dTO)
         {
-            // The admin may pick a role on the New User form; default to Customer.
-            if (string.IsNullOrWhiteSpace(dTO.Role))
+            // Non-admins always create Customers (putting someone in a role is Admin-only).
+            if (string.IsNullOrWhiteSpace(dTO.Role) || !User.IsInRole(Policies.AdminRole))
                 dTO.Role = "Customer";
 
             var response = await _service.register<ResponseDTO>(dTO);

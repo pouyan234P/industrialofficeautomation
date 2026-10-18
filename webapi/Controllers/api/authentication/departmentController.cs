@@ -28,7 +28,6 @@ namespace webapi.Controllers.api.authentication
             _cache = cache;
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [HttpPost("addDepartment")]
         public async Task<IActionResult> addDepartment([FromBody] DepartmentDTO dTO)
         {

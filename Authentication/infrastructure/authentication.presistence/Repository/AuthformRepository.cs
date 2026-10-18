@@ -1,4 +1,4 @@
-using authentication.application;
+﻿using authentication.application;
 using authentication.application.DTO;
 using authentication.application.IRepository;
 using authentication.domain;
@@ -227,12 +227,19 @@ namespace authentication.presistence.Repository
             }).ToList();
         }
 
-        public async Task<List<string>> updateUser(int id, updateUserDTO dto)
+        public async Task<List<string>> updateUser(int id, updateUserDTO dto, bool callerIsAdmin)
         {
             var user = await _userManger.Users.FirstOrDefaultAsync(u => u.Id == id);
             if (user == null)
             {
                 return new List<string>() { $"User {id} was not found." };
+            }
+
+            // Otherwise a non-admin could reset an admin's password and sign in as them,
+            // which would get around "only admins assign roles".
+            if (!callerIsAdmin && await _userManger.IsInRoleAsync(user, AppRoles.Admin))
+            {
+                return new List<string>() { "Only an admin can edit an admin account." };
             }
 
             var newUsername = dto.username!.Trim();

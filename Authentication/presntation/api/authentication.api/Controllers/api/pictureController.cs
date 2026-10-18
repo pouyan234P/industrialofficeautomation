@@ -34,7 +34,6 @@ namespace authentication.api.Controllers.api
             return null;
         }
 
-        [Authorize(Policy = Policies.RequireAdminRole)]
         [RequestSizeLimit(MaxSignatureBytes + 64 * 1024)]
         [HttpPost("addPicture")]
         public async Task<IActionResult> addPicture([FromForm]IFormFile file)

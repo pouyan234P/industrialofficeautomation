@@ -1,4 +1,4 @@
-using authentication.application.Feature.authfeature.request.Commands;
+﻿using authentication.application.Feature.authfeature.request.Commands;
 using authentication.application.IRepository;
 using authentication.application.Responses;
 using MediatR;
@@ -17,7 +17,7 @@ namespace authentication.application.Feature.authfeature.handles.Commands
         public async Task<baseCommandResponse> Handle(updateUserCommand request, CancellationToken cancellationToken)
         {
             var response = new baseCommandResponse();
-            var errors = await _authformRepository.updateUser(request.id, request.userDTO!);
+            var errors = await _authformRepository.updateUser(request.id, request.userDTO!, request.callerIsAdmin);
 
             if (errors.Count == 0)
             {
