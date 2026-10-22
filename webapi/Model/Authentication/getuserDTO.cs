@@ -14,5 +14,6 @@ namespace webapi.Model.Authentication
         public int personID { get; set; }
         public bool CurrentStatus { get; set; }
         public getimageidDTO? signitureimageid { get; set; }
+        public List<string> roles { get; set; } = new();
     }
 }

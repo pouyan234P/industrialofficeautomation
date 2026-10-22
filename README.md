@@ -101,8 +101,8 @@ Provides **full-text search** over letter documents.
 Manages users, roles, departments, and positions. Issues **JWT tokens** consumed by the rest of the platform.
 
 **Key features:**
-- User registration and login (JWT)
-- Role management
+- Login (JWT) and user registration (Admin only)
+- Role management — creating roles and assigning them is Admin-only
 - Department and position CRUD
 - Signature image upload/retrieval per user
 
@@ -117,10 +117,11 @@ The public-facing Web API that clients interact with directly. It acts as a **Ba
 
 | Controller | Responsibility |
 |---|---|
-| `authController` | Register, login, create roles |
+| `authController` | Login (public), register (Admin) |
+| `roleController` | List and create roles (Admin) |
 | `departmentController` | Department management |
 | `positionController` | Position management |
-| `userController` | User profile management |
+| `userController` | List users; Admin edits anyone, others only themselves; assign roles (Admin) |
 | `pictureController` | Signature image upload |
 | `LetterController` | Letter CRUD (calls Correspondence Core) |
 | `referralController` | Create & manage referrals (calls Workflow Service + publishes to RabbitMQ) |
@@ -186,9 +187,6 @@ Each service has its own `appsettings.json`. Update connection strings and setti
     "gatewayApi": "http://localhost:5003",
     "IdentityApi": "http://localhost:5230"
   },
-  "appSetting": {
-    "Token": "YOUR_SECRET_JWT_KEY_HERE"
-  },
   "TopicAndQueueNames": {
     "myreferral": "myreferral",
     "myels": "myels",
@@ -198,6 +196,32 @@ Each service has its own `appsettings.json`. Update connection strings and setti
 ```
 
 Update the corresponding `appsettings.json` in the Correspondence, Workflow, Search, and Authentication services with your database and RabbitMQ connection strings.
+
+**Secrets (JWT key and first admin)** — never put these in `appsettings.json`.
+In Development a throw-away key in `appsettings.Development.json` is used automatically.
+Everywhere else, set the same JWT key for the Authentication service and the Web API
+(at least 32 characters) with user-secrets or environment variables:
+
+```bash
+# Authentication service
+cd Authentication/presntation/api/authentication.api
+dotnet user-secrets init
+dotnet user-secrets set "appSetting:Token" "<long random string>"
+# First admin: an existing account's email is promoted to Admin at startup.
+dotnet user-secrets set "BootstrapAdmin:Email" "you@example.com"
+# Only if that account doesn't exist yet (remove it again after the first start):
+dotnet user-secrets set "BootstrapAdmin:Password" "<Strong!Passw0rd>"
+
+# Web API — same key
+cd ../../../../webapi
+dotnet user-secrets set "appSetting:Token" "<same long random string>"
+```
+
+Environment variables work too: `appSetting__Token`, `BootstrapAdmin__Email`, `BootstrapAdmin__Password`.
+The `Admin` and `Customer` roles are created automatically. Only admins can create users,
+create roles, put users in roles, and create or assign positions. Admins can edit any account;
+everyone else can only edit their own (username, password, signature — not PersonID or status).
+Everything else needs a signed-in user.
 
 ### 3. Run the services
 

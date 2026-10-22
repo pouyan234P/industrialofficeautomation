@@ -9,5 +9,8 @@ namespace webapi.Services.IServices.Identity
         Task<T> CreateRole<T>(string myroleName);
         Task<T> getAll<T>();
         Task<T> updateUser<T>(int id, updateUserDTO dto);
+        Task<T> getRoles<T>();
+        Task<T> createRole<T>(createRoleDTO dto);
+        Task<T> setUserRoles<T>(int userId, setUserRolesDTO dto);
     }
 }

@@ -1,14 +1,9 @@
-﻿using authentication.application.DTO;
+using authentication.application.DTO;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace authentication.application.Feature.authfeature.request.Queries
 {
-    public class loginRequest:IRequest<string>
+    public class loginRequest : IRequest<loginResultDTO>
     {
         public loginDTO? myslogindto { get; set; }
     }

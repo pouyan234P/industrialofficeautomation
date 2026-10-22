@@ -9,7 +9,6 @@ using webapi.Services.IServices.ICorrespondenceService;
 
 namespace webapi.Controllers.api.correspondece
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class LetterController : ControllerBase

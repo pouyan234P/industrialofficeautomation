@@ -8,7 +8,6 @@ using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class pictureController : ControllerBase

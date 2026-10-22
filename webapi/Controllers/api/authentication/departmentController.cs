@@ -12,7 +12,6 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class departmentController : ControllerBase
@@ -21,6 +20,8 @@ namespace webapi.Controllers.api.authentication
         private readonly IDistributedCache _cache;
         // یک نام ثابت برای کلید کش در نظر می‌گیریم
         private const string DEPARTMENTS_CACHE_KEY = "all_departments_list";
+        // key actually used by getDepartment (changed earlier to bypass old bad data)
+        private const string DEPARTMENTS_LIST_CACHE_KEY = "DEPARTMENTS_CACHE_KEY_V2";
         public departmentController(IdepartmentIdentityService service, IDistributedCache cache)
         {
             _service = service;
@@ -30,11 +31,13 @@ namespace webapi.Controllers.api.authentication
         [HttpPost("addDepartment")]
         public async Task<IActionResult> addDepartment([FromBody] DepartmentDTO dTO)
         {
-                var response = await _service.addDepartment<ResponseDTO>(dTO);
-                if (response.IsSuccess)
-                {
-                    return Ok(response.Result);
-                }
+            var response = await _service.addDepartment<ResponseDTO>(dTO);
+            if (response.IsSuccess)
+            {
+                // the cached list no longer contains every department
+                await _cache.RemoveAsync(DEPARTMENTS_LIST_CACHE_KEY);
+                return Ok(response.Result);
+            }
             return BadRequest(response.ErrorMessages);
         }
 
@@ -61,7 +64,7 @@ namespace webapi.Controllers.api.authentication
             try
             {
                 // 1. Check the Cache
-                var cachedDepartments = await _cache.GetStringAsync("DEPARTMENTS_CACHE_KEY_V2"); // Changed key to bypass old bad data
+                var cachedDepartments = await _cache.GetStringAsync(DEPARTMENTS_LIST_CACHE_KEY); // Changed key to bypass old bad data
 
                 if (!string.IsNullOrEmpty(cachedDepartments))
                 {
@@ -89,7 +92,7 @@ namespace webapi.Controllers.api.authentication
                   var depresult=  JsonConvert.DeserializeObject<IEnumerable<DepartmentDTO>>(Convert.ToString(response.Result)!);
                     // 4. Save to Redis
                     string serializedData = JsonSerializer.Serialize(depresult, jsonOptions);
-                    await _cache.SetStringAsync("DEPARTMENTS_CACHE_KEY_V2", serializedData, cacheOptions);
+                    await _cache.SetStringAsync(DEPARTMENTS_LIST_CACHE_KEY, serializedData, cacheOptions);
 
                     return Ok(response.Result);
                 }
@@ -100,11 +103,13 @@ namespace webapi.Controllers.api.authentication
             catch (JsonException jsonEx)
             {
                 // If the cache somehow gets corrupted again, we catch it here so the app doesn't crash
-                return StatusCode(500, $"خطای پردازش داده‌های کش: {jsonEx.Message}");
+                Serilog.Log.Error(jsonEx, "Cached list could not be read");
+                return StatusCode(500, "خطای پردازش داده‌های کش.");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"خطای داخلی سرور: {ex.Message}");
+                Serilog.Log.Error(ex, "Unhandled error while loading list");
+                return StatusCode(500, "خطای داخلی سرور.");
             }
         }
 

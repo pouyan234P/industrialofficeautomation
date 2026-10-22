@@ -8,7 +8,10 @@ using webapi.Services.IServices.Identity;
 
 namespace webapi.Controllers.api.authentication
 {
-    [AllowAnonymous]
+    /// <summary>
+    /// Any signed-in user can see the list. Admins can edit anyone; others only their own account.
+    /// Assigning roles is Admin-only.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class userController : ControllerBase
@@ -56,7 +59,8 @@ namespace webapi.Controllers.api.authentication
                                 Title = mygetpos?.Title,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
-                                signitureimageid = uploaded
+                                signitureimageid = uploaded,
+                                roles = i.roles ?? new List<string>()
                             };
                             usermodel.Add(myuser);
                         }
@@ -69,7 +73,8 @@ namespace webapi.Controllers.api.authentication
                                 Title = null,
                                 CurrentStatus = i.CurrentStatus,
                                 username = i.username,
-                                signitureimageid = uploaded
+                                signitureimageid = uploaded,
+                                roles = i.roles ?? new List<string>()
                             };
                             usermodel.Add(myuser);
                         }
@@ -84,7 +89,26 @@ namespace webapi.Controllers.api.authentication
         [HttpPut("updateUser/{id}")]
         public async Task<IActionResult> updateUser(int id, [FromBody] updateUserDTO dto)
         {
+            var callerId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            if (!User.IsInRole(Policies.AdminRole) && callerId != id.ToString())
+            {
+                return StatusCode(StatusCodes.Status403Forbidden, new List<string> { "You can only edit your own account." });
+            }
+
             var response = await _service.updateUser<ResponseDTO>(id, dto);
+            if (response != null && response.IsSuccess)
+            {
+                return Ok(response.Result);
+            }
+            return BadRequest(response?.ErrorMessages);
+        }
+
+        /// <summary>PUT api/user/{id}/roles — body { "roles": ["Admin", "Manager"] } replaces the user's roles.</summary>
+        [Authorize(Policy = Policies.RequireAdminRole)]
+        [HttpPut("{id:int}/roles")]
+        public async Task<IActionResult> setRoles(int id, [FromBody] setUserRolesDTO dto)
+        {
+            var response = await _service.setUserRoles<ResponseDTO>(id, dto ?? new setUserRolesDTO());
             if (response != null && response.IsSuccess)
             {
                 return Ok(response.Result);

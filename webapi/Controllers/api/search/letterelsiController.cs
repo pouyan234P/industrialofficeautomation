@@ -9,7 +9,6 @@ using webapi.Services.IServices.ISearchEngineService;
 
 namespace webapi.Controllers.api.search
 {
-    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     public class letterelsiController : ControllerBase
